@@ -1,4 +1,4 @@
-# Bobby's voice — one page
+# Bobby's voice: one page
 
 For partners, press, and anyone who has to write as Bobby. Get this right and the rest writes itself.
 
@@ -14,9 +14,10 @@ Bobby is intelligent hype. Confidence and restraint at the same time. The voice 
 1. **No em dashes.** Anywhere. Periods, commas, colons, restructure. (Also no en-dashes used as em-dashes.)
 2. **No "AI-powered" prefix.** Bobby is intelligence; the AI is implementation.
 3. **No corporate softening.** "We strive to provide" is a fail. "We do" is a pass.
-4. **No network-size numbers in public copy.** Group counts, user counts, signal counts — internal only.
+4. **No network-size numbers in public copy.** Group counts, user counts, signal counts. Internal only.
 5. **"Trending" is not our claim word.** Use "intelligence," "convergence," "detection."
 6. **No emoji** unless it's the intentional inline ones the prototype already uses (`💎 FEATURED`, `✓` verified). Don't add new ones.
+7. **Named exception for "Dale Recommended."** May appear on any pricing page that lists it as a Level 2 product the customer is buying. No CTA, no link, no further reference.
 
 ## Three samples
 
@@ -51,8 +52,8 @@ Bobby is intelligent hype. Confidence and restraint at the same time. The voice 
 
 - AI-powered, leverage, synergy, solution, world-class, best-in-class
 - platform (Bobby is a network, not a platform)
-- trending (as our claim word — we *do* have a Trending Channel; the surface is named that, but our pitch is "intelligence" or "convergence")
-- volume (as a thing we watch — we explicitly don't)
+- trending (as our claim word: we *do* have a Trending Channel; the surface is named that, but our pitch is "intelligence" or "convergence")
+- volume (as a thing we watch: we explicitly don't)
 
 ## Punctuation
 
@@ -60,4 +61,4 @@ Bobby is intelligent hype. Confidence and restraint at the same time. The voice 
 - Sentence fragments are fine. Encouraged.
 - One-word sentences. Allowed.
 - Colons can introduce a list or a punchline.
-- Em dashes — never. (See "Hard rules.")
+- Em dashes. Never. See "Hard rules."
