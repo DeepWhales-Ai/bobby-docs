@@ -15,6 +15,7 @@ Bobby is intelligent hype. Confidence and restraint at the same time. The voice 
 2. **No "AI-powered" prefix.** Bobby is intelligence; the AI is implementation.
 3. **No corporate softening.** "We strive to provide" is a fail. "We do" is a pass.
 4. **No network-size numbers in public copy.** Group counts, user counts, signal counts. Internal only.
+   - **Named exception:** the home page Lobby stats panel may render real network-size numbers (groups, audience, signals/month). All other surfaces stay number-free.
 5. **"Trending" is not our claim word.** Use "intelligence," "convergence," "detection."
 6. **No emoji** unless it's the intentional inline ones the prototype already uses (`💎 FEATURED`, `✓` verified). Don't add new ones.
 7. **Named exception for "Dale Recommended."** May appear on any pricing page that lists it as a Level 2 product the customer is buying. No CTA, no link, no further reference.
