@@ -1,0 +1,38 @@
+---
+title: "Configure Bobby"
+sidebarTitle: "Configure"
+description: "Two commands cover most of it. Set the portal. Set the socials. Bobby does the rest."
+---
+
+## Set the portal
+
+Tell Bobby where members should land when they tap the portal button on his alerts.
+
+```
+/set_portal https://yourproject.com
+```
+
+## Set the socials
+
+X, Telegram channels, websites, dexscreener. Bobby renders them in his info panel and in his alerts. Render rules are below.
+
+```
+/set_socials x=BobbyBuyBot tg=BobbyBuyBot web=bobby.bot
+```
+
+<Info>
+**The render flag.** Some communities want the socials inline on every Bobby alert. Some prefer Bobby clean. Toggle `BOBBY_SOCIALS_RENDER` on or off. When on, your socials render under every alert. When off, they only show in the info panel.
+</Info>
+
+## Permissions Bobby needs
+
+| Permission | Required? | Why |
+|---|---|---|
+| Send messages | Required | Bobby needs to be able to ping. |
+| Pin messages | Optional | For the welcome pin and major convergence alerts. |
+| Delete | Never asked for | Bobby does not moderate. |
+| Admin | No | Bobby is a member, not a moderator. |
+
+## More
+
+Tune the room further: [customize alerts](/groups/alerts). Lookup every command: [commands reference](/groups/commands).
