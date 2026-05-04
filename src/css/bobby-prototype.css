@@ -3141,3 +3141,166 @@ h2:hover .anchor, h3:hover .anchor { opacity: 1; }
   flex-shrink: 0;
 }
 .sm-caption-text { color: rgba(255,255,255,0.65); line-height: 1.4; }
+
+/* ============================================================
+   Docusaurus shell overrides — navbar, sidebar, TOC, content
+   Map prototype look onto Docusaurus theme classes.
+   ============================================================ */
+
+/* --- NAVBAR --- */
+.navbar {
+  background: rgba(10, 10, 10, 0.86);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  height: var(--nav-h);
+  box-shadow: none;
+}
+
+.navbar__inner.bobby-topnav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: none;
+}
+
+.bobby-topnav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.bobby-topnav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* Logo wordmark inside the swizzled navbar */
+.bobby-topnav-left .navbar__brand {
+  margin: 0;
+  padding: 0;
+}
+.bobby-topnav-left .navbar__logo {
+  margin: 0;
+  height: auto;
+}
+.bobby-topnav-left .navbar__logo img {
+  height: 28px;
+  width: auto;
+}
+
+@media (max-width: 996px) {
+  .bobby-topnav .topnav-sections,
+  .bobby-topnav .search-trigger,
+  .bobby-topnav .icon-btn {
+    display: none;
+  }
+}
+
+/* --- TOC (right rail on doc pages) --- */
+.theme-doc-toc-desktop {
+  position: sticky;
+  top: calc(var(--nav-h) + 32px);
+  font-size: 12.5px;
+}
+
+.theme-doc-toc-desktop::before {
+  content: 'On this page';
+  display: block;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 10.5px;
+  color: var(--text-4);
+  margin-bottom: 12px;
+}
+
+.table-of-contents {
+  border-left: 1px solid var(--border);
+  padding-left: 0;
+  margin: 0;
+  font-size: 12.5px;
+}
+
+.table-of-contents__link {
+  display: block;
+  padding: 5px 12px;
+  color: var(--text-3);
+  border-left: 2px solid transparent;
+  margin-left: -1px;
+  transition: all 0.12s ease;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.table-of-contents__link:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.table-of-contents__link--active,
+.table-of-contents__link.table-of-contents__link--active {
+  color: var(--lime);
+  border-left-color: var(--lime);
+}
+
+.table-of-contents .table-of-contents {
+  border-left: none;
+  padding-left: 14px;
+}
+
+.table-of-contents .table-of-contents .table-of-contents__link {
+  font-size: 12px;
+  padding-left: 22px;
+}
+
+/* --- DOC PAGE SIDEBAR (left rail) — keep Docusaurus defaults, brand-tint --- */
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.menu__link {
+  color: var(--text-3);
+  font-size: 13.5px;
+  border-radius: var(--r-sm);
+}
+
+.menu__link:hover {
+  color: var(--text);
+  background: var(--surface);
+  text-decoration: none;
+}
+
+.menu__link--active,
+.menu__link--active:hover {
+  color: var(--text);
+  background: var(--surface);
+  font-weight: 500;
+}
+
+.menu__list-item-collapsible:hover {
+  background: var(--surface);
+}
+
+.menu__caret::before {
+  background: var(--text-4) var(--ifm-menu-link-sublist-icon) 50% / 1.25rem 1.25rem;
+}
+
+/* --- BODY LINK COLOR — restore lime accent on doc body links
+       (the prototype's `a { color: inherit }` reset removed it globally) --- */
+.theme-doc-markdown a:not(.bobby-card):not(.bobby-card--link):not(.surface-card):not(.door):not(.dm-cta):not(.cta-primary):not(.cta-ghost):not(.button) {
+  color: var(--lime);
+  text-decoration: underline;
+  text-decoration-color: var(--lime-edge);
+  text-underline-offset: 3px;
+}
+.theme-doc-markdown a:hover {
+  text-decoration-color: var(--lime);
+}
