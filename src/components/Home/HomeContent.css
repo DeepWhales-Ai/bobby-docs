@@ -53,12 +53,12 @@
   color: var(--text-4);
 }
 
-/* Solid black bull frame — override prototype's diagonal stripe pattern.
-   !important + explicit background-image: none because the production bundle's
-   prototype rule sets a multi-layer `background:` shorthand and the override
-   was apparently being ignored on Vercel even at higher specificity. */
-.home-wrap .hero .bull-stage .bull-frame {
-  background: var(--bg) !important;
+/* Solid PURE BLACK bull frame.
+   Hardcoded #000000 (not var(--bg) = #0A0A0A) because at #0A0A0A the frame
+   reads as grey against the page on Vercel — the eye needs full black to
+   register the frame as a solid plate, not a slight tonal shift. */
+.home-wrap .bull-frame {
+  background: #000000 !important;
   background-image: none !important;
 }
 

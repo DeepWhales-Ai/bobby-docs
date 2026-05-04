@@ -3195,6 +3195,15 @@ h2:hover .anchor, h3:hover .anchor { opacity: 1; }
   width: auto !important;
 }
 
+/* Broader-net rule: target every <img> inside the navbar. The bobby-topnav-left
+   selector wasn't winning at runtime on Vercel — this catches the wordmark
+   regardless of any wrapper class hash drift between builds. */
+.navbar .navbar__inner img,
+.bobby-topnav img {
+  height: 36px !important;
+  width: auto !important;
+}
+
 @media (max-width: 996px) {
   .bobby-topnav .topnav-sections,
   .bobby-topnav .search-trigger,
