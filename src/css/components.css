@@ -20,12 +20,21 @@
 }
 
 .bobby-card__icon {
-  display: inline-block;
-  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--lime-dim);
+  border: 1px solid var(--lime-edge);
   color: var(--lime);
-  margin-bottom: 6px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+
+.bobby-card--link:hover .bobby-card__icon {
+  background: rgba(191, 255, 0, 0.18);
+  border-color: var(--lime);
 }
 
 .bobby-card__title {

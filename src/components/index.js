@@ -1,12 +1,39 @@
 import React from 'react';
 import Admonition from '@theme/Admonition';
+import * as LucideIcons from 'lucide-react';
+
+const ICON_ALIASES = {
+  bullseye: 'Target',
+  telegram: 'Send',
+  'life-ring': 'LifeBuoy',
+  'quote-left': 'Quote',
+  bolt: 'Zap',
+  'layer-group': 'Layers',
+  'seal-check': 'BadgeCheck',
+  grid: 'LayoutGrid',
+};
+
+function resolveIcon(name) {
+  if (!name || typeof name !== 'string') return null;
+  if (ICON_ALIASES[name]) return LucideIcons[ICON_ALIASES[name]] || null;
+  const pascal = name
+    .split('-')
+    .map((s) => s.charAt(0).toUpperCase() + s.slice(1))
+    .join('');
+  return LucideIcons[pascal] || null;
+}
 
 export function Card({title, icon, href, children}) {
   const Wrapper = href ? 'a' : 'div';
   const props = href ? {href, className: 'bobby-card bobby-card--link'} : {className: 'bobby-card'};
+  const IconComp = resolveIcon(icon);
   return (
     <Wrapper {...props}>
-      {icon && <span className="bobby-card__icon" aria-hidden="true">{icon}</span>}
+      {IconComp && (
+        <span className="bobby-card__icon" aria-hidden="true">
+          <IconComp size={18} strokeWidth={1.8} />
+        </span>
+      )}
       {title && <div className="bobby-card__title">{title}</div>}
       {children && <div className="bobby-card__body">{children}</div>}
     </Wrapper>
