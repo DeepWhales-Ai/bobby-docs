@@ -3200,7 +3200,7 @@ h2:hover .anchor, h3:hover .anchor { opacity: 1; }
    regardless of any wrapper class hash drift between builds. */
 .navbar .navbar__inner img,
 .bobby-topnav img {
-  height: 36px !important;
+  height: 48px !important;
   width: auto !important;
 }
 
