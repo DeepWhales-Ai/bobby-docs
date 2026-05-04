@@ -1,5 +1,4 @@
 import React from 'react';
-import Admonition from '@theme/Admonition';
 import * as LucideIcons from 'lucide-react';
 
 const ICON_ALIASES = {
@@ -57,20 +56,32 @@ export function Frame({caption, children}) {
   );
 }
 
+function Callout({kind, icon, title, children}) {
+  return (
+    <div className={`callout ${kind}`}>
+      <div className="callout-icon">{icon}</div>
+      <div>
+        {title && <div className="callout-title">{title}</div>}
+        <div>{children}</div>
+      </div>
+    </div>
+  );
+}
+
 export function Note({title, children}) {
-  return <Admonition type="note" title={title}>{children}</Admonition>;
+  return <Callout kind="info" icon="i" title={title}>{children}</Callout>;
 }
 
 export function Info({title, children}) {
-  return <Admonition type="info" title={title}>{children}</Admonition>;
+  return <Callout kind="info" icon="i" title={title}>{children}</Callout>;
 }
 
 export function Warning({title, children}) {
-  return <Admonition type="warning" title={title}>{children}</Admonition>;
+  return <Callout kind="warn" icon="!" title={title}>{children}</Callout>;
 }
 
 export function Tip({title, children}) {
-  return <Admonition type="tip" title={title}>{children}</Admonition>;
+  return <Callout kind="tip" icon="✓" title={title}>{children}</Callout>;
 }
 
 export function Steps({children}) {
