@@ -5,11 +5,40 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Bobby',
   tagline: "The intelligence network crypto Telegram runs on.",
-  favicon: 'img/bobby-mark.png',
+  favicon: 'favicon.ico',
 
   future: {
     v4: true,
   },
+
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'apple-touch-icon',
+        sizes: '256x256',
+        href: '/img/favicon-256.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '128x128',
+        href: '/img/favicon-128.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/img/favicon-32.png',
+      },
+    },
+  ],
 
   url: 'https://docs.bobby.placeholder',
   baseUrl: '/',
@@ -53,7 +82,10 @@ const config = {
       navbar: {
         logo: {
           alt: 'Bobby',
-          src: 'img/bobby-mark.png',
+          src: 'img/bobby-wordmark.png',
+          srcDark: 'img/bobby-wordmark.png',
+          width: 120,
+          height: 36,
         },
         items: [],
       },
