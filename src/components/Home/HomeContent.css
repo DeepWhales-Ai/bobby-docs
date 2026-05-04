@@ -53,6 +53,11 @@
   color: var(--text-4);
 }
 
+/* Solid black bull frame — override prototype's diagonal stripe pattern */
+.home-wrap .bull-frame {
+  background: var(--bg);
+}
+
 /* Bull mark image inside the frame */
 .home-wrap .bull-mark-img {
   width: 74%;
@@ -89,6 +94,63 @@
   flex-wrap: wrap;
 }
 
+.section-body {
+  color: var(--text-2);
+  max-width: 600px;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 14px 0;
+}
+
+.section-body-muted {
+  color: var(--text-3);
+}
+
+/* Voice section CTA row */
+.voice-cta-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Closing block */
+.home-closer .home-closer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+
+.home-closer .home-closer-copy {
+  max-width: 520px;
+}
+
+.home-closer .home-closer-copy h3 {
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.01em;
+}
+
+.home-closer .home-closer-copy p {
+  color: var(--text-3);
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* Marquee — full bleed across home-wrap padding */
+.home-wrap > .marquee {
+  margin-left: -56px;
+  margin-right: -56px;
+}
+
 /* Mobile */
 @media (max-width: 996px) {
   .home-wrap {
@@ -105,5 +167,9 @@
   }
   .home-menu-edge {
     display: none;
+  }
+  .home-wrap > .marquee {
+    margin-left: -24px;
+    margin-right: -24px;
   }
 }
