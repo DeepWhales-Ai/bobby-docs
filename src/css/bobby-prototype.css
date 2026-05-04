@@ -3191,8 +3191,8 @@ h2:hover .anchor, h3:hover .anchor { opacity: 1; }
   height: auto;
 }
 .bobby-topnav-left .navbar__logo img {
-  height: 36px;
-  width: auto;
+  height: 36px !important;
+  width: auto !important;
 }
 
 @media (max-width: 996px) {

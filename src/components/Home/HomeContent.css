@@ -53,9 +53,13 @@
   color: var(--text-4);
 }
 
-/* Solid black bull frame — override prototype's diagonal stripe pattern */
-.home-wrap .bull-frame {
-  background: var(--bg);
+/* Solid black bull frame — override prototype's diagonal stripe pattern.
+   !important + explicit background-image: none because the production bundle's
+   prototype rule sets a multi-layer `background:` shorthand and the override
+   was apparently being ignored on Vercel even at higher specificity. */
+.home-wrap .hero .bull-stage .bull-frame {
+  background: var(--bg) !important;
+  background-image: none !important;
 }
 
 /* Bull mark image inside the frame */
@@ -157,6 +161,33 @@
 .home-wrap > .marquee {
   margin-left: -56px;
   margin-right: -56px;
+}
+
+/* CountUp — animated Lobby stats counters with occasional +N pulses */
+.count-up {
+  position: relative;
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
+
+.count-up-pulse {
+  position: absolute;
+  top: -2px;
+  right: -36px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--lime);
+  text-shadow: 0 0 8px rgba(191, 255, 0, 0.4);
+  pointer-events: none;
+  animation: countPulse 1.4s ease-out forwards;
+}
+
+@keyframes countPulse {
+  0%   { opacity: 0; transform: translateY(0); }
+  18%  { opacity: 1; transform: translateY(-3px); }
+  80%  { opacity: 1; transform: translateY(-16px); }
+  100% { opacity: 0; transform: translateY(-24px); }
 }
 
 /* Mobile */

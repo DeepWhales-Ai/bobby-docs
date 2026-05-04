@@ -2,6 +2,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import ConvergenceEngine from '@site/src/components/ConvergenceEngine';
+import CountUp from './CountUp';
 import './HomeContent.css';
 
 const Pill = ({kind = 'live', children}) => (
@@ -190,9 +191,9 @@ export default function HomeContent() {
             Crypto Telegram is fragmented by design. Thousands of groups, thousands of dialects, no one in the same room. Bobby has been part of all of it since 2021. The Lobby is what happens when the network finally introduces everyone.
           </p>
           <div className="lobby-feature-stats">
-            <div><div className="num">27,000</div><div className="lbl">TG groups</div></div>
-            <div><div className="num">850,000</div><div className="lbl">audience</div></div>
-            <div><div className="num">2.5M+</div><div className="lbl">alerts / month</div></div>
+            <div><div className="num"><CountUp target={27000} format="comma" /></div><div className="lbl">TG groups</div></div>
+            <div><div className="num"><CountUp target={850000} format="comma" /></div><div className="lbl">audience</div></div>
+            <div><div className="num"><CountUp target={2500000} format="mPlus" /></div><div className="lbl">alerts / month</div></div>
           </div>
           <div className="lobby-feature-cta">
             <a className="cta-primary" href="https://t.me/BobbyLobby" target="_blank" rel="noreferrer">
