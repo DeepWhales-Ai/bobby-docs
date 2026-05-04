@@ -1,5 +1,6 @@
 import React from 'react';
 import MDXComponents from '@theme-original/MDXComponents';
+import CodeBlockWrapper from '@site/src/components/CodeBlockWrapper';
 import {
   Card,
   CardGroup,
@@ -29,6 +30,7 @@ function BobbyAdmonition({type, title, children}) {
 export default {
   ...MDXComponents,
   admonition: BobbyAdmonition,
+  pre: CodeBlockWrapper,
   Card,
   CardGroup,
   Frame,
