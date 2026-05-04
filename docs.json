@@ -1,0 +1,108 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Bobby",
+  "colors": {
+    "primary": "#BFFF00",
+    "light": "#BFFF00",
+    "dark": "#0A0A0A"
+  },
+  "favicon": "/favicon.png",
+  "navigation": {
+    "groups": [
+      {
+        "group": "Welcome",
+        "pages": [
+          "index",
+          "start"
+        ]
+      },
+      {
+        "group": "For your group",
+        "pages": [
+          "groups/what-bobby-does",
+          "groups/add",
+          "groups/configure",
+          "groups/alerts",
+          "groups/commands",
+          "groups/pro"
+        ]
+      },
+      {
+        "group": "For projects",
+        "pages": [
+          "projects/why",
+          "projects/level-1",
+          "projects/level-2",
+          "projects/founders",
+          "projects/bundles",
+          "projects/surfaces",
+          "projects/apply"
+        ]
+      },
+      {
+        "group": "Community",
+        "pages": [
+          "community/league",
+          "community/board",
+          "community/proof",
+          "community/channel"
+        ]
+      },
+      {
+        "group": "The intelligence",
+        "pages": [
+          "intelligence/what-bobby-sees",
+          "intelligence/convergence",
+          "intelligence/why-we-say-no",
+          "intelligence/bobby-sees"
+        ]
+      },
+      {
+        "group": "Surfaces",
+        "pages": [
+          "surfaces/lobby",
+          "surfaces/x",
+          "surfaces/support"
+        ]
+      },
+      {
+        "group": "Brand",
+        "pages": [
+          "brand/assets",
+          "brand/voice",
+          "brand/press"
+        ]
+      },
+      {
+        "group": "Useful",
+        "pages": [
+          "links"
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/images/bobby-wordmark.jpg",
+    "dark": "/images/bobby-wordmark.jpg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "DM @BobbyBuyBot",
+        "href": "https://t.me/BobbyBuyBot"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Add Bobby",
+      "href": "https://t.me/BobbyBuyBot"
+    }
+  },
+  "footer": {
+    "socials": {
+      "telegram": "https://t.me/BobbyBuyBot",
+      "x": "https://x.com/BobbyBuyBot"
+    }
+  }
+}

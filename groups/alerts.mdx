@@ -1,0 +1,30 @@
+---
+title: "Customize alerts"
+description: "What you can tune. What you cannot. Why the difference is the product."
+---
+
+## What you can tune
+
+- **Threshold.** How loud a convergence event has to be before Bobby pings.
+- **Quiet hours.** Bobby holds non-urgent pings for the next window.
+- **Format.** Compact, full, or with socials inline.
+- **Categories.** Mute holder behavior, sentiment shifts, listing events. Independently.
+
+```
+/alerts threshold=high quiet=22:00-08:00 format=full
+```
+
+## What you cannot tune. And why.
+
+Bobby will not let you tune the methodology. You cannot weight a single source. You cannot turn convergence into a single-ping firehose. You cannot raise the floor so the threshold passes nothing. Those are not features. They are sabotage of the room's trust.
+
+> If your members learn to ignore Bobby's pings, the product breaks.
+> So we draw the line where the line keeps the product working.
+
+## Sensible defaults
+
+If you do nothing, Bobby works. Defaults are tuned per-community based on size, chain, and engagement. You can override anything in the table above. You probably do not need to.
+
+<Warning>
+**If a setting is not here, do not ask.** Methodology is not a setting. Source weighting is not a setting. The internal joke is twelve herbs and spices.
+</Warning>
