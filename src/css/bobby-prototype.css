@@ -3191,7 +3191,7 @@ h2:hover .anchor, h3:hover .anchor { opacity: 1; }
   height: auto;
 }
 .bobby-topnav-left .navbar__logo img {
-  height: 28px;
+  height: 36px;
   width: auto;
 }
 
@@ -3303,4 +3303,33 @@ h2:hover .anchor, h3:hover .anchor { opacity: 1; }
 }
 .theme-doc-markdown a:hover {
   text-decoration-color: var(--lime);
+}
+
+/* --- BROKEN-IMAGE GRACEFUL DEGRADE on doc pages.
+       Scoped to .theme-doc-markdown so the navbar wordmark and home hero
+       bull mark are unaffected. Working images render normally on top of the
+       placeholder background; broken images keep the dashed-border slot with
+       the alt text exposed via ::after (rendered by browsers that support
+       pseudo-elements on broken <img> — Chrome / Firefox). --- */
+.theme-doc-markdown img[alt] {
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  min-height: 80px;
+  display: inline-block;
+}
+.theme-doc-markdown img[alt]::after {
+  content: attr(alt);
+  display: block;
+  padding: 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-4);
+  text-align: center;
+}
+
+/* --- CONVERGENCE ENGINE on doc pages — keep within content column,
+       allow horizontal scroll if the 3-column ce-stage cramps. --- */
+.theme-doc-markdown .conv-engine {
+  max-width: 100%;
+  overflow-x: auto;
 }

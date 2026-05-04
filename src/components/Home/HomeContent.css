@@ -66,11 +66,19 @@
   filter: drop-shadow(0 0 40px rgba(191, 255, 0, 0.25));
 }
 
-/* Home page sections (engine, doors, principle, lobby, marquee, surfaces, voice) */
+/* Home page sections (engine, doors, principle, lobby, marquee, surfaces, voice).
+   Tighter rhythm than the prototype's editorial 80px-on-section-rule cadence —
+   reads more web-product than magazine. */
 .home-section {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 56px 0;
+  padding: 28px 0;
+}
+
+/* Override prototype's `.section-rule { margin: 80px 0 32px 0 }` — the
+   .home-section padding already provides the vertical breathing room. */
+.home-section .section-rule {
+  margin: 0 0 16px 0;
 }
 
 .section-lede {
