@@ -1,0 +1,145 @@
+/* Card */
+.bobby-card {
+  display: block;
+  padding: 16px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text-2);
+  transition: border-color 120ms ease, transform 120ms ease;
+}
+
+.bobby-card--link {
+  cursor: pointer;
+}
+
+.bobby-card--link:hover {
+  border-color: var(--lime-edge);
+  text-decoration: none;
+}
+
+.bobby-card__icon {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--lime);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.bobby-card__title {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.bobby-card__body {
+  color: var(--text-3);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.bobby-card__body > :last-child {
+  margin-bottom: 0;
+}
+
+/* CardGroup */
+.bobby-card-group {
+  display: grid;
+  grid-template-columns: repeat(var(--bobby-cols, 2), minmax(0, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+@media (max-width: 720px) {
+  .bobby-card-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Frame */
+.bobby-frame {
+  margin: 20px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.bobby-frame__inner {
+  padding: 12px;
+}
+
+.bobby-frame__inner img,
+.bobby-frame__inner video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.bobby-frame__caption {
+  padding: 8px 14px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--text-3);
+  background: var(--bg-2);
+}
+
+/* Steps */
+.bobby-steps {
+  list-style: none;
+  counter-reset: bobby-step;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.bobby-step {
+  counter-increment: bobby-step;
+  position: relative;
+  padding: 4px 0 16px 38px;
+  border-left: 1px solid var(--border);
+  margin-left: 12px;
+}
+
+.bobby-step:last-child {
+  border-left-color: transparent;
+  padding-bottom: 0;
+}
+
+.bobby-step::before {
+  content: counter(bobby-step);
+  position: absolute;
+  left: -12px;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--bg-2);
+  border: 1px solid var(--lime-edge);
+  color: var(--lime);
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bobby-step__title {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.bobby-step__body {
+  color: var(--text-2);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.bobby-step__body > :last-child {
+  margin-bottom: 0;
+}

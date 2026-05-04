@@ -1,5 +1,6 @@
 /* Inter as Cera Pro fallback. Cera Pro not yet licensed. */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import './components.css';
 
 :root {
   /* Bobby brand tokens */
