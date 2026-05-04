@@ -54,12 +54,13 @@
 }
 
 /* Solid PURE BLACK bull frame.
-   Hardcoded #000000 (not var(--bg) = #0A0A0A) because at #0A0A0A the frame
-   reads as grey against the page on Vercel — the eye needs full black to
-   register the frame as a solid plate, not a slight tonal shift. */
+   Hardcoded #000000 (not var(--bg) = #0A0A0A). Three properties because the
+   prototype rule sets a multi-layer `background:` shorthand — kill the
+   stripe gradient explicitly with background-image: none. */
 .home-wrap .bull-frame {
   background: #000000 !important;
   background-image: none !important;
+  background-color: #000000 !important;
 }
 
 /* Bull mark image inside the frame */

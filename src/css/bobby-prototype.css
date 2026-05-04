@@ -3342,3 +3342,17 @@ h2:hover .anchor, h3:hover .anchor { opacity: 1; }
   max-width: 100%;
   overflow-x: auto;
 }
+
+/* ============================================================
+   NAVBAR LOGO — last-in-cascade override.
+   Multiple selectors covering every markup pattern Docusaurus
+   could emit. Last in the bundle, !important on every property.
+   ============================================================ */
+.navbar .navbar__inner img,
+.bobby-topnav img,
+nav.navbar img,
+header img.themedComponent_mlkZ {
+  height: 36px !important;
+  width: auto !important;
+  max-height: 36px !important;
+}
