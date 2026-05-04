@@ -1,1 +1,81 @@
-/* Home page styles. Phase 2 fills this in. */
+/* Home page styles. Layout chrome, page-level positioning, and overrides where the
+   hero deviates from prototype/styles.css. Component-level styles for .hero, .bull-frame,
+   etc. live in src/css/bobby-prototype.css. */
+
+.home-wrap {
+  position: relative;
+  min-height: calc(100vh - var(--ifm-navbar-height));
+  padding: 0 56px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* MENU edge label — vertical text on the left edge of the page */
+.home-menu-edge {
+  position: fixed;
+  left: 14px;
+  bottom: 64px;
+  transform: rotate(-90deg);
+  transform-origin: left bottom;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  color: var(--text-4);
+  pointer-events: none;
+  z-index: 5;
+  white-space: nowrap;
+}
+
+/* Hero — section width and rhythm.
+   .hero, .hero-grid, .hero-tag, .live-dot, .hero h1, .hero-sub, .cta-primary,
+   .cta-ghost, .bull-stage, .bull-frame, .corner are all in bobby-prototype.css. */
+
+.home-wrap .hero {
+  max-width: 1240px;
+  margin: 0 auto;
+  border-bottom: none;
+}
+
+/* Override prototype's centered placeholder-tag to corner-pin per design ref
+   (// BOBBY top-right, v.5 bottom-left, always on bottom-right). */
+.home-wrap .bull-frame .placeholder-tag {
+  top: 16px;
+  right: 18px;
+  left: auto;
+  transform: none;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--text-3);
+}
+
+.home-wrap .bull-frame .meta-tag {
+  font-size: 10px;
+  color: var(--text-4);
+}
+
+/* Bull mark image inside the frame */
+.home-wrap .bull-mark-img {
+  width: 74%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 40px rgba(191, 255, 0, 0.25));
+}
+
+/* Mobile */
+@media (max-width: 996px) {
+  .home-wrap {
+    padding: 0 24px;
+  }
+  .home-wrap .hero {
+    padding: 64px 0 56px;
+  }
+  .home-wrap .hero h1 {
+    font-size: clamp(40px, 9vw, 64px);
+  }
+  .home-wrap .hero-sub {
+    font-size: 18px;
+  }
+  .home-menu-edge {
+    display: none;
+  }
+}

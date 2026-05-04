@@ -46,6 +46,7 @@
   /* Aliases consumed by bobby-prototype.css */
   --font-sans: var(--ifm-font-family-base);
   --font-mono: var(--ifm-font-family-monospace);
+  --font-display: var(--ifm-font-family-base);
   --ifm-font-size-base: 15px;
   --ifm-line-height-base: 1.65;
 
