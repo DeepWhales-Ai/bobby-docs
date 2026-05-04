@@ -89,11 +89,6 @@ const config = {
         },
         items: [],
       },
-      footer: {
-        style: 'dark',
-        links: [],
-        copyright: "Bobby. We don't predict. We detect. · <a href=\"https://t.me/justdmbobby\">@justdmbobby</a>",
-      },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
