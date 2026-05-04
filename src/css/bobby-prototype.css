@@ -3,7 +3,7 @@
    and Docusaurus defaults. Everything below is component-level styling. */
 
 :root {
-  --nav-h: 56px;
+  --nav-h: 72px;
   --side-w: 264px;
   --toc-w: 220px;
   --content-max: 760px;
@@ -3191,7 +3191,7 @@ h2:hover .anchor, h3:hover .anchor { opacity: 1; }
   height: auto;
 }
 .bobby-topnav-left .navbar__logo img {
-  height: 36px !important;
+  height: 48px !important;
   width: auto !important;
 }
 
@@ -3352,7 +3352,7 @@ h2:hover .anchor, h3:hover .anchor { opacity: 1; }
 .bobby-topnav img,
 nav.navbar img,
 header img.themedComponent_mlkZ {
-  height: 36px !important;
+  height: 48px !important;
   width: auto !important;
-  max-height: 36px !important;
+  max-height: 48px !important;
 }
