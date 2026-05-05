@@ -16,6 +16,21 @@
 
 .bobby-card--link {
   cursor: pointer;
+  position: relative;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.bobby-card--link::after {
+  content: '→';
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  color: var(--lime);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 16px;
+  opacity: 0.45;
+  transition: opacity 200ms ease, transform 200ms ease;
+  pointer-events: none;
 }
 
 .bobby-card--link:hover {
@@ -26,6 +41,11 @@
     0 0 0 1px rgba(191, 255, 0, 0.2) inset;
   background: rgba(191, 255, 0, 0.02);
   text-decoration: none;
+}
+
+.bobby-card--link:hover::after {
+  opacity: 1;
+  transform: translateX(4px);
 }
 
 .bobby-card__icon {
