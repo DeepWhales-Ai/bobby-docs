@@ -875,6 +875,65 @@ h1.page-h1 {
 }
 .door p { color: var(--text-3); font-size: 13.5px; margin: 0; }
 
+/* Hero variant — for /start (Pick a door). Bigger, editorial. */
+.door--hero {
+  padding: 36px 28px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+  text-decoration: none;
+  color: inherit;
+}
+.door--hero::after { display: none; }
+.door--hero .door-num {
+  font-family: var(--font-mono);
+  font-size: 44px;
+  font-weight: 600;
+  color: var(--lime);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 6px;
+  text-shadow: 0 0 18px rgba(191,255,0,0.25);
+}
+.door--hero .door-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-4);
+  margin-bottom: 22px;
+}
+.door--hero .door-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.015em;
+  line-height: 1.18;
+  margin-bottom: 10px;
+}
+.door--hero .door-desc {
+  color: var(--text-3);
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0 0 24px 0;
+  flex: 1;
+}
+.door--hero .door-cta {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+  color: var(--lime);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.door--hero .door-cta .arrow {
+  transition: transform 0.2s ease;
+  font-size: 14px;
+}
+.door--hero:hover .door-cta .arrow { transform: translateX(4px); }
+
 /* HOME — sections */
 .section-rule {
   display: flex; align-items: center; gap: 16px;
