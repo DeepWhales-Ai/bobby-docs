@@ -3626,3 +3626,137 @@ header img.themedComponent_mlkZ {
   z-index: 1;
 }
 .lf-meta { color: var(--text-4); letter-spacing: 0.06em; }
+
+/* ============================================================
+   THE PROOF — rolling ticker (ported from styles-community.css).
+   ============================================================ */
+.proof {
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--bg-2);
+  margin: 20px 0 28px;
+  overflow: hidden;
+}
+.proof-head {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(0,0,0,0.4);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+.ph-left { display: inline-flex; align-items: center; gap: 8px; color: var(--text-2); }
+.ph-left .dot.lime {
+  width: 7px; height: 7px;
+  background: var(--lime);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--lime);
+  animation: leaguePulse 1.4s ease-in-out infinite;
+}
+.ph-title { letter-spacing: 0.04em; }
+.ph-meta { color: var(--text-4); letter-spacing: 0.06em; }
+
+.proof-epic {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  background:
+    linear-gradient(90deg, rgba(191,255,0,0.08), transparent 60%),
+    rgba(0,0,0,0.2);
+}
+.pe-tag {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  padding: 4px 10px;
+  background: var(--lime);
+  color: #0a0a0a;
+  border-radius: 3px;
+}
+.pe-body {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.4;
+}
+.pe-body strong { color: var(--lime); font-weight: 600; }
+
+.proof-feed { padding: 4px 0; }
+.pt-row {
+  display: grid;
+  grid-template-columns: 56px 64px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 9px 18px;
+  border-bottom: 1px dashed rgba(255,255,255,0.04);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  transition: background 0.4s;
+}
+.pt-row:last-child { border-bottom: 0; }
+.pt-row.new {
+  animation: ptFlash 1.4s ease-out;
+}
+@keyframes ptFlash {
+  0%   { background: rgba(191,255,0,0.16); transform: translateY(-3px); }
+  100% { background: transparent;          transform: translateY(0); }
+}
+.pt-tag {
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  padding: 3px 7px;
+  border-radius: 3px;
+  text-align: center;
+  font-family: var(--font-mono);
+}
+.pt-tag.rank   { background: rgba(110,193,255,0.15); color: #6ec1ff; }
+.pt-tag.boost  { background: rgba(191,255,0,0.15);   color: var(--lime); }
+.pt-tag.entry  { background: rgba(255,180,80,0.15);  color: #ffb450; }
+.pt-tag.volume { background: rgba(255,110,200,0.15); color: #ff6ec8; }
+.pt-tag.gain   { background: rgba(124,255,0,0.15);   color: #7CFF00; }
+
+.pt-tkr {
+  color: var(--text);
+  font-weight: 600;
+}
+.pt-msg { color: var(--text-2); }
+.pt-sub {
+  color: var(--text-4);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.proof-cta {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 18px;
+  border-top: 1px solid var(--border);
+  background: rgba(0,0,0,0.3);
+}
+.pc-line { display: flex; align-items: baseline; gap: 12px; font-family: var(--font-mono); }
+.pc-label {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: var(--text-4);
+  text-transform: uppercase;
+}
+.pc-val {
+  font-size: 13px;
+  color: var(--lime);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.pc-arrow a {
+  color: var(--lime);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
+.pc-arrow a:hover { text-decoration: underline; }
