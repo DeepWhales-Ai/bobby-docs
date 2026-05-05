@@ -1,0 +1,83 @@
+/* Telegram-style mock chat — ported from prototype/styles.css */
+
+.tg-mock {
+  background: #17212B;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 16px 14px;
+  margin: 22px 0;
+  font-size: 13.5px;
+  font-family: var(--font-sans);
+}
+.tg-mock-bar {
+  display: flex; align-items: center; gap: 10px;
+  border-bottom: 1px solid #243140;
+  margin: -16px -14px 12px -14px;
+  padding: 12px 14px;
+}
+.tg-mock-bar .tg-avatar {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--lime), var(--lime-2));
+  display: grid; place-items: center;
+  font-weight: 700; color: #000;
+  font-size: 13px;
+}
+.tg-mock-bar .tg-name { color: #fff; font-weight: 500; font-size: 13px; }
+.tg-mock-bar .tg-meta { color: #6b7e8e; font-size: 11px; }
+
+.tg-msg {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 10px;
+  margin: 8px 0;
+}
+.tg-msg .av {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: #2a3949;
+  display: grid; place-items: center;
+  font-size: 11px; color: #fff;
+  font-weight: 600;
+}
+.tg-msg.bot .av {
+  background: var(--lime); color: #000;
+}
+.tg-bubble {
+  background: #182533;
+  padding: 8px 12px;
+  border-radius: 10px 10px 10px 2px;
+  color: #e6e8ea;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.tg-msg.bot .tg-bubble {
+  background: #2b5278;
+  color: #fff;
+}
+.tg-bubble .tg-from { color: var(--lime); font-size: 11.5px; font-weight: 600; margin-bottom: 2px; }
+.tg-msg.bot .tg-bubble .tg-from { color: #aacef0; }
+.tg-bubble code {
+  font-family: var(--font-mono);
+  background: rgba(0,0,0,0.25);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.tg-alert {
+  background: #182533;
+  border-left: 3px solid var(--lime);
+  padding: 10px 12px;
+  margin: 6px 0;
+  border-radius: 0 6px 6px 0;
+}
+.tg-alert .tg-alert-head {
+  font-size: 11px; color: var(--lime);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 4px;
+  font-family: var(--font-mono);
+}
+.tg-alert .tg-alert-line { color: #e6e8ea; font-size: 13px; }

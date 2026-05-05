@@ -3,6 +3,7 @@ import MDXComponents from '@theme-original/MDXComponents';
 import CodeBlockWrapper from '@site/src/components/CodeBlockWrapper';
 import Pullquote from '@site/src/components/Pullquote';
 import KV from '@site/src/components/KV';
+import {TGMock, TGMsg, TGAlert} from '@site/src/components/TG';
 import {
   Card,
   CardGroup,
@@ -45,4 +46,7 @@ export default {
   Step,
   Pullquote,
   KV,
+  TGMock,
+  TGMsg,
+  TGAlert,
 };
