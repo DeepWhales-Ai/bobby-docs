@@ -3835,3 +3835,39 @@ header img.themedComponent_mlkZ {
     padding: 10px 14px;
   }
 }
+
+/* ============================================================
+   Doc-page vertical rhythm — applies only to top-level children
+   of the markdown container, leaves nested layouts untouched.
+   ============================================================ */
+.theme-doc-markdown > h2 {
+  margin-top: 56px;
+  margin-bottom: 16px;
+}
+.theme-doc-markdown > h3 {
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+.theme-doc-markdown > p {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+.theme-doc-markdown > p:first-child {
+  margin-top: 0;
+}
+.theme-doc-markdown > ul,
+.theme-doc-markdown > ol {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+.theme-doc-markdown > .bobby-card,
+.theme-doc-markdown > .bobby-pullquote,
+.theme-doc-markdown > .bobby-callout,
+.theme-doc-markdown > .conv-engine,
+.theme-doc-markdown > .tg-mock,
+.theme-doc-markdown > .league,
+.theme-doc-markdown > .proof,
+.theme-doc-markdown > .card-group {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
