@@ -1,6 +1,7 @@
 import React from 'react';
 import MDXComponents from '@theme-original/MDXComponents';
 import CodeBlockWrapper from '@site/src/components/CodeBlockWrapper';
+import Pullquote from '@site/src/components/Pullquote';
 import {
   Card,
   CardGroup,
@@ -31,6 +32,7 @@ export default {
   ...MDXComponents,
   admonition: BobbyAdmonition,
   pre: CodeBlockWrapper,
+  blockquote: ({children}) => <Pullquote>{children}</Pullquote>,
   Card,
   CardGroup,
   Frame,
@@ -40,4 +42,5 @@ export default {
   Tip,
   Steps,
   Step,
+  Pullquote,
 };
