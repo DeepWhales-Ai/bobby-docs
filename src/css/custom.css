@@ -62,3 +62,5 @@
   --ifm-background-surface-color: var(--surface);
   --docusaurus-highlighted-code-line-bg: rgba(191, 255, 0, 0.14);
 }
+
+.lime { color: var(--lime); }

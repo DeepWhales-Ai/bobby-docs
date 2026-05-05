@@ -49,6 +49,13 @@
   letter-spacing: -0.02em;
 }
 
+.bobby-pullquote--hero .bobby-pullquote__text {
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
 .bobby-pullquote__attr {
   margin-top: 12px;
   font-family: var(--font-mono);
