@@ -3356,3 +3356,44 @@ header img.themedComponent_mlkZ {
   width: auto !important;
   max-height: 48px !important;
 }
+
+/* ============================================================
+   CARD HOVER STATES — lift + lime edge glow.
+   Last-in-cascade so transform/box-shadow win over earlier
+   border-color-only hover rules from the prototype port.
+   ============================================================ */
+
+/* Three doors row on the home page. */
+.door {
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.door:hover {
+  transform: translateY(-2px);
+  border-color: rgba(191, 255, 0, 0.5);
+  background: rgba(191, 255, 0, 0.02);
+  box-shadow: 0 6px 28px rgba(191, 255, 0, 0.10);
+}
+
+/* Surfaces grid on the home page. */
+.surface-card {
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease;
+}
+.surface-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(191, 255, 0, 0.4);
+  background: rgba(191, 255, 0, 0.02);
+  box-shadow: 0 4px 18px rgba(191, 255, 0, 0.06);
+}
+.surface-card:hover .glyph {
+  color: var(--lime);
+  border-color: var(--lime-edge);
+  background: rgba(191, 255, 0, 0.08);
+}
