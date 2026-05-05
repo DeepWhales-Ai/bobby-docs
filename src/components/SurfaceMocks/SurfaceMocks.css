@@ -7,6 +7,15 @@
   overflow: hidden;
   position: relative;
   margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+}
+.sm-frame > .sm-tg-body {
+  flex: 1 1 auto;
+}
+.sm-frame > .sm-caption {
+  margin-top: auto;
+  flex-shrink: 0;
 }
 .sm-frame-tall .sm-tg-body { min-height: 280px; }
 

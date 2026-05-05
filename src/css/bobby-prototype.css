@@ -3931,20 +3931,22 @@ header img.themedComponent_mlkZ {
 /* ============================================================
    Doc-page vertical rhythm — applies only to top-level children
    of the markdown container, leaves nested layouts untouched.
+   Components own their own 20px margin; paragraphs adjacent to
+   components get one-direction margin to prevent stacking.
    ============================================================ */
 .theme-doc-markdown > * + * {
-  margin-top: 16px;
+  margin-top: 12px;
 }
 .theme-doc-markdown > h2 {
-  margin-top: 40px;
-  margin-bottom: 12px;
-}
-.theme-doc-markdown > h3 {
-  margin-top: 28px;
+  margin-top: 32px;
   margin-bottom: 8px;
 }
+.theme-doc-markdown > h3 {
+  margin-top: 24px;
+  margin-bottom: 6px;
+}
 .theme-doc-markdown > p {
-  margin-top: 12px;
+  margin-top: 8px;
   margin-bottom: 0;
 }
 .theme-doc-markdown > p:first-child {
@@ -3952,12 +3954,13 @@ header img.themedComponent_mlkZ {
 }
 .theme-doc-markdown > ul,
 .theme-doc-markdown > ol {
-  margin-top: 12px;
+  margin-top: 8px;
   margin-bottom: 0;
 }
 .theme-doc-markdown > .bobby-card,
 .theme-doc-markdown > .bobby-pullquote,
 .theme-doc-markdown > .bobby-callout,
+.theme-doc-markdown > .callout,
 .theme-doc-markdown > .conv-engine,
 .theme-doc-markdown > .tg-mock,
 .theme-doc-markdown > .league,
@@ -3965,8 +3968,54 @@ header img.themedComponent_mlkZ {
 .theme-doc-markdown > .board,
 .theme-doc-markdown > .sm-frame,
 .theme-doc-markdown > .card-group {
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Kill stacking when components sit next to text. */
+.theme-doc-markdown > .tg-mock + p,
+.theme-doc-markdown > .sm-frame + p,
+.theme-doc-markdown > .conv-engine + p,
+.theme-doc-markdown > .league + p,
+.theme-doc-markdown > .proof + p,
+.theme-doc-markdown > .board + p,
+.theme-doc-markdown > .bobby-pullquote + p,
+.theme-doc-markdown > .bobby-card + p,
+.theme-doc-markdown > .bobby-callout + p,
+.theme-doc-markdown > .callout + p,
+.theme-doc-markdown > .card-group + p {
+  margin-top: 0;
+}
+
+.theme-doc-markdown > p + .tg-mock,
+.theme-doc-markdown > p + .sm-frame,
+.theme-doc-markdown > p + .conv-engine,
+.theme-doc-markdown > p + .league,
+.theme-doc-markdown > p + .proof,
+.theme-doc-markdown > p + .board,
+.theme-doc-markdown > p + .bobby-pullquote,
+.theme-doc-markdown > p + .bobby-card,
+.theme-doc-markdown > p + .bobby-callout,
+.theme-doc-markdown > p + .callout,
+.theme-doc-markdown > p + .card-group {
+  margin-top: 12px;
+}
+
+/* Force consistent left edge across every top-level component. */
+.theme-doc-markdown > .tg-mock,
+.theme-doc-markdown > .sm-frame,
+.theme-doc-markdown > .bobby-callout,
+.theme-doc-markdown > .callout,
+.theme-doc-markdown > .bobby-pullquote,
+.theme-doc-markdown > .bobby-card,
+.theme-doc-markdown > .conv-engine,
+.theme-doc-markdown > .league,
+.theme-doc-markdown > .proof,
+.theme-doc-markdown > .board {
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* ============================================================
