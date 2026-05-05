@@ -106,58 +106,78 @@
   background: var(--bg-2);
 }
 
-/* Steps */
+/* Steps — lime numbered circles (01, 02, 03) with vertical connector line. */
 .bobby-steps {
   list-style: none;
-  counter-reset: bobby-step;
   padding: 0;
-  margin: 16px 0;
+  margin: 24px 0;
+  counter-reset: step;
 }
 
 .bobby-step {
-  counter-increment: bobby-step;
   position: relative;
-  padding: 4px 0 16px 38px;
-  border-left: 1px solid var(--border);
-  margin-left: 12px;
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 16px;
+  padding-bottom: 24px;
+  counter-increment: step;
 }
 
 .bobby-step:last-child {
-  border-left-color: transparent;
   padding-bottom: 0;
 }
 
-.bobby-step::before {
-  content: counter(bobby-step);
+.bobby-step:not(:last-child)::before {
+  content: '';
   position: absolute;
-  left: -12px;
-  top: 0;
-  width: 24px;
-  height: 24px;
+  left: 15px;
+  top: 32px;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(191, 255, 0, 0.3) 0%, var(--border) 100%);
+}
+
+.bobby-step__num {
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: var(--bg-2);
-  border: 1px solid var(--lime-edge);
-  color: var(--lime);
-  font-size: 12px;
-  font-weight: 600;
+  border: 1px solid var(--lime);
+  background: rgba(191, 255, 0, 0.04);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--lime);
+  font-weight: 600;
+  z-index: 1;
+}
+
+.bobby-step__num::before {
+  content: counter(step, decimal-leading-zero);
+}
+
+.bobby-step__body {
+  padding-top: 4px;
 }
 
 .bobby-step__title {
   color: var(--text);
   font-weight: 600;
-  font-size: 15px;
-  margin-bottom: 4px;
+  font-size: 17px;
+  margin-bottom: 6px;
 }
 
-.bobby-step__body {
+.bobby-step__content {
   color: var(--text-2);
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 14.5px;
+  line-height: 1.55;
 }
 
-.bobby-step__body > :last-child {
+.bobby-step__content > p:first-child {
+  margin-top: 0;
+}
+
+.bobby-step__content > :last-child {
   margin-bottom: 0;
 }

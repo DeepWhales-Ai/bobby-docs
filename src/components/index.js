@@ -103,8 +103,11 @@ export function Steps({children}) {
 export function Step({title, children}) {
   return (
     <li className="bobby-step">
-      {title && <div className="bobby-step__title">{title}</div>}
-      <div className="bobby-step__body">{children}</div>
+      <div className="bobby-step__num" aria-hidden="true" />
+      <div className="bobby-step__body">
+        {title && <div className="bobby-step__title">{title}</div>}
+        <div className="bobby-step__content">{children}</div>
+      </div>
     </li>
   );
 }
