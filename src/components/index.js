@@ -1,6 +1,9 @@
 import React from 'react';
 import * as LucideIcons from 'lucide-react';
 
+export {default as Pullquote} from './Pullquote';
+export {default as KV} from './KV';
+
 const ICON_ALIASES = {
   bullseye: 'Target',
   telegram: 'Send',

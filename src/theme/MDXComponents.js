@@ -2,6 +2,7 @@ import React from 'react';
 import MDXComponents from '@theme-original/MDXComponents';
 import CodeBlockWrapper from '@site/src/components/CodeBlockWrapper';
 import Pullquote from '@site/src/components/Pullquote';
+import KV from '@site/src/components/KV';
 import {
   Card,
   CardGroup,
@@ -43,4 +44,5 @@ export default {
   Steps,
   Step,
   Pullquote,
+  KV,
 };
