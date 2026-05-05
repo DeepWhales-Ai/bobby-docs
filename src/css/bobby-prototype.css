@@ -3943,3 +3943,74 @@ header img.themedComponent_mlkZ {
   margin-top: 24px;
   margin-bottom: 24px;
 }
+
+/* ============================================================
+   Brand assets — explicit download buttons, no click-to-zoom.
+   ============================================================ */
+.brand-asset-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+@media (max-width: 800px) {
+  .brand-asset-grid { grid-template-columns: 1fr; }
+}
+.brand-asset {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+.brand-asset-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  min-height: 160px;
+  background: var(--bg-2);
+  border-bottom: 1px solid var(--border);
+}
+.brand-asset-frame--light {
+  background: #ffffff;
+}
+.brand-asset-frame img {
+  max-width: 100%;
+  max-height: 96px;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+}
+.brand-asset-meta {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.brand-asset-name {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  color: var(--text-2);
+}
+.brand-download {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 6px 12px;
+  background: var(--lime);
+  color: #000;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: filter 0.15s;
+}
+.brand-download:hover {
+  filter: brightness(1.1);
+  text-decoration: none;
+  color: #000;
+}
