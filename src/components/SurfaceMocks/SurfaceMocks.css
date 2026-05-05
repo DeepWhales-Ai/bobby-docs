@@ -10,6 +10,13 @@
 }
 .sm-frame-tall .sm-tg-body { min-height: 280px; }
 
+/* Locked outer heights — content shifts inside, frame holds. */
+.sm-frame--buy-alert      { min-height: 540px; }
+.sm-frame--board          { min-height: 480px; }
+.sm-frame--mass-dm        { min-height: 460px; }
+.sm-frame--weekly-promo   { min-height: 520px; }
+.sm-frame--custom-monthly { min-height: 480px; }
+
 .sm-tg-head {
   display: flex;
   align-items: center;

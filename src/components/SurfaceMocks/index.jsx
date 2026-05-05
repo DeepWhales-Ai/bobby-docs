@@ -38,7 +38,7 @@ function MockBuyAlert() {
   const swap = alertVisible ? Math.round(swapTarget * Math.min(1, (phase - 0.15) * 4)) : 0;
 
   return (
-    <div className="sm-frame">
+    <div className="sm-frame sm-frame--buy-alert">
       <div className="sm-tg-head">
         <div className="sm-avatar" style={{background: 'linear-gradient(135deg,#4A6FA5,#2D4A7A)'}}>PX</div>
         <div className="sm-tg-meta">
@@ -135,7 +135,7 @@ function MockBoard() {
   })).sort((a, b) => a.rank - b.rank);
 
   return (
-    <div className="sm-frame">
+    <div className="sm-frame sm-frame--board">
       <div className="sm-tg-head">
         <div className="sm-avatar sm-bobby-av">B</div>
         <div className="sm-tg-meta">
@@ -193,7 +193,7 @@ function MockMassDM() {
   const ctaPulse = phase > 0.6 ? Math.sin((phase - 0.6) * Math.PI * 4) * 0.5 + 0.5 : 0;
 
   return (
-    <div className="sm-frame">
+    <div className="sm-frame sm-frame--mass-dm">
       <div className="sm-tg-head">
         <div className="sm-avatar sm-bobby-av">B</div>
         <div className="sm-tg-meta">
@@ -252,7 +252,7 @@ function MockWeeklyPromo() {
   const holders = postVisible ? Math.round(holdersEnd * Math.min(1, (phase - 0.4) * 3)) : 0;
 
   return (
-    <div className="sm-frame">
+    <div className="sm-frame sm-frame--weekly-promo">
       <div className="sm-tg-head">
         <div className="sm-avatar" style={{background: 'linear-gradient(135deg,#7B5CD6,#4A35A8)'}}>DL</div>
         <div className="sm-tg-meta">
@@ -325,7 +325,7 @@ function MockCustomMonthly() {
   const activeIdx = Math.min(3, Math.floor(phase * 4.2));
 
   return (
-    <div className="sm-frame sm-frame-tall">
+    <div className="sm-frame sm-frame-tall sm-frame--custom-monthly">
       <div className="sm-tg-head">
         <div className="sm-avatar sm-bobby-av">B</div>
         <div className="sm-tg-meta">
