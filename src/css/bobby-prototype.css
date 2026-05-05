@@ -3900,16 +3900,19 @@ header img.themedComponent_mlkZ {
    Doc-page vertical rhythm — applies only to top-level children
    of the markdown container, leaves nested layouts untouched.
    ============================================================ */
-.theme-doc-markdown > h2 {
-  margin-top: 56px;
-  margin-bottom: 16px;
+.theme-doc-markdown > * + * {
+  margin-top: 16px;
 }
-.theme-doc-markdown > h3 {
+.theme-doc-markdown > h2 {
   margin-top: 40px;
   margin-bottom: 12px;
 }
+.theme-doc-markdown > h3 {
+  margin-top: 28px;
+  margin-bottom: 8px;
+}
 .theme-doc-markdown > p {
-  margin-top: 16px;
+  margin-top: 12px;
   margin-bottom: 0;
 }
 .theme-doc-markdown > p:first-child {
@@ -3917,7 +3920,7 @@ header img.themedComponent_mlkZ {
 }
 .theme-doc-markdown > ul,
 .theme-doc-markdown > ol {
-  margin-top: 16px;
+  margin-top: 12px;
   margin-bottom: 0;
 }
 .theme-doc-markdown > .bobby-card,
@@ -3927,7 +3930,9 @@ header img.themedComponent_mlkZ {
 .theme-doc-markdown > .tg-mock,
 .theme-doc-markdown > .league,
 .theme-doc-markdown > .proof,
+.theme-doc-markdown > .board,
+.theme-doc-markdown > .sm-frame,
 .theme-doc-markdown > .card-group {
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
