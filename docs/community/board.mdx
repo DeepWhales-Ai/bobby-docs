@@ -3,20 +3,18 @@ title: "The Board"
 description: "The live trending leaderboard. Pinned in the Bobby Trending Channel. Edited in place every two minutes. Ranked by boost weight, not by paid volume."
 ---
 
+import TheBoard from '@site/src/components/TheBoard';
+
 > Boosted tokens trend first.
 > The Board is the public scoreboard for that sentence.
+
+<TheBoard />
 
 ## How it ranks
 
 Top 15 tokens by network boost activity, with positional context. The top 7 are the high pressure seats. The Podium is positions 1, 2, 3. The ones with editorial gravity. Positions 8 through 15 are standard trending. All of them earned their seat through community taps, not paid bumps.
 
 The pinned message in the channel edits in place every two minutes. Rank arrows show movement. A LIVE indicator confirms the feed is current. Every row carries boost attribution. How many taps, from how many rooms.
-
-{/* TODO: The Board screenshot. See HANDOFF.md. */}
-
-<Frame caption="The Board · live · refreshed 2m ago · pinned in @booostbobby">
-  <img src="/img/screenshots/the-board.png" alt="The Board top 7 with $WIF, $BRETT, $BONK, $PEPE, $BERA, $DEGEN, $ANDY" />
-</Frame>
 
 | Rank | Token | Boosts | Movement |
 |---:|---|---:|---|

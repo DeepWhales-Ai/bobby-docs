@@ -1,0 +1,191 @@
+/* TheBoard — live trending leaderboard. Family with .league/.proof. */
+
+.board {
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--bg-2);
+  margin: 24px 0 32px;
+  overflow: hidden;
+  position: relative;
+}
+.board::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% -10%, rgba(191,255,0,0.08), transparent 55%),
+    radial-gradient(circle at 90% 110%, rgba(191,255,0,0.04), transparent 55%);
+  pointer-events: none;
+}
+
+.board-head {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(0,0,0,0.4);
+  position: relative;
+  z-index: 1;
+}
+.bh-left { display: flex; align-items: center; gap: 18px; }
+.bh-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--text-2);
+}
+.bh-tag .dot.lime {
+  width: 7px; height: 7px;
+  background: var(--lime);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--lime);
+  animation: leaguePulse 1.4s ease-in-out infinite;
+}
+.bh-stat {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  color: var(--text-4);
+  text-transform: uppercase;
+}
+
+.board-list {
+  position: relative;
+  z-index: 1;
+  padding: 14px 0 6px;
+}
+
+.bl-header,
+.bl-row {
+  display: grid;
+  grid-template-columns: 64px 1fr 96px 140px;
+  gap: 12px;
+  align-items: center;
+  padding: 9px 20px;
+}
+.bl-header {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: var(--text-4);
+  text-transform: uppercase;
+  border-bottom: 1px dashed rgba(255,255,255,0.06);
+  padding-top: 0;
+  padding-bottom: 10px;
+}
+.bl-h-boosts { text-align: right; }
+.bl-h-mvmt { text-align: right; }
+
+.bl-row {
+  border-bottom: 1px dashed rgba(255,255,255,0.04);
+  transition: background 0.4s, transform 0.4s;
+}
+.bl-row:last-child { border-bottom: 0; }
+.bl-row.moved {
+  background: rgba(191,255,0,0.05);
+  animation: blPulse 1.6s ease-out;
+}
+@keyframes blPulse {
+  0%   { background: rgba(191,255,0,0.18); }
+  100% { background: transparent; }
+}
+.bl-row.podium {
+  background: linear-gradient(90deg, rgba(191,255,0,0.04), transparent 70%);
+}
+
+.bl-rank {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-3);
+  letter-spacing: 0.04em;
+}
+.bl-row.podium .bl-rank {
+  color: var(--lime);
+  text-shadow: 0 0 6px rgba(191,255,0,0.4);
+}
+
+.bl-token {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 14px;
+  font-family: var(--font-mono);
+}
+.bl-verify {
+  color: var(--lime);
+  font-size: 11px;
+  background: rgba(191,255,0,0.12);
+  border: 1px solid rgba(191,255,0,0.4);
+  border-radius: 50%;
+  width: 16px; height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.bl-boosts {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 500;
+  text-align: right;
+  transition: color 0.3s;
+}
+.bl-row.moved .bl-boosts { color: var(--lime); }
+
+.bl-mvmt {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--text-3);
+  letter-spacing: 0.04em;
+}
+.bl-mvmt.up   .bl-arrow { color: var(--lime); }
+.bl-mvmt.down .bl-arrow { color: #ff6e6e; }
+.bl-arrow { font-size: 10px; }
+
+.board-foot {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 20px;
+  border-top: 1px solid var(--border);
+  background: rgba(0,0,0,0.3);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-3);
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 600px) {
+  .board-head { padding: 12px 14px; }
+  .bh-left { gap: 12px; flex-wrap: wrap; }
+  .bl-header, .bl-row {
+    grid-template-columns: 44px 1fr 80px;
+    grid-template-rows: auto auto;
+    column-gap: 10px;
+    row-gap: 4px;
+    padding: 10px 14px;
+  }
+  .bl-h-mvmt, .bl-mvmt {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .bl-token { font-size: 13px; }
+  .bl-boosts { font-size: 13px; }
+  .board-foot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 10px 14px;
+  }
+}
