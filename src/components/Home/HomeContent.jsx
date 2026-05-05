@@ -2,6 +2,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import ConvergenceEngine from '@site/src/components/ConvergenceEngine';
+import Pullquote from '@site/src/components/Pullquote';
 import CountUp from './CountUp';
 import './HomeContent.css';
 
@@ -132,10 +133,10 @@ export default function HomeContent() {
           <span className="line" />
         </div>
 
-        <div className="pullquote">
-          <p>We are not a billboard.</p>
-          <p>We are intelligence.</p>
-        </div>
+        <Pullquote variant="hero">
+          We are not a billboard.<br />
+          <span className="lime">We are intelligence.</span>
+        </Pullquote>
 
         <p className="section-body">
           Most signal products fire on one ping. One trade. One mention. One wallet move. That's noise. That's manipulation bait. Bobby fires when thousands of independent sources agree. Not louder. Not faster. Truer.
