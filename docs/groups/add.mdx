@@ -4,6 +4,8 @@ sidebarTitle: "Add Bobby"
 description: "Type /add in DM. Bobby asks for your token. You paste the contract. Done. Bobby is live in your group, on duty."
 ---
 
+import {TGMock, TGMsg} from '@site/src/components/TG';
+
 <Info>
 **Before you start.** You need to be the admin of the Telegram group. You need the token contract address. That is the entire prerequisite list.
 </Info>
@@ -14,17 +16,13 @@ description: "Type /add in DM. Bobby asks for your token. You paste the contract
   <Step title="Open a DM with Bobby">
     Find `@BobbyBuyBot` on Telegram. Start a conversation.
 
-    ```
-    /add
-    ```
+    <TGMsg from="you" code="/add" />
   </Step>
   <Step title="Paste the contract address">
     Bobby auto-detects chain, ticker, and listing. No form. No upload.
 
-    ```
-    0x6982508145454ce325ddbe47a25d4ec3d2311933
-    # Bobby: Detected $PEPE on Ethereum. Mainnet. Continue?
-    ```
+    <TGMsg from="you" code="0x6982508145454ce325ddbe47a25d4ec3d2311933" />
+    <TGMsg bot text="Detected $PEPE on Ethereum. Mainnet. Continue?" />
   </Step>
   <Step title="Pick the group">
     Bobby lists the groups where you are admin and he can join. Pick one. He joins.

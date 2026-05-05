@@ -4,18 +4,20 @@ sidebarTitle: "What Bobby does"
 description: "Add Bobby once. He sits in your group. He watches what matters. He talks when there is something to say. The room runs better."
 ---
 
+import {TGMock, TGMsg, TGAlert} from '@site/src/components/TG';
+
 ## Alerts that earn the ping
 
 Bobby does not ping for everything. A ping is a promise. When Bobby fires an alert in your group, your members learn to read it. Over time the signal compounds. Other bots ping for noise. Bobby pings for convergence.
 
-{/* TODO: Telegram chat mock screenshot. See HANDOFF.md. */}
-
-<Frame caption="A Bobby convergence alert in a group">
-  <img src="/img/screenshots/group-alert.png" alt="Telegram group with Bobby firing a convergence alert on $WIF" />
-</Frame>
-
-> **Bobby · Convergence detected**
-> $WIF · 6 independent sources agree. Cross-community pattern, last 4h. Behavior change, not volume. Worth your attention.
+<TGMock groupName="PEPE Holders" members="14,328 members · live" avatar="PH">
+  <TGMsg from="lily" text="anyone seeing the chart on $WIF" />
+  <TGMsg from="ape42" text="quiet" />
+  <TGAlert head="Bobby · Convergence detected">
+    $WIF · 6 independent sources agree. Cross-community pattern, last 4h. Behavior change, not volume. Worth your attention.
+  </TGAlert>
+  <TGMsg from="lily" text="ok now i'm paying attention" />
+</TGMock>
 
 ## Intelligence on demand
 
