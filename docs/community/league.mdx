@@ -3,6 +3,8 @@ title: "The League"
 description: "An inter community boost league. Top 10 users. Top 10 groups. The audience competes, the rooms compete, and the result is the most public signal Bobby produces."
 ---
 
+import LeagueLeaderboard from '@site/src/components/LeagueLeaderboard';
+
 > The Board is the result.
 > The League is the engine.
 >
@@ -24,11 +26,7 @@ Two parallel leaderboards. One action feeds both. A user taps the BOOST button o
 
 Live snapshot. Both boards update as boosts come in. Rank arrows show movement since the last refresh.
 
-{/* TODO: League leaderboard. Both tables. See HANDOFF.md. */}
-
-<Frame>
-  <img src="/img/screenshots/league-leaderboard.png" alt="The League. Top 10 users and top 10 groups, weekly standings." />
-</Frame>
+<LeagueLeaderboard />
 
 <Info>
 **The League runs in the background of every Bobby group on the network.** Your group does not opt in. Your group is already in. Members tap BOOST. The room climbs.
