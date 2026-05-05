@@ -237,9 +237,10 @@ export default function HomeContent() {
           {SURFACES.map((s) => (
             <Link to={s.path} className="surface-card" key={s.name}>
               <span className="glyph">{s.g}</span>
-              <div>
+              <div className="surface-card-body">
                 <h4>{s.name}</h4>
                 <p>{s.desc}</p>
+                <span className="surface-card-cta">Learn more <span className="arrow">→</span></span>
               </div>
               {s.pill}
             </Link>
