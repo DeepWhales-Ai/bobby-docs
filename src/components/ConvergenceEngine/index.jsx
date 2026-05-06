@@ -345,7 +345,7 @@ export default function ConvergenceEngine() {
 
         <div className="ce-foot">
           <div><span className="ce-key">[i]</span> Five input streams. One convergence model. Behavior, never volume.</div>
-          <div className="ce-foot-right">methodology · twelve herbs and spices</div>
+          <div className="ce-foot-right">methodology</div>
         </div>
       </div>
     </div>

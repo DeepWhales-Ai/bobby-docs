@@ -20,14 +20,10 @@ const SURFACES = [
 ];
 
 const MARQUEE_ITEMS = [
-  'Convergence over noise',
-  'Behavior over volume',
-  'Trust over reach',
-  'Signal over theatre',
-  'Five surfaces, no more',
-  'The room is one',
-  'Part of it since 2021',
   'Detection, not prediction',
+  'Behavior, not volume',
+  'Part of it since 2021',
+  'Real signal, not noise',
 ];
 
 export default function HomeContent() {
@@ -49,7 +45,7 @@ export default function HomeContent() {
               <span className="lime">We detect.</span>
             </h1>
             <p className="hero-sub">
-              Crypto Telegram is the loudest room on the internet. Bobby is the one reading the room, and the one bringing everyone into the same room.
+              The bot crypto Telegram already trusts. He catches what's moving before everyone else sees it.
             </p>
             <div className="hero-cta-row">
               <Link to="/welcome" className="cta-primary">
@@ -80,7 +76,7 @@ export default function HomeContent() {
 
       <section className="home-section engine-section">
         <div className="section-rule" id="the-engine">
-          <span className="label"><span className="lime">01</span> · The engine, live</span>
+          <span className="label"><span className="lime">01</span> · What Bobby does</span>
           <span className="line" />
         </div>
         <p className="section-lede">
@@ -98,14 +94,14 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* 02 — Three doors */}
+      {/* 02 — Get started */}
       <section className="home-section">
         <div className="section-rule">
-          <span className="label"><span className="lime">02</span> · Three doors</span>
+          <span className="label"><span className="lime">02</span> · Get started</span>
           <span className="line" />
         </div>
         <p className="section-sub" style={{maxWidth: 560}}>
-          The site does not pretend Bobby is one product. Pick your door.
+          Pick one.
         </p>
         <div className="three-doors">
           <Link to="/groups/what-bobby-does" className="door">
@@ -126,10 +122,10 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* 03 — The principle */}
+      {/* 03 — Why it works */}
       <section className="home-section">
         <div className="section-rule">
-          <span className="label"><span className="lime">03</span> · The principle</span>
+          <span className="label"><span className="lime">03</span> · Why it works</span>
           <span className="line" />
         </div>
 
@@ -172,7 +168,7 @@ export default function HomeContent() {
             </div>
           </div>
           <div className="flywheel-loop">
-            And the loop closes back on <strong>01</strong>. Years deep, and tightening.
+            Back to <strong>01</strong>. Five years in. Still growing.
           </div>
         </div>
       </section>
@@ -224,19 +220,18 @@ export default function HomeContent() {
         </div>
       </div>
 
-      {/* 04 — The surfaces */}
+      {/* 04 — Where Bobby is */}
       <section className="home-section">
         <div className="section-rule">
-          <span className="label"><span className="lime">04</span> · The surfaces</span>
+          <span className="label"><span className="lime">04</span> · Where Bobby is</span>
           <span className="line" />
         </div>
         <p className="section-sub" style={{maxWidth: 560}}>
-          Bobby is not one product. Bobby is a network of surfaces. Each one earns its place.
+          Bobby shows up in different places. Each does a different job.
         </p>
         <div className="surface-grid">
           {SURFACES.map((s) => (
             <Link to={s.path} className="surface-card" key={s.name}>
-              <span className="glyph">{s.g}</span>
               <div className="surface-card-body">
                 <h4>{s.name}</h4>
                 <p>{s.desc}</p>
@@ -248,10 +243,10 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* 05 — A sample of the voice */}
+      {/* 05 — How Bobby talks */}
       <section className="home-section">
         <div className="section-rule">
-          <span className="label"><span className="lime">05</span> · A sample of the voice</span>
+          <span className="label"><span className="lime">05</span> · How Bobby talks</span>
           <span className="line" />
         </div>
 
