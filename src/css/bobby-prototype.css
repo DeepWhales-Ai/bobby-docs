@@ -3928,6 +3928,25 @@ header img.themedComponent_mlkZ {
   }
 }
 
+@media (max-width: 400px) {
+  /* League — drop sub line, prioritize handle + score */
+  .ll-handle { font-size: 12.5px; }
+  .ll-sub { font-size: 10px; }
+  .ll-score-num { font-size: 12.5px; }
+  .ll-num { font-size: 12px; width: 22px; }
+
+  /* Proof — let msg wrap rather than ellipsize at ultra-narrow */
+  .pt-row {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto;
+    row-gap: 3px;
+  }
+  .pt-tag  { grid-column: 1; grid-row: 1; }
+  .pt-tkr  { grid-column: 2; grid-row: 1; }
+  .pt-msg  { grid-column: 1 / -1; grid-row: 2; white-space: normal; overflow: visible; }
+  .pt-sub  { grid-column: 1 / -1; grid-row: 3; }
+}
+
 /* ============================================================
    Doc-page vertical rhythm — applies only to top-level children
    of the markdown container, leaves nested layouts untouched.
