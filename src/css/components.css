@@ -201,3 +201,26 @@
 .bobby-step__content > :last-child {
   margin-bottom: 0;
 }
+
+@media (max-width: 600px) {
+  .bobby-step {
+    grid-template-columns: 28px 1fr;
+    gap: 12px;
+    padding-bottom: 18px;
+  }
+  .bobby-step:not(:last-child)::before {
+    left: 13px;
+    top: 28px;
+  }
+  .bobby-step__num {
+    width: 28px;
+    height: 28px;
+    font-size: 11.5px;
+  }
+  .bobby-step__title {
+    font-size: 15px;
+  }
+  .bobby-step__content {
+    font-size: 13.5px;
+  }
+}

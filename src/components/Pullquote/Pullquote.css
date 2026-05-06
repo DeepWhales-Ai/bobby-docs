@@ -75,4 +75,8 @@
   .bobby-pullquote--large .bobby-pullquote__text {
     font-size: 24px;
   }
+  .bobby-pullquote--hero .bobby-pullquote__text {
+    font-size: clamp(28px, 7vw, 40px);
+    line-height: 1.1;
+  }
 }

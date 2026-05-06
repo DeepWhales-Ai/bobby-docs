@@ -4138,3 +4138,30 @@ header img.themedComponent_mlkZ {
   text-decoration: none;
   color: #000;
 }
+
+/* ============================================================
+   Mobile docs polish — table overflow, door--hero scaling.
+   ============================================================ */
+@media (max-width: 600px) {
+  /* Tables — wrap to scroll horizontally if too wide for viewport */
+  .theme-doc-markdown table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+  }
+
+  /* Pick a door hero — tighten panel spacing */
+  .door--hero {
+    padding: 28px 22px 22px 22px;
+    min-height: 220px;
+  }
+  .door--hero .door-num    { font-size: 36px; margin-bottom: 4px; }
+  .door--hero .door-eyebrow { margin-bottom: 16px; }
+  .door--hero .door-title  { font-size: 19px; }
+  .door--hero .door-desc   { font-size: 13.5px; margin: 0 0 18px 0; }
+
+  /* Brand asset frame — smaller padding on phones */
+  .brand-asset-frame { padding: 24px; min-height: 140px; }
+  .brand-asset-frame img { max-height: 80px; }
+}
