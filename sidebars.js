@@ -51,7 +51,6 @@ const sidebars = {
         'community/league',
         'community/board',
         'community/proof',
-        'community/channel',
       ],
     },
     {
