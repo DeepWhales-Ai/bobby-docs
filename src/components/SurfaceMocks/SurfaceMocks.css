@@ -546,3 +546,94 @@
   flex-shrink: 0;
 }
 .sm-caption-text { color: rgba(255,255,255,0.65); line-height: 1.4; }
+
+/* ============================================================
+   Mobile (≤600px) — loosen locked heights, reflow inner grids.
+   ============================================================ */
+@media (max-width: 600px) {
+  .sm-frame--buy-alert      { min-height: 480px; }
+  .sm-frame--board          { min-height: 420px; }
+  .sm-frame--mass-dm        { min-height: 400px; }
+  .sm-frame--weekly-promo   { min-height: 460px; }
+  .sm-frame--custom-monthly { min-height: 440px; }
+
+  .sm-tg-head {
+    padding: 8px 10px;
+    gap: 8px;
+  }
+  .sm-tg-name { font-size: 12px; }
+  .sm-tg-sub  { font-size: 10px; }
+  .sm-tg-tag  { font-size: 8.5px; padding: 2px 5px; }
+
+  .sm-tg-body {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .sm-msg-text { font-size: 11.5px; }
+  .sm-bubble   { font-size: 12px; }
+
+  /* MockBuyAlert */
+  .sm-buy-alert { padding: 10px 12px; }
+  .sm-ba-stats { gap: 8px; font-size: 10px; flex-wrap: wrap; }
+  .sm-ba-btns  { gap: 4px; }
+  .sm-tgbtn    { font-size: 9.5px; padding: 4px 6px; }
+  .sm-sponsor-cta { font-size: 11px; padding: 7px 10px; }
+
+  /* MockBoard */
+  .sm-board { padding: 10px; }
+  .sm-board-row {
+    grid-template-columns: 22px 1fr 36px 44px 12px;
+    gap: 6px;
+    padding: 6px;
+    font-size: 11px;
+  }
+  .sm-board-tok    { font-size: 11px; }
+  .sm-board-chain  { font-size: 8px; padding: 1px 4px; }
+  .sm-board-change { font-size: 10px; }
+
+  /* MockMassDM */
+  .sm-dm-bubble   { padding: 12px; }
+  .sm-dm-headline { font-size: 13px; }
+  .sm-dm-body     { font-size: 11.5px; }
+  .sm-dm-cta      { font-size: 11px; padding: 8px 12px; }
+
+  /* MockWeeklyPromo */
+  .sm-promo-bubble { padding: 12px; }
+  .sm-promo-headline { font-size: 12.5px; }
+  .sm-promo-body     { font-size: 11px; }
+  .sm-promo-stats    { gap: 4px; }
+  .sm-promo-stat     { padding: 5px; }
+  .sm-promo-stat-v   { font-size: 11px; }
+  .sm-promo-cta      { font-size: 11px; padding: 7px 10px; }
+
+  /* MockCustomMonthly — week label + track grid */
+  .sm-cm-body { padding: 12px; gap: 8px; }
+  .sm-cm-row {
+    grid-template-columns: 56px 1fr;
+    gap: 8px;
+  }
+  .sm-cm-week  { font-size: 9px; }
+  .sm-cm-track { height: 32px; padding: 0 8px; }
+  .sm-cm-tags  { gap: 4px; }
+  .sm-cm-tag   { font-size: 8.5px; padding: 2px 5px; }
+  .sm-cm-axis  { margin-left: 64px; font-size: 8px; }
+
+  /* Caption strip */
+  .sm-caption {
+    padding: 8px 10px;
+    gap: 8px;
+  }
+  .sm-caption-tag  { font-size: 8px; }
+  .sm-caption-text { font-size: 11px; }
+}
+
+@media (max-width: 400px) {
+  .sm-cm-row  { grid-template-columns: 48px 1fr; }
+  .sm-cm-axis { margin-left: 56px; }
+  .sm-board-row {
+    grid-template-columns: 20px 1fr auto auto;
+    gap: 4px;
+  }
+  .sm-board-row .sm-climb-arrow { display: none; }
+}
