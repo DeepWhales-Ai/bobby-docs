@@ -221,3 +221,66 @@
     margin-right: -24px;
   }
 }
+
+/* Phone */
+@media (max-width: 600px) {
+  .home-wrap {
+    padding: 0 16px;
+  }
+  .home-wrap .hero {
+    padding: 32px 0 24px;
+  }
+  .home-wrap .hero-grid {
+    padding: 0;
+    gap: 24px;
+  }
+  .home-wrap .hero h1 {
+    font-size: clamp(32px, 8vw, 48px);
+    line-height: 1.05;
+  }
+  .home-wrap .hero-sub {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .home-wrap .hero-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .home-wrap .hero-cta-row .cta-primary,
+  .home-wrap .hero-cta-row .cta-ghost {
+    text-align: center;
+    justify-content: center;
+  }
+  .home-wrap > .marquee {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 14px 0;
+  }
+  .home-section { padding: 16px 0; }
+  .section-lede { font-size: 15px; }
+  .section-sub  { font-size: 14px; }
+  .section-body { font-size: 14.5px; }
+
+  .lobby-feature { padding: 24px 18px; margin: 32px 0; }
+  .lobby-feature-stats {
+    gap: 18px;
+    padding: 16px 0;
+  }
+  .lobby-feature-stats .num { font-size: 26px; }
+  .lobby-feature-stats > div { min-width: 80px; }
+  .lobby-feature-cta { gap: 8px; }
+  .lobby-feature-cta .cta-primary,
+  .lobby-feature-cta .cta-ghost {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .surface-card { padding: 16px; }
+  .home-closer .home-closer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
