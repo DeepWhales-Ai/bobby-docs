@@ -338,6 +338,11 @@ export default function ConvergenceEngine() {
           </div>
         </div>
 
+        <div className="ce-mobile-caption">
+          <strong>Inputs:</strong> group conversations · holder behavior · cross-community echo · listing footprint · historical context.<br />
+          <strong>Outputs:</strong> alerts that earn the ping.
+        </div>
+
         <div className="ce-foot">
           <div><span className="ce-key">[i]</span> Five input streams. One convergence model. Behavior, never volume.</div>
           <div className="ce-foot-right">methodology · twelve herbs and spices</div>
