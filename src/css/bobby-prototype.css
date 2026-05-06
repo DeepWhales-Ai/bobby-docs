@@ -3333,6 +3333,21 @@ h2:hover .anchor, h3:hover .anchor { opacity: 1; }
   .bobby-topnav .icon-btn {
     display: none;
   }
+  .navbar__inner.bobby-topnav { gap: 12px; }
+}
+
+@media (max-width: 600px) {
+  /* Shrink the 48px wordmark on phones */
+  .navbar .navbar__inner img,
+  .bobby-topnav img,
+  .bobby-topnav-left .navbar__logo img {
+    height: 32px !important;
+  }
+  .bobby-topnav-right { gap: 6px; }
+  .bobby-topnav .dm-cta {
+    font-size: 11.5px;
+    padding: 6px 10px;
+  }
 }
 
 /* --- TOC (right rail on doc pages) --- */
