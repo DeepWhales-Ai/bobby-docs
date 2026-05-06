@@ -46,7 +46,7 @@ export default function HomeContent() {
               <span className="lime">We detect.</span>
             </h1>
             <p className="hero-sub">
-              Bobby is a buy bot. He's also the intelligence network crypto Telegram runs on.
+              Now, he is the intelligence network crypto Telegram runs on.
             </p>
             <div className="hero-cta-row">
               <Link to="/welcome" className="cta-primary">
@@ -77,8 +77,7 @@ export default function HomeContent() {
 
       <section className="home-section home-thesis">
         <Pullquote variant="hero">
-          Bobby was the first trusted buy bot in crypto Telegram.<br />
-          <span className="lime">It only makes sense he's the first to change it again.</span>
+          Bobby started as a buy bot. <span className="lime">Things changed.</span>
         </Pullquote>
       </section>
 
@@ -94,19 +93,19 @@ export default function HomeContent() {
 
         <BuyBotAnimation />
 
-        <p className="section-sub">
-          Same Bobby. Just smarter now.
-        </p>
+        <Pullquote variant="hero">
+          You know Bobby. <span className="lime">Now look.</span>
+        </Pullquote>
       </section>
 
-      {/* 02 — What he became */}
+      {/* 02 — What he is now */}
       <section className="home-section engine-section">
         <div className="section-rule" id="the-engine">
-          <span className="label"><span className="lime">02</span> · What he became</span>
+          <span className="label"><span className="lime">02</span> · What he is now</span>
           <span className="line" />
         </div>
         <p className="section-lede">
-          Then he became more. Five input streams. One convergence model. Behavior, never volume.
+          Most buy bots count trades. Bobby reads behavior. Which wallets are loading. Which rooms are talking. Which patterns are forming. The chart shows what already happened. Bobby shows what's about to.
         </p>
 
         <ConvergenceEngine />
@@ -207,10 +206,9 @@ export default function HomeContent() {
           <div className="lobby-feature-eyebrow">
             <span className="dot live" /> Bobby Lobby · the room
           </div>
-          <h2 className="lobby-feature-title">
-            We read all the data.<br />
-            <span className="lime">We bring the people together.</span>
-          </h2>
+          <Pullquote variant="large">
+            The network has a room. <span className="lime">Bobby Lobby is the room.</span>
+          </Pullquote>
           <p className="lobby-feature-lede">
             Crypto Telegram is fragmented by design. Thousands of groups, thousands of dialects, no one in the same room. Bobby has been part of all of it since 2021. The Lobby is what happens when the network finally introduces everyone.
           </p>

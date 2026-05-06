@@ -23,6 +23,7 @@
   font-style: normal;
   border-left: none;
   padding-left: 0;
+  text-wrap: balance;
 }
 
 /* Tighten margins on paragraph children so multi-line quotes flow as

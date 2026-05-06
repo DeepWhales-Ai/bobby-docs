@@ -1,11 +1,18 @@
 import React, {useEffect, useRef, useState} from 'react';
-import {MockBuyAlert} from '@site/src/components/SurfaceMocks';
+import TGBuyAlert from '@site/src/components/TG/TGBuyAlert';
 import './BuyBotAnimation.css';
 
 // Demonstrates Bobby calling a buy in a Telegram group.
 // IntersectionObserver triggers the animation once on first viewport entry,
 // then holds the final state. prefers-reduced-motion users see the final
 // state immediately with no animation.
+//
+// Sequence (resolves at ~2700ms then holds):
+//   0–1000ms   three chat messages fade in sequentially
+//   1000–1300  silent beat
+//   1300–2000  alert BOOMs in (bounce + glow halo)
+//   2000–2630  egg row fills L-to-R inside the alert
+//   2700+      hold
 export default function BuyBotAnimation() {
   const [played, setPlayed] = useState(false);
   const ref = useRef(null);
@@ -57,7 +64,7 @@ export default function BuyBotAnimation() {
       <div className="bba-body">
         <div className="bba-msg bba-msg--1">
           <span className="bba-msg-name">midcaplab</span>
-          <span className="bba-msg-text">anyone watching $BRETT?</span>
+          <span className="bba-msg-text">anyone watching $DEEPAI?</span>
         </div>
         <div className="bba-msg bba-msg--2">
           <span className="bba-msg-name">echo.echo</span>
@@ -69,7 +76,7 @@ export default function BuyBotAnimation() {
         </div>
 
         <div className="bba-alert">
-          <MockBuyAlert />
+          <TGBuyAlert />
         </div>
       </div>
     </div>
