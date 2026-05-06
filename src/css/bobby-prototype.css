@@ -2464,6 +2464,37 @@ h2:hover .anchor, h3:hover .anchor { opacity: 1; }
 @media (max-width: 760px) {
   .ce-bigger { width: 100%; }
   .ce-bigger .ce-stage { grid-template-columns: 1fr; }
+
+  /* Base engine — stack columns: feed → svg → alerts */
+  .conv-engine .ce-stage {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .conv-engine .ce-feed,
+  .conv-engine .ce-out {
+    border-left: 0;
+    border-right: 0;
+    padding: 14px 12px;
+  }
+  .conv-engine .ce-feed { border-bottom: 1px solid var(--border); }
+  .conv-engine .ce-out  { border-top:    1px solid var(--border); }
+  .conv-engine .ce-svg {
+    height: 240px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .conv-engine { margin: 20px 0 24px; }
+  .ce-bar { padding: 8px 12px; font-size: 10px; }
+  .ce-bar-meta { display: none; }
+  .ce-feed, .ce-out { padding: 12px 10px; }
+  .ce-feed-head { font-size: 9px; }
+  .ce-msg-text  { font-size: 11px; }
+  .ce-alert     { padding: 8px 10px; }
+  .ce-alert-tkr { font-size: 11.5px; }
+  .ce-alert-msg { font-size: 11px; }
+  .conv-engine .ce-svg { height: 200px; }
 }
 
 /* LEFT FEED — chatter */
