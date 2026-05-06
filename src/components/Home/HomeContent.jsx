@@ -161,7 +161,7 @@ export default function HomeContent() {
             <div className="fw-arrow">→</div>
             <div className="fw-node">
               <div className="num">03</div>
-              <div className="name">Projects need on.</div>
+              <div className="name">Projects need in.</div>
               <div className="desc">There is no other way to reach them.</div>
             </div>
             <div className="fw-arrow">→</div>
