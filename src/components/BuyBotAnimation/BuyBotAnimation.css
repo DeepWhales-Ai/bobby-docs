@@ -1,0 +1,143 @@
+/* BuyBotAnimation: chat panel that fades in three messages, then the
+   MockBuyAlert slides up from the bottom. Plays once on first viewport entry. */
+
+.bba {
+  background: #0d0d0d;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  margin: 24px 0;
+  max-width: 100%;
+}
+
+/* ---------- chat header ---------- */
+.bba-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #1a1a1a;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.bba-avatar {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 12px;
+  color: #fff;
+  background: linear-gradient(135deg, #4A6FA5, #2D4A7A);
+  flex-shrink: 0;
+}
+.bba-meta { flex: 1; min-width: 0; }
+.bba-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1px;
+}
+.bba-sub {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  font-family: var(--font-mono);
+}
+.bba-live-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 6px var(--lime);
+  animation: bbaPulse 2s ease-in-out infinite;
+}
+@keyframes bbaPulse {
+  0%, 100% { opacity: 1;   transform: scale(1); }
+  50%      { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* ---------- body ---------- */
+.bba-body {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #0d0d0d;
+}
+
+/* ---------- chat messages ---------- */
+.bba-msg {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 92%;
+  align-self: flex-start;
+  opacity: 0;
+  transform: translateY(6px);
+}
+.bba-msg-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: #6BB4F5;
+}
+.bba-msg-text {
+  background: #1f1f1f;
+  border-radius: 10px;
+  border-top-left-radius: 4px;
+  padding: 6px 10px;
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.75);
+  align-self: flex-start;
+}
+
+/* ---------- alert wrap ---------- */
+.bba-alert {
+  margin-top: 4px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+/* Reset margins on the embedded MockBuyAlert frame so it sits flush. */
+.bba-alert .sm-frame {
+  margin: 0;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ============================================================
+   Played state: fade in messages then slide up the alert.
+   ============================================================ */
+.bba--played .bba-msg {
+  animation: bbaMsgIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.bba--played .bba-msg--1 { animation-delay: 0ms; }
+.bba--played .bba-msg--2 { animation-delay: 250ms; }
+.bba--played .bba-msg--3 { animation-delay: 500ms; }
+
+.bba--played .bba-alert {
+  animation: bbaAlertIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 1000ms;
+}
+
+@keyframes bbaMsgIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes bbaAlertIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Reduced motion fallback: the .bba--played modifier is set immediately
+   on mount, and the keyframes resolve to the final state. */
+
+/* ============================================================
+   Mobile.
+   ============================================================ */
+@media (max-width: 600px) {
+  .bba-head { padding: 8px 10px; gap: 8px; }
+  .bba-avatar { width: 28px; height: 28px; font-size: 11px; }
+  .bba-name { font-size: 12px; }
+  .bba-sub  { font-size: 10px; }
+  .bba-body { padding: 10px; gap: 6px; }
+  .bba-msg-text { font-size: 11.5px; padding: 5px 9px; }
+}

@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import BuyBotAnimation from '@site/src/components/BuyBotAnimation';
 import ConvergenceEngine from '@site/src/components/ConvergenceEngine';
-import {MockBuyAlert} from '@site/src/components/SurfaceMocks';
 import Pullquote from '@site/src/components/Pullquote';
 import CountUp from './CountUp';
 import './HomeContent.css';
@@ -82,18 +82,30 @@ export default function HomeContent() {
         </Pullquote>
       </section>
 
-      <section className="home-section engine-section">
-        <div className="section-rule" id="the-engine">
-          <span className="label"><span className="lime">01</span> · What Bobby does</span>
+      {/* 01 — The buy bot you already know */}
+      <section className="home-section">
+        <div className="section-rule">
+          <span className="label"><span className="lime">01</span> · The buy bot you already know</span>
           <span className="line" />
         </div>
         <p className="section-lede">
-          Bobby started as a buy bot. Every time someone buys in your group, he calls it. Like this.
+          You've known him since 2021. Through every cycle, every season, every chart. The buy bot crypto Telegram has trusted from the start.
         </p>
 
-        <MockBuyAlert />
+        <BuyBotAnimation />
 
         <p className="section-sub">
+          Same Bobby. Just smarter now.
+        </p>
+      </section>
+
+      {/* 02 — What he became */}
+      <section className="home-section engine-section">
+        <div className="section-rule" id="the-engine">
+          <span className="label"><span className="lime">02</span> · What he became</span>
+          <span className="line" />
+        </div>
+        <p className="section-lede">
           Then he became more. Five input streams. One convergence model. Behavior, never volume.
         </p>
 
@@ -109,10 +121,10 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* 02 — Get started */}
+      {/* 03 — Get started */}
       <section className="home-section">
         <div className="section-rule">
-          <span className="label"><span className="lime">02</span> · Get started</span>
+          <span className="label"><span className="lime">03</span> · Get started</span>
           <span className="line" />
         </div>
         <p className="section-sub" style={{maxWidth: 560}}>
@@ -137,10 +149,10 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* 03 — Why it works */}
+      {/* 04 — Why it works */}
       <section className="home-section">
         <div className="section-rule">
-          <span className="label"><span className="lime">03</span> · Why it works</span>
+          <span className="label"><span className="lime">04</span> · Why it works</span>
           <span className="line" />
         </div>
 
@@ -235,10 +247,10 @@ export default function HomeContent() {
         </div>
       </div>
 
-      {/* 04 — Where Bobby is */}
+      {/* 05 — Where Bobby is */}
       <section className="home-section">
         <div className="section-rule">
-          <span className="label"><span className="lime">04</span> · Where Bobby is</span>
+          <span className="label"><span className="lime">05</span> · Where Bobby is</span>
           <span className="line" />
         </div>
         <p className="section-sub" style={{maxWidth: 560}}>
@@ -258,10 +270,10 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* 05 — How Bobby talks */}
+      {/* 06 — How Bobby talks */}
       <section className="home-section">
         <div className="section-rule">
-          <span className="label"><span className="lime">05</span> · How Bobby talks</span>
+          <span className="label"><span className="lime">06</span> · How Bobby talks</span>
           <span className="line" />
         </div>
 
