@@ -2,6 +2,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import ConvergenceEngine from '@site/src/components/ConvergenceEngine';
+import {MockBuyAlert} from '@site/src/components/SurfaceMocks';
 import Pullquote from '@site/src/components/Pullquote';
 import CountUp from './CountUp';
 import './HomeContent.css';
@@ -11,7 +12,7 @@ const Pill = ({kind = 'live', children}) => (
 );
 
 const SURFACES = [
-  {g: 'BG', name: 'Bobby in your group', desc: 'The flagship. Add Bobby to a Telegram group. He detects, alerts, customizes.', path: '/groups/what-bobby-does', pill: <Pill kind="live">Live</Pill>},
+  {g: 'BG', name: 'Bobby in your group', desc: 'The buy bot. Add Bobby to a Telegram group. He calls every buy and detects what\'s moving next.', path: '/groups/what-bobby-does', pill: <Pill kind="live">Live</Pill>},
   {g: 'BL', name: 'Bobby Lobby',         desc: 'The community itself. The room where the audience finally meets the audience. Trusted since 2021.', path: '/surfaces/lobby', pill: <Pill kind="live">Live</Pill>},
   {g: 'BS', name: 'Bobby Sees',          desc: 'Discovery surface for trending and intelligence. Formerly Bobby Browser.', path: '/intelligence/bobby-sees', pill: <Pill kind="live">Live</Pill>},
   {g: 'BX', name: 'Bobby X',             desc: 'Proof-of-network on X. The public credibility layer.', path: '/surfaces/x', pill: <Pill kind="phase">Phase 1</Pill>},
@@ -45,7 +46,7 @@ export default function HomeContent() {
               <span className="lime">We detect.</span>
             </h1>
             <p className="hero-sub">
-              The bot crypto Telegram already trusts. He catches what's moving before everyone else sees it.
+              Bobby is a buy bot. He's also the intelligence network crypto Telegram runs on.
             </p>
             <div className="hero-cta-row">
               <Link to="/welcome" className="cta-primary">
@@ -74,19 +75,33 @@ export default function HomeContent() {
         </div>
       </section>
 
+      <section className="home-section home-thesis">
+        <Pullquote variant="hero">
+          Bobby was the first trusted buy bot in crypto Telegram.<br />
+          <span className="lime">It only makes sense he's the first to change it again.</span>
+        </Pullquote>
+      </section>
+
       <section className="home-section engine-section">
         <div className="section-rule" id="the-engine">
           <span className="label"><span className="lime">01</span> · What Bobby does</span>
           <span className="line" />
         </div>
         <p className="section-lede">
-          This is what Bobby does, all day, every day. Five input streams on the left. One convergence model in the middle. The alerts that earn the ping on the right.
+          Bobby started as a buy bot. Every time someone buys in your group, he calls it. Like this.
         </p>
+
+        <MockBuyAlert />
+
         <p className="section-sub">
-          Not a metaphor. The same logic the production network runs on, slowed down so you can see it.
+          Then he became more. Five input streams. One convergence model. Behavior, never volume.
         </p>
 
         <ConvergenceEngine />
+
+        <p className="section-sub">
+          Not a metaphor. The same logic the production network runs on, slowed down so you can see it.
+        </p>
 
         <div className="section-cta-row">
           <Link to="/intelligence/what-bobby-sees" className="cta-ghost">How the model works →</Link>
