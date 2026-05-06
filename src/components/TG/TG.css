@@ -81,3 +81,49 @@
   font-family: var(--font-mono);
 }
 .tg-alert .tg-alert-line { color: #e6e8ea; font-size: 13px; }
+
+/* ============================================================
+   Mobile (≤600px) — tighten bubble grid, wrap long code strings.
+   ============================================================ */
+@media (max-width: 600px) {
+  .tg-mock {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+  .tg-mock-bar {
+    margin: -12px -10px 10px -10px;
+    padding: 10px;
+    gap: 8px;
+  }
+  .tg-mock-bar .tg-avatar {
+    width: 26px; height: 26px;
+    font-size: 11px;
+  }
+  .tg-mock-bar .tg-name { font-size: 12px; }
+  .tg-mock-bar .tg-meta { font-size: 10px; }
+
+  .tg-msg {
+    grid-template-columns: 24px 1fr;
+    gap: 8px;
+  }
+  .tg-msg .av {
+    width: 24px; height: 24px;
+    font-size: 10px;
+  }
+  .tg-bubble {
+    padding: 7px 10px;
+    font-size: 12.5px;
+    line-height: 1.45;
+  }
+  .tg-bubble .tg-from { font-size: 10.5px; }
+  .tg-bubble code {
+    font-size: 11px;
+    word-break: break-all; /* contract addresses wrap rather than overflow */
+  }
+
+  .tg-alert {
+    padding: 9px 11px;
+  }
+  .tg-alert .tg-alert-head { font-size: 10px; }
+  .tg-alert .tg-alert-line { font-size: 12.5px; }
+}
