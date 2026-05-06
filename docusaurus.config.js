@@ -76,7 +76,7 @@ const config = {
     ({
       colorMode: {
         defaultMode: 'dark',
-        disableSwitch: false,
+        disableSwitch: true,
         respectPrefersColorScheme: false,
       },
       navbar: {
@@ -87,7 +87,23 @@ const config = {
           width: 120,
           height: 36,
         },
-        items: [],
+        // Items render only in the mobile drawer. Desktop navbar is fully
+        // custom (see src/theme/Navbar/Content). Order matches SECTIONS there.
+        items: [
+          {to: '/groups/what-bobby-does', label: 'For your group', position: 'left'},
+          {to: '/projects/why',           label: 'For projects',   position: 'left'},
+          {to: '/community/league',       label: 'Community',      position: 'left'},
+          {to: '/intelligence/what-bobby-sees', label: 'The intelligence', position: 'left'},
+          {to: '/surfaces/lobby',         label: 'Surfaces',       position: 'left'},
+          {to: '/brand/assets',           label: 'Brand',          position: 'left'},
+          {to: '/links',                  label: 'Useful links',   position: 'left'},
+          {
+            href: 'https://t.me/BobbyBuyBot',
+            label: 'DM Bobby',
+            position: 'right',
+            className: 'dm-cta-mobile',
+          },
+        ],
       },
       prism: {
         theme: prismThemes.github,
