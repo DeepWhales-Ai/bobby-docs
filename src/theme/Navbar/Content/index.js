@@ -89,7 +89,13 @@ export default function NavbarContent() {
           rel="noreferrer">
           <XIcon />
         </a>
-        <Link className="dm-cta" to="/groups/add">DM Bobby</Link>
+        <a
+          className="dm-cta"
+          href="https://t.me/BobbyBuyBot"
+          target="_blank"
+          rel="noopener noreferrer">
+          DM Bobby
+        </a>
       </div>
     </div>
   );
