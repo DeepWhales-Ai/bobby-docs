@@ -26,8 +26,8 @@ const sidebars = {
       label: 'For projects',
       items: [
         'projects/why',
-        'projects/level-1',
-        'projects/level-2',
+        'projects/tier-1',
+        'projects/tier-2',
         'projects/founders',
         'projects/bundles',
         'projects/surfaces',
