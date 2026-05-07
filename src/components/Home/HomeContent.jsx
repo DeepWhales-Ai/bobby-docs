@@ -81,7 +81,7 @@ export default function HomeContent() {
         </Pullquote>
       </section>
 
-      {/* 01 — The buy bot you already know */}
+      {/* 01 - The buy bot you already know */}
       <section className="home-section">
         <div className="section-rule">
           <span className="label"><span className="lime">01</span> · The buy bot you already know</span>
@@ -98,7 +98,7 @@ export default function HomeContent() {
         </Pullquote>
       </section>
 
-      {/* 02 — What he is now */}
+      {/* 02 - What he is now */}
       <section className="home-section engine-section">
         <div className="section-rule" id="the-engine">
           <span className="label"><span className="lime">02</span> · What he is now</span>
@@ -120,7 +120,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* 03 — Get started */}
+      {/* 03 - Get started */}
       <section className="home-section">
         <div className="section-rule">
           <span className="label"><span className="lime">03</span> · Get started</span>
@@ -148,7 +148,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* 04 — Why it works */}
+      {/* 04 - Why it works */}
       <section className="home-section">
         <div className="section-rule">
           <span className="label"><span className="lime">04</span> · Why it works</span>
@@ -245,7 +245,7 @@ export default function HomeContent() {
         </div>
       </div>
 
-      {/* 05 — Where Bobby is */}
+      {/* 05 - Where Bobby is */}
       <section className="home-section">
         <div className="section-rule">
           <span className="label"><span className="lime">05</span> · Where Bobby is</span>
@@ -268,7 +268,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* 06 — How Bobby talks */}
+      {/* 06 - How Bobby talks */}
       <section className="home-section">
         <div className="section-rule">
           <span className="label"><span className="lime">06</span> · How Bobby talks</span>
@@ -276,7 +276,7 @@ export default function HomeContent() {
         </div>
 
         <div className="voice-sample">
-          <p>If you apply for a Level 2 slot, we already know about you.</p>
+          <p>If you apply for a Tier 2 slot, we already know about you.</p>
           <p style={{color: 'var(--text-3)'}}>We've watched your community for months. We know who's joining and who's leaving. We know what's being said about you in groups you've never heard of.</p>
           <p>If you qualify, we'll tell you. If you don't, we'll also tell you.</p>
         </div>

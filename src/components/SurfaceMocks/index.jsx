@@ -1,4 +1,4 @@
-// Animated mockups for each ad surface — show the ad landing in a real Telegram context.
+// Animated mockups for each ad surface - show the ad landing in a real Telegram context.
 // Each mock cycles through phases so the user sees the slot "go live".
 // Ported from prototype/surface-mocks.jsx.
 
@@ -26,7 +26,7 @@ function usePhase(period = 4500) {
 }
 
 // ============================================================
-// 01 — Buy Alert Sponsorship
+// 01 - Buy Alert Sponsorship
 // ============================================================
 function MockBuyAlert() {
   const phase = usePhase(5000);
@@ -107,7 +107,7 @@ function MockBuyAlert() {
 }
 
 // ============================================================
-// 02 — The Board (trending)
+// 02 - The Board (trending)
 // ============================================================
 function MockBoard() {
   const phase = usePhase(6000);
@@ -183,7 +183,7 @@ function MockBoard() {
 }
 
 // ============================================================
-// 03 — Mass DM
+// 03 - Mass DM
 // ============================================================
 function MockMassDM() {
   const phase = usePhase(5500);
@@ -239,7 +239,7 @@ function MockMassDM() {
 }
 
 // ============================================================
-// 04 — Weekly Promo
+// 04 - Weekly Promo
 // ============================================================
 function MockWeeklyPromo() {
   const phase = usePhase(5500);
@@ -312,7 +312,7 @@ function MockWeeklyPromo() {
 }
 
 // ============================================================
-// 05 — Custom Monthly
+// 05 - Custom Monthly
 // ============================================================
 function MockCustomMonthly() {
   const phase = usePhase(7000);

@@ -1,4 +1,4 @@
-// Live convergence engine — the centerpiece of /intelligence/what-bobby-sees and the home engine section.
+// Live convergence engine - the centerpiece of /intelligence/what-bobby-sees and the home engine section.
 // SVG-based: chatter pings in left feeds → animated particles flow along bezier curves →
 // converge on glowing core → alert pulses fire out right side.
 
@@ -31,7 +31,7 @@ const ALERT_LINES = [
   {tkr: '$POPCAT', msg: 'quiet accumulation, 8 wallets',   meta: 'behavior'},
 ];
 
-// 5 input streams — each origin → core
+// 5 input streams - each origin → core
 const STREAMS = [
   {y: 60,  label: 'Group conversations', color: '#BFFF00'},
   {y: 130, label: 'Holder behavior',     color: '#9FE000'},
@@ -122,7 +122,7 @@ export default function ConvergenceEngine() {
         </div>
 
         <div className="ce-stage">
-          {/* Left feed — chatter */}
+          {/* Left feed - chatter */}
           <div className="ce-feed">
             <div className="ce-feed-head">INPUTS · live chatter</div>
             <div className="ce-feed-list">
@@ -142,7 +142,7 @@ export default function ConvergenceEngine() {
             </div>
           </div>
 
-          {/* Center — SVG engine */}
+          {/* Center - SVG engine */}
           <svg className="ce-svg" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid meet">
             <defs>
               <radialGradient id="ceCore" cx="50%" cy="50%" r="50%">
@@ -296,7 +296,7 @@ export default function ConvergenceEngine() {
                     fontFamily="JetBrains Mono" fill="#BFFF00" letterSpacing="3">CONVERGENCE</text>
             </g>
 
-            {/* outbound rays — alert beams */}
+            {/* outbound rays - alert beams */}
             {[150, 200, 250].map((y, i) => (
               <g key={'out' + i}>
                 <line x1={CORE_X + 28} y1={y} x2={W - 40} y2={y}
@@ -313,7 +313,7 @@ export default function ConvergenceEngine() {
             <text x={W - 10} y={130} textAnchor="end" fontSize="10" fontFamily="JetBrains Mono" fill="#666">OUTPUTS →</text>
           </svg>
 
-          {/* Right column — alerts firing */}
+          {/* Right column - alerts firing */}
           <div className="ce-out">
             <div className="ce-feed-head">OUTPUT · alerts that earn the ping</div>
             <div className="ce-alerts">

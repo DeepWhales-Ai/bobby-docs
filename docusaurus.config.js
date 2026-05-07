@@ -71,6 +71,20 @@ const config = {
     ],
   ],
 
+  themes: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      /** @type {import('@easyops-cn/docusaurus-search-local').PluginOptions} */
+      ({
+        hashed: true,
+        indexBlog: false,
+        indexPages: true,
+        docsRouteBasePath: '/',
+        highlightSearchTermsOnTargetPage: true,
+      }),
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -89,6 +103,10 @@ const config = {
         },
         // Items render only in the mobile drawer. Desktop navbar is fully
         // custom (see src/theme/Navbar/Content). Order matches SECTIONS there.
+        // Telegram + X are appended so they're reachable from the mobile
+        // drawer (the desktop icon-btn versions are hidden by the @media
+        // (max-width: 996px) rule in src/css/bobby-prototype.css). DM Bobby
+        // sits last so the CTA stays bottom-of-drawer on tap.
         items: [
           {to: '/groups/what-bobby-does', label: 'For your group', position: 'left'},
           {to: '/projects/why',           label: 'For projects',   position: 'left'},
@@ -97,6 +115,16 @@ const config = {
           {to: '/surfaces/lobby',         label: 'Surfaces',       position: 'left'},
           {to: '/brand/assets',           label: 'Brand',          position: 'left'},
           {to: '/links',                  label: 'Useful links',   position: 'left'},
+          {
+            href: 'https://t.me/BobbyBuyBot',
+            label: 'Telegram',
+            position: 'right',
+          },
+          {
+            href: 'https://x.com/BobbyBuyBot',
+            label: 'X',
+            position: 'right',
+          },
           {
             href: 'https://t.me/BobbyBuyBot',
             label: 'DM Bobby',

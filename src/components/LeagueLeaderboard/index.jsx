@@ -1,4 +1,4 @@
-// Animated League leaderboard — top users + top groups, weekly competition.
+// Animated League leaderboard - top users + top groups, weekly competition.
 // Boost counts tick up. Rows shuffle when ranks change. Rank arrows show movement.
 
 import React, {useState, useEffect} from 'react';
@@ -46,7 +46,7 @@ export default function LeagueLeaderboard() {
     return () => clearInterval(t);
   }, []);
 
-  // Each tick, randomly bump 1–2 users and 1 group every other tick
+  // Each tick, randomly bump 1-2 users and 1 group every other tick
   useEffect(() => {
     if (tick === 0) return;
     setUsers((prev) => {

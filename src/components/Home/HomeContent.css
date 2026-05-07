@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 
-/* MENU edge label — vertical text on the left edge of the page */
+/* MENU edge label - vertical text on the left edge of the page */
 .home-menu-edge {
   position: fixed;
   left: 14px;
@@ -26,7 +26,7 @@
   white-space: nowrap;
 }
 
-/* Hero — section width and rhythm.
+/* Hero - section width and rhythm.
    .hero, .hero-grid, .hero-tag, .live-dot, .hero h1, .hero-sub, .cta-primary,
    .cta-ghost, .bull-stage, .bull-frame, .corner are all in bobby-prototype.css. */
 
@@ -36,7 +36,7 @@
   border-bottom: none;
 }
 
-/* 40px breathing room between viewport content edge and hero columns —
+/* 40px breathing room between viewport content edge and hero columns -
    eyebrow / headline / bull frame all sit inset rather than hugging the edge. */
 .home-wrap .hero-grid {
   padding: 0 40px;
@@ -59,7 +59,7 @@
   color: var(--text-4);
 }
 
-/* Bull frame plate — pure black with a soft lime atmospheric glow at center.
+/* Bull frame plate - pure black with a soft lime atmospheric glow at center.
    Reinforces the bull mark's existing lime drop-shadow rather than fighting
    the prototype's grey-stripe pattern. */
 .home-wrap .bull-frame {
@@ -77,7 +77,7 @@
 }
 
 /* Home page sections (engine, doors, principle, lobby, marquee, surfaces, voice).
-   Tighter rhythm than the prototype's editorial 80px-on-section-rule cadence —
+   Tighter rhythm than the prototype's editorial 80px-on-section-rule cadence -
    reads more web-product than magazine. */
 .home-section {
   max-width: 1240px;
@@ -85,7 +85,7 @@
   padding: 20px 0;
 }
 
-/* Override prototype's `.section-rule { margin: 80px 0 32px 0 }` — the
+/* Override prototype's `.section-rule { margin: 80px 0 32px 0 }` - the
    .home-section padding already provides the vertical breathing room. */
 .home-section .section-rule {
   margin: 0 0 16px 0;
@@ -163,13 +163,13 @@
   line-height: 1.55;
 }
 
-/* Marquee — full bleed across home-wrap padding */
+/* Marquee - full bleed across home-wrap padding */
 .home-wrap > .marquee {
   margin-left: -56px;
   margin-right: -56px;
 }
 
-/* CountUp — animated Lobby stats counters with occasional +N pulses */
+/* CountUp - animated Lobby stats counters with occasional +N pulses */
 .count-up {
   position: relative;
   display: inline-block;

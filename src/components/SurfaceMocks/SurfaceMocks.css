@@ -1,4 +1,4 @@
-/* SurfaceMocks — animated ad-surface mockups, ported from prototype/styles.css. */
+/* SurfaceMocks - animated ad-surface mockups, ported from prototype/styles.css. */
 
 .sm-frame {
   background: #0d0d0d;
@@ -19,7 +19,7 @@
 }
 .sm-frame-tall .sm-tg-body { min-height: 280px; }
 
-/* Locked outer heights — content shifts inside, frame holds. */
+/* Locked outer heights - content shifts inside, frame holds. */
 .sm-frame--buy-alert      { min-height: 540px; }
 .sm-frame--board          { min-height: 480px; }
 .sm-frame--mass-dm        { min-height: 460px; }
@@ -548,7 +548,7 @@
 .sm-caption-text { color: rgba(255,255,255,0.65); line-height: 1.4; }
 
 /* ============================================================
-   Mobile (≤600px) — loosen locked heights, reflow inner grids.
+   Mobile (≤600px) - loosen locked heights, reflow inner grids.
    ============================================================ */
 @media (max-width: 600px) {
   .sm-frame--buy-alert      { min-height: 480px; }
@@ -607,7 +607,7 @@
   .sm-promo-stat-v   { font-size: 11px; }
   .sm-promo-cta      { font-size: 11px; padding: 7px 10px; }
 
-  /* MockCustomMonthly — week label + track grid */
+  /* MockCustomMonthly - week label + track grid */
   .sm-cm-body { padding: 12px; gap: 8px; }
   .sm-cm-row {
     grid-template-columns: 56px 1fr;

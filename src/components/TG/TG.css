@@ -1,4 +1,4 @@
-/* Telegram-style mock chat — ported from prototype/styles.css */
+/* Telegram-style mock chat - ported from prototype/styles.css */
 
 .tg-mock {
   background: #17212B;
@@ -83,7 +83,7 @@
 .tg-alert .tg-alert-line { color: #e6e8ea; font-size: 13px; }
 
 /* ============================================================
-   Mobile (≤600px) — tighten bubble grid, wrap long code strings.
+   Mobile (≤600px) - tighten bubble grid, wrap long code strings.
    ============================================================ */
 @media (max-width: 600px) {
   .tg-mock {

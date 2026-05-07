@@ -126,7 +126,7 @@
   background: var(--bg-2);
 }
 
-/* Steps — lime numbered circles (01, 02, 03) with vertical connector line. */
+/* Steps - lime numbered circles (01, 02, 03) with vertical connector line. */
 .bobby-steps {
   list-style: none;
   padding: 0;

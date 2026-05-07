@@ -1,4 +1,4 @@
-// The Proof — rolling 10-line event ticker. Newest top, oldest rolls off.
+// The Proof - rolling 10-line event ticker. Newest top, oldest rolls off.
 // Plus the Epic sticky line above and rotating CTA below.
 
 import React, {useState, useEffect} from 'react';

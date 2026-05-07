@@ -2,7 +2,7 @@ import React from 'react';
 import './KV.css';
 
 /**
- * Bobby KV — opinionated key-value pair table for spec sheets, config grids,
+ * Bobby KV - opinionated key-value pair table for spec sheets, config grids,
  * and "Reset cadence | Weekly" style content. Use in MDX as:
  *
  *   <KV title="League rules" rows={[

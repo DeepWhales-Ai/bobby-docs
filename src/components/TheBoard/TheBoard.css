@@ -1,4 +1,4 @@
-/* TheBoard — live trending leaderboard. Family with .league/.proof. */
+/* TheBoard - live trending leaderboard. Family with .league/.proof. */
 
 .board {
   border: 1px solid var(--border);
@@ -174,7 +174,7 @@
   .bh-left { gap: 12px; flex-wrap: wrap; }
   .bh-stat { font-size: 9.5px; }
 
-  /* Hide column headers — rows are self-evident at narrow widths */
+  /* Hide column headers - rows are self-evident at narrow widths */
   .bl-header { display: none; }
 
   .bl-row {

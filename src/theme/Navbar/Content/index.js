@@ -4,6 +4,7 @@ import {useLocation} from '@docusaurus/router';
 import {useNavbarMobileSidebar} from '@docusaurus/theme-common/internal';
 import NavbarLogo from '@theme/Navbar/Logo';
 import NavbarMobileSidebarToggle from '@theme/Navbar/MobileSidebar/Toggle';
+import SearchBar from '@theme/SearchBar';
 
 const SECTIONS = [
   {label: 'For your group', to: '/groups/what-bobby-does', prefix: '/groups'},
@@ -14,15 +15,6 @@ const SECTIONS = [
   {label: 'Brand', to: '/brand/assets', prefix: '/brand'},
   {label: 'Useful links', to: '/links', prefix: '/links'},
 ];
-
-function SearchIcon() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-      <circle cx="11" cy="11" r="7" />
-      <path d="m20 20-3.5-3.5" />
-    </svg>
-  );
-}
 
 function TelegramIcon() {
   return (
@@ -64,15 +56,9 @@ export default function NavbarContent() {
         </div>
       </div>
       <div className="bobby-topnav-right">
-        <button
-          type="button"
-          className="search-trigger"
-          aria-label="Search (coming soon)"
-          onClick={() => {}}>
-          <SearchIcon />
-          <span>Search</span>
-          <span className="kbd">⌘K</span>
-        </button>
+        <div className="bobby-topnav-search">
+          <SearchBar />
+        </div>
         <a
           className="icon-btn"
           title="Telegram"
