@@ -39,7 +39,9 @@ export default function HomeContent() {
           <div>
             <div className="hero-tag">
               <span className="live-dot" />
-              Live across crypto Telegram · Since 2021
+              <span className="hero-tag-1">Live across crypto Telegram</span>
+              <span className="hero-tag-sep"> · </span>
+              <span className="hero-tag-2">Since 2021</span>
             </div>
             <h1>
               Bobby started as a buy bot.<br />
