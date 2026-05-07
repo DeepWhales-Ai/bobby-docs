@@ -3363,6 +3363,44 @@ h2:hover .anchor, h3:hover .anchor { opacity: 1; }
     display: none;
   }
   .navbar__inner.bobby-topnav { gap: 12px; }
+
+  /* Hamburger must be visible, sized, and on top. The default Infima rule
+     hides .navbar__toggle at desktop; here we force-show it at mobile and
+     guarantee a 40x40 hit target so it can't be eclipsed by adjacent flex
+     children (logo link, dm-cta) or any vestigial ColorModeToggle markup. */
+  .bobby-topnav .navbar__toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+    margin-right: 4px;
+    color: var(--text);
+    background: transparent;
+    border: 0;
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+  }
+  .bobby-topnav .navbar__toggle svg { width: 22px; height: 22px; }
+
+  /* Logo link must not steal taps from the hamburger. Constrain its hit
+     area to the image bounds. */
+  .bobby-topnav-left .navbar__brand {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Belt-and-suspenders: colorMode.disableSwitch:true should already null out
+   NavbarColorModeToggle, but if any class-based fragment leaks through (e.g.
+   Docusaurus default sidebar header markup), keep it invisible and
+   non-interactive everywhere. */
+.colorModeToggle_DEke,
+[class*="colorModeToggle"],
+.navbar-sidebar__brand .navbar__brand + button[class*="toggleButton"] {
+  display: none !important;
+  pointer-events: none !important;
 }
 
 @media (max-width: 600px) {
