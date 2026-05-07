@@ -82,7 +82,9 @@
   min-width: 220px;
 }
 .bobby-topnav-search .navbar__search-input {
-  background: var(--surface);
+  /* background-color (not the `background` shorthand) so the Infima default
+     `background-image` magnifying-glass icon stays. The shorthand wiped it. */
+  background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--r-md);
   color: var(--text-2);
@@ -3299,15 +3301,28 @@ h2:hover .anchor, h3:hover .anchor { opacity: 1; }
    Map prototype look onto Docusaurus theme classes.
    ============================================================ */
 
-/* --- NAVBAR --- */
+/* --- NAVBAR ---
+   The blur lives on a ::before pseudo-element rather than .navbar itself.
+   `backdrop-filter` creates a containing block for `position: fixed`
+   descendants, which would clip the mobile drawer (also position: fixed,
+   rendered as a child of <nav class="navbar">) to the navbar's height.
+   Pseudo-element keeps the visual without trapping the drawer. */
 .navbar {
-  background: rgba(10, 10, 10, 0.86);
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
+  background: transparent;
   border-bottom: 1px solid var(--border);
   padding: 0 24px;
   height: var(--nav-h);
   box-shadow: none;
+}
+.navbar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.86);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .navbar__inner.bobby-topnav {
