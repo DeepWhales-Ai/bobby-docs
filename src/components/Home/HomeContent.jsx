@@ -46,7 +46,7 @@ export default function HomeContent() {
               <span className="lime">We detect.</span>
             </h1>
             <p className="hero-sub">
-              Now, he is the intelligence network crypto Telegram runs on.
+              Bobby started as a buy bot.
             </p>
             <div className="hero-cta-row">
               <Link to="/welcome" className="cta-primary">
@@ -77,7 +77,7 @@ export default function HomeContent() {
 
       <section className="home-section home-thesis">
         <Pullquote variant="hero">
-          Bobby started as a buy bot. <span className="lime">Things changed.</span>
+          Things changed. <span className="lime">Now, he is the intelligence network crypto Telegram runs on.</span>
         </Pullquote>
       </section>
 
