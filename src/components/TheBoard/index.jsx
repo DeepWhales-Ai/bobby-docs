@@ -46,7 +46,7 @@ export default function TheBoard() {
             <span className="dot lime" />
             <span>bobby.board · live</span>
           </div>
-          <div className="bh-stat">refreshed 2s ago · pinned in @booostbobby</div>
+          <div className="bh-stat">refreshed 2s ago · pinned in @bobbybooost</div>
         </div>
         <div className="bh-right">
           <span className="bh-stat">TOP 7 · LIVE FEED</span>
@@ -89,7 +89,7 @@ export default function TheBoard() {
 
       <div className="board-foot">
         <span>positions 8-15 · standard trending</span>
-        <span>updates every 2 min on @booostbobby</span>
+        <span>updates every 2 min on @bobbybooost</span>
       </div>
     </div>
   );

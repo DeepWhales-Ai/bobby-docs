@@ -100,7 +100,7 @@ export default function ProofTicker() {
           <span className="pc-val">{cta.val}</span>
         </div>
         <div className="pc-arrow">
-          <a href="https://t.me/booostbobby" target="_blank" rel="noreferrer">
+          <a href="https://t.me/bobbybooost" target="_blank" rel="noreferrer">
             Open the channel →
           </a>
         </div>
