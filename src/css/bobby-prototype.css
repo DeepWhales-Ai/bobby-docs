@@ -751,6 +751,7 @@ h1.page-h1 {
   line-height: 0.95;
   color: var(--text);
   margin: 0 0 32px 0;
+  text-wrap: balance;
 }
 .hero h1 .lime { color: var(--lime); }
 .hero-sub {
