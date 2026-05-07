@@ -3358,11 +3358,11 @@ h2:hover .anchor, h3:hover .anchor { opacity: 1; }
 
 @media (max-width: 996px) {
   .bobby-topnav .topnav-sections,
-  .bobby-topnav .bobby-topnav-search,
   .bobby-topnav .icon-btn {
     display: none;
   }
   .navbar__inner.bobby-topnav { gap: 12px; }
+  .bobby-topnav-search { flex-shrink: 1; min-width: 0; }
 }
 
 @media (max-width: 600px) {
