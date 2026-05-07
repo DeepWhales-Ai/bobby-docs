@@ -1,18 +1,18 @@
-/* TGBuyAlert: Bobby's in-chat buy-alert message body.
-   Fills in the parent BuyBotAnimation's alert slot. */
+/* TGBuyAlert: production-fidelity recreation of Bobby's in-chat buy alert.
+   Sits inside BuyBotAnimation as Bobby's "message" in the chat. */
 
-.tg-ba {
-  position: relative;
-  background: #15191c;
+.tg-buy-alert {
+  background: #0d1015;
   border: 1px solid rgba(255,255,255,0.06);
-  border-left: 3px solid var(--lime);
-  border-radius: 8px;
-  padding: 14px 16px 12px 16px;
+  border-radius: 14px;
   font-family: var(--font-sans);
   color: #e6e8ea;
   font-size: 13px;
-  line-height: 1.5;
-  margin: 0 8px;
+  line-height: 1.45;
+  width: 78%;
+  max-width: 380px;
+  margin: 0 auto 0 0;
+  overflow: hidden;
 }
 
 /* ---------- header ---------- */
@@ -20,23 +20,17 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 8px;
-}
-.tg-ba-avatar {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  background: rgba(191,255,0,0.06);
-  padding: 2px;
+  padding: 10px 14px 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 .tg-ba-from {
-  color: var(--lime);
+  color: #E8554E;
   font-weight: 700;
   font-size: 13px;
   letter-spacing: 0.01em;
 }
 .tg-ba-chip {
+  margin-left: auto;
   font-family: var(--font-mono);
   font-size: 9.5px;
   letter-spacing: 0.12em;
@@ -48,40 +42,142 @@
   border-radius: 4px;
   font-weight: 600;
 }
-.tg-ba-time {
-  margin-left: auto;
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  color: rgba(255,255,255,0.4);
-}
 
-/* ---------- token row ---------- */
-.tg-ba-token {
+/* ---------- video / image header ---------- */
+.tg-ba-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: radial-gradient(ellipse at center, #0f1a0c 0%, #060906 70%);
+  overflow: hidden;
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: rgba(255,255,255,0.85);
-  margin-bottom: 10px;
+  justify-content: center;
 }
-.tg-ba-token strong {
-  color: #fff;
-  font-weight: 700;
+/* Faux ascending chart pattern */
+.tg-ba-video-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(45deg, transparent 48%, rgba(191,255,0,0.08) 49%, rgba(191,255,0,0.08) 51%, transparent 52%),
+    linear-gradient(45deg, transparent 60%, rgba(191,255,0,0.05) 61%, rgba(191,255,0,0.05) 63%, transparent 64%),
+    linear-gradient(45deg, transparent 30%, rgba(191,255,0,0.06) 31%, rgba(191,255,0,0.06) 33%, transparent 34%);
+  background-size: 80px 80px, 120px 120px, 60px 60px;
+  pointer-events: none;
 }
-.tg-ba-livedot {
-  width: 6px;
-  height: 6px;
+.tg-ba-video-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(191,255,0,0.18), transparent 55%);
+  pointer-events: none;
+}
+.tg-ba-video-mute {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  color: rgba(255,255,255,0.7);
+  background: rgba(0,0,0,0.45);
   border-radius: 50%;
-  background: var(--lime);
-  box-shadow: 0 0 6px var(--lime);
-  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tg-ba-video-time {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.04em;
+}
+.tg-ba-video-stack {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 1;
+}
+.tg-ba-video-headline {
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 800;
+  color: var(--lime);
+  letter-spacing: -0.01em;
+  text-shadow: 0 0 18px rgba(191,255,0,0.45);
+  line-height: 1;
+}
+.tg-ba-video-mark {
+  width: 96px;
+  height: auto;
+  filter: drop-shadow(0 0 24px rgba(191,255,0,0.35));
+}
+.tg-ba-video-zen {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--lime);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.tg-ba-video-pfp {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(191,255,0,0.1);
+  padding: 2px;
+  z-index: 2;
+}
+
+/* ---------- boosted indicator ---------- */
+.tg-ba-boosted {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px 4px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+}
+.tg-ba-boosted-icon {
+  color: var(--lime);
+  display: inline-flex;
+}
+.tg-ba-handle {
+  color: rgba(255,255,255,0.75);
+}
+
+/* ---------- trend this ---------- */
+.tg-ba-trend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 14px 8px;
+  font-size: 12.5px;
+  color: var(--lime);
+  font-weight: 500;
+  cursor: default;
+}
+.tg-ba-trend-icon { display: inline-flex; }
+
+/* ---------- token ticker ---------- */
+.tg-ba-ticker {
+  padding: 4px 14px 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.01em;
 }
 
 /* ---------- egg row ---------- */
 .tg-ba-eggrow {
   display: flex;
   gap: 4px;
-  margin-bottom: 12px;
+  padding: 0 14px 12px;
   align-items: center;
 }
 .tg-ba-egg {
@@ -92,8 +188,8 @@
   flex-shrink: 0;
 }
 .tg-ba-egg.is-filled {
-  background: var(--lime);
-  box-shadow: 0 0 4px rgba(191,255,0,0.4);
+  background: #d4f000;
+  box-shadow: 0 0 4px rgba(212,240,0,0.4);
 }
 .tg-ba-egg.is-empty {
   background: transparent;
@@ -101,9 +197,8 @@
 }
 
 /* When the parent BuyBotAnimation is in its played state, animate the
-   filled eggs left-to-right. Otherwise (parent not played, or no parent
-   class control), eggs render in their final state via the .is-filled
-   color above so static fallback matches. */
+   filled eggs left-to-right. Outside that context, eggs render statically
+   in their fully-filled state. */
 .bba .tg-ba-egg.is-filled {
   opacity: 0;
   transform: scale(0.6);
@@ -137,105 +232,207 @@
 
 /* ---------- buy details ---------- */
 .tg-ba-details {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 16px;
-  margin-bottom: 10px;
-}
-.tg-ba-d-left { display: flex; flex-direction: column; gap: 2px; }
-.tg-ba-d-amount {
-  color: var(--lime);
-  font-weight: 700;
-  font-size: 14.5px;
-  font-variant-numeric: tabular-nums;
-}
-.tg-ba-d-tokens {
-  color: rgba(255,255,255,0.55);
-  font-size: 12px;
-}
-.tg-ba-d-right {
+  list-style: none;
+  margin: 0;
+  padding: 0 14px 8px;
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  text-align: right;
-  font-family: var(--font-mono);
-  font-size: 11.5px;
-  color: rgba(255,255,255,0.6);
+  gap: 6px;
+}
+.tg-ba-details li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
   font-variant-numeric: tabular-nums;
 }
-.tg-ba-d-pos { color: var(--lime); }
+.tg-ba-d-icon {
+  display: inline-flex;
+  width: 16px;
+  color: rgba(191,255,0,0.65);
+  flex-shrink: 0;
+}
+.tg-ba-d-amount {
+  color: #b9f400;
+  font-weight: 600;
+}
+.tg-ba-d-eth {
+  color: rgba(255,255,255,0.55);
+  font-weight: 400;
+  font-size: 11.5px;
+}
+.tg-ba-d-link {
+  color: var(--lime);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+.tg-ba-d-pct {
+  margin-left: auto;
+  color: var(--lime);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+.tg-ba-d-price {
+  color: rgba(255,255,255,0.85);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+}
+.tg-ba-d-mcap {
+  color: var(--lime);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 600;
+}
 
-/* ---------- actions ---------- */
-.tg-ba-actions {
+/* ---------- social row ---------- */
+.tg-ba-social {
   display: flex;
   gap: 6px;
+  padding: 6px 14px 8px;
   flex-wrap: wrap;
-  margin-bottom: 10px;
 }
-.tg-ba-action {
+.tg-ba-social-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   font-family: var(--font-mono);
   font-size: 10.5px;
   letter-spacing: 0.04em;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.75);
   border: 1px solid rgba(255,255,255,0.12);
   background: rgba(255,255,255,0.03);
-  padding: 4px 9px;
+  padding: 4px 8px;
   border-radius: 4px;
-  cursor: default;
-  transition: color 0.15s, border-color 0.15s, background 0.15s;
+  transition: color 0.15s, border-color 0.15s;
 }
-.tg-ba-action:hover {
+.tg-ba-social-chip:hover {
   color: var(--lime);
   border-color: rgba(191,255,0,0.4);
-  background: rgba(191,255,0,0.05);
 }
 
-/* ---------- footer ---------- */
-.tg-ba-foot {
+/* ---------- quick links ---------- */
+.tg-ba-quick {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding-top: 8px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  font-size: 10.5px;
-  color: rgba(255,255,255,0.4);
+  padding: 6px 14px 8px;
+  font-size: 11.5px;
+}
+.tg-ba-quick-link {
+  color: var(--lime);
+  letter-spacing: 0.04em;
+  cursor: default;
+  transition: opacity 0.15s;
+}
+.tg-ba-quick-link:hover { opacity: 0.7; }
+.tg-ba-quick-sep { color: rgba(255,255,255,0.25); }
+.tg-ba-quick-pfp {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-left: 4px;
+}
+
+/* ---------- signature footer ---------- */
+.tg-ba-sig {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px 10px;
+  border-top: 1px solid rgba(255,255,255,0.05);
   font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: rgba(255,255,255,0.45);
   letter-spacing: 0.04em;
 }
-.tg-ba-foot-icon {
-  width: 12px;
-  height: 12px;
+.tg-ba-sig-icon {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
   opacity: 0.7;
+}
+.tg-ba-sig-time {
+  margin-left: auto;
+  font-size: 10px;
+  color: rgba(255,255,255,0.35);
+}
+
+/* ---------- CTA buttons ---------- */
+.tg-ba-ctas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 0 10px 8px;
+}
+.tg-ba-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 12px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border-radius: 8px;
+  cursor: default;
+  border: 1px solid transparent;
+  transition: filter 0.15s, border-color 0.15s;
+}
+.tg-ba-cta--buy {
+  background: #1f2228;
+  color: #fff;
+  border-color: rgba(255,255,255,0.06);
+}
+.tg-ba-cta--boost {
+  background: var(--lime);
+  color: #0a0a0a;
+}
+.tg-ba-cta:hover { filter: brightness(1.08); }
+
+/* ---------- footer banner ---------- */
+.tg-ba-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-size: 11.5px;
+  color: rgba(255,255,255,0.55);
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  background: rgba(0,0,0,0.25);
+}
+.tg-ba-banner-arrow {
+  color: var(--lime);
+  display: inline-flex;
 }
 
 /* ---------- mobile ---------- */
 @media (max-width: 600px) {
-  .tg-ba {
-    padding: 12px 12px 10px 12px;
-    margin: 0 4px;
-    font-size: 12px;
+  .tg-buy-alert {
+    width: 92%;
+    max-width: none;
+    font-size: 12.5px;
   }
-  .tg-ba-from { font-size: 12px; }
-  .tg-ba-chip { font-size: 9px; padding: 2px 6px; }
-  .tg-ba-token { font-size: 12px; }
+  .tg-ba-head { padding: 9px 12px 7px; }
+  .tg-ba-video-mark { width: 80px; }
+  .tg-ba-video-headline { font-size: clamp(18px, 5vw, 24px); }
+  .tg-ba-ticker { font-size: 16px; padding: 4px 12px 6px; }
   .tg-ba-egg { width: 7px; height: 11px; }
-  .tg-ba-eggrow { gap: 3px; }
-  .tg-ba-d-amount { font-size: 13.5px; }
-  .tg-ba-d-tokens { font-size: 11.5px; }
-  .tg-ba-d-right  { font-size: 11px; }
-  .tg-ba-action   { font-size: 10px; padding: 3px 7px; }
+  .tg-ba-eggrow { gap: 3px; padding: 0 12px 10px; }
+  .tg-ba-details { padding: 0 12px 6px; }
+  .tg-ba-details li { font-size: 12px; }
+  .tg-ba-social, .tg-ba-quick, .tg-ba-trend, .tg-ba-boosted { padding-left: 12px; padding-right: 12px; }
+  .tg-ba-sig { padding: 7px 12px 9px; }
+  .tg-ba-ctas { padding: 0 8px 7px; }
+  .tg-ba-cta { padding: 9px 10px; font-size: 11px; }
+  .tg-ba-banner { padding: 8px 12px; font-size: 11px; }
 }
 
 @media (max-width: 400px) {
-  .tg-ba-details {
-    flex-direction: column;
-    gap: 6px;
-  }
-  .tg-ba-d-right {
-    text-align: left;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 8px;
+  .tg-ba-ctas {
+    grid-template-columns: 1fr;
   }
 }

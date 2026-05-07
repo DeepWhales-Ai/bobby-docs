@@ -4,7 +4,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Bobby',
-  tagline: "The intelligence network crypto Telegram runs on.",
+  tagline: "The intelligence layer crypto Telegram runs on.",
   favicon: 'favicon.ico',
 
   future: {

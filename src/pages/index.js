@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Layout
       title="Bobby"
-      description="The intelligence network crypto Telegram runs on."
+      description="The intelligence layer crypto Telegram runs on."
       noFooter={true}>
       <HomeContent />
     </Layout>

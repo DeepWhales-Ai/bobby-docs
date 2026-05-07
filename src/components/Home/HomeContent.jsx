@@ -42,11 +42,11 @@ export default function HomeContent() {
               Live across crypto Telegram · Since 2021
             </div>
             <h1>
-              We don't predict.<br />
-              <span className="lime">We detect.</span>
+              Bobby started as a buy bot.<br />
+              <span className="lime">Things changed.</span>
             </h1>
             <p className="hero-sub">
-              Bobby started as a buy bot.
+              Now, he is the intelligence layer crypto Telegram runs on.
             </p>
             <div className="hero-cta-row">
               <Link to="/welcome" className="cta-primary">
@@ -77,7 +77,7 @@ export default function HomeContent() {
 
       <section className="home-section home-thesis">
         <Pullquote variant="hero">
-          Things changed. <span className="lime">Now, he is the intelligence network crypto Telegram runs on.</span>
+          We don't predict. <span className="lime">We detect.</span>
         </Pullquote>
       </section>
 

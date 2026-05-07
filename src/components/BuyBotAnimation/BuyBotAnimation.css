@@ -1,6 +1,6 @@
-/* BuyBotAnimation: chat panel that fades in three messages, then the
-   TGBuyAlert pops in with a bounce + glow halo. Plays once on first
-   viewport entry. */
+/* BuyBotAnimation: TG-style group chat with alternating bubble sides,
+   then Bobby's contained-width buy alert pops in with a bounce + glow.
+   Plays once on first viewport entry, holds the final state. */
 
 .bba {
   background: #0d0d0d;
@@ -66,47 +66,85 @@
   padding-bottom: 18px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   background: #0d0d0d;
 }
 
-/* ---------- chat messages ---------- */
+/* ---------- chat bubbles (alternating sides) ---------- */
 .bba-msg {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  max-width: 92%;
-  align-self: flex-start;
+  max-width: 70%;
   opacity: 0;
-  transform: translateY(6px);
+}
+.bba-msg--lhs {
+  align-self: flex-start;
+  align-items: flex-start;
+  transform: translateX(-8px);
+}
+.bba-msg--rhs {
+  align-self: flex-end;
+  align-items: flex-end;
+  transform: translateX(8px);
 }
 .bba-msg-name {
   font-size: 11px;
   font-weight: 600;
   color: #6BB4F5;
+  padding: 0 4px;
 }
 .bba-msg-text {
-  background: #1f1f1f;
-  border-radius: 10px;
-  border-top-left-radius: 4px;
-  padding: 6px 10px;
+  border-radius: 12px;
+  padding: 6px 11px;
   font-size: 12.5px;
-  color: rgba(255,255,255,0.75);
-  align-self: flex-start;
+  line-height: 1.4;
+  color: rgba(255,255,255,0.85);
 }
+.bba-msg--lhs .bba-msg-text {
+  background: #1f2227;
+  border-top-left-radius: 4px;
+}
+.bba-msg--rhs .bba-msg-text {
+  background: rgba(184, 255, 0, 0.06);
+  border: 1px solid rgba(184, 255, 0, 0.12);
+  border-top-right-radius: 4px;
+  color: #fff;
+}
+.bba-msg--rhs .bba-msg-name { color: rgba(184,255,0,0.7); }
 
 /* ---------- alert wrap ---------- */
 .bba-alert {
   position: relative;
-  margin-top: 12px;
+  margin-top: 6px;
+  align-self: flex-start;
+  width: 100%;
   opacity: 0;
   transform: translateY(24px) scale(0.85);
 }
-/* Lime glow halo behind the alert. Pseudo-element so we don't add DOM. */
+.bba-alert-sender {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 4px 4px;
+}
+.bba-alert-sender-avatar {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(232, 85, 78, 0.1);
+  padding: 1px;
+}
+.bba-alert-sender-name {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #E8554E;
+}
+/* Lime glow halo behind the alert. */
 .bba-alert::before {
   content: '';
   position: absolute;
-  inset: -16px;
+  inset: 18px -16px -16px -16px;
   background: radial-gradient(ellipse at center, rgba(191,255,0,0.45), transparent 60%);
   filter: blur(20px);
   z-index: 0;
@@ -119,10 +157,13 @@
 }
 
 /* ============================================================
-   Played state. Messages fade, beat, alert BOOM + glow, eggs L-to-R.
+   Played state. Bubbles slide in, beat, alert BOOM + glow.
    ============================================================ */
-.bba--played .bba-msg {
-  animation: bbaMsgIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+.bba--played .bba-msg--lhs {
+  animation: bbaMsgInLhs 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.bba--played .bba-msg--rhs {
+  animation: bbaMsgInRhs 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 .bba--played .bba-msg--1 { animation-delay: 0ms; }
 .bba--played .bba-msg--2 { animation-delay: 250ms; }
@@ -135,8 +176,11 @@
   animation: bbaAlertGlow 800ms ease-out 1300ms forwards;
 }
 
-@keyframes bbaMsgIn {
-  to { opacity: 1; transform: translateY(0); }
+@keyframes bbaMsgInLhs {
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes bbaMsgInRhs {
+  to { opacity: 1; transform: translateX(0); }
 }
 @keyframes bbaAlertBoom {
   0%   { opacity: 0; transform: translateY(24px) scale(0.85); }
@@ -152,7 +196,7 @@
 }
 
 /* ============================================================
-   Reduced motion: jump to the final, calm state. No keyframes.
+   Reduced motion: jump to the final, calm state.
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {
   .bba--played .bba-msg,
@@ -176,8 +220,9 @@
   .bba-avatar { width: 28px; height: 28px; font-size: 11px; }
   .bba-name { font-size: 12px; }
   .bba-sub  { font-size: 10px; }
-  .bba-body { padding: 10px; padding-bottom: 14px; gap: 6px; }
-  .bba-msg-text { font-size: 11.5px; padding: 5px 9px; }
-  .bba-alert { margin-top: 10px; }
-  .bba-alert::before { inset: -10px; }
+  .bba-body { padding: 10px; padding-bottom: 14px; gap: 8px; }
+  .bba-msg { max-width: 80%; }
+  .bba-msg-text { font-size: 11.5px; padding: 5px 10px; }
+  .bba-alert { margin-top: 4px; }
+  .bba-alert::before { inset: 14px -10px -10px -10px; }
 }
