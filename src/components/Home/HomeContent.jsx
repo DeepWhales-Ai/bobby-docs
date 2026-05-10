@@ -192,7 +192,7 @@ export default function HomeContent() {
             <div className="fw-node">
               <div className="num">04</div>
               <div className="name">The network grows.</div>
-              <div className="desc">More groups. More signal. Tighter trust.</div>
+              <div className="desc">More groups. More Signals. Tighter trust.</div>
             </div>
           </div>
           <div className="flywheel-loop">
