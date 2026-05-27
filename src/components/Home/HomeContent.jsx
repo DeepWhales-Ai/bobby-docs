@@ -307,6 +307,11 @@ export default function HomeContent() {
           <Link to="/intelligence/why-we-say-no" className="cta-ghost">Why we say no →</Link>
         </div>
       </section>
+
+      <div className="page-foot" style={{justifyContent: 'center', gap: '24px'}}>
+        <Link to="/legal">Privacy Policy</Link>
+        <Link to="/terms">Terms of Service</Link>
+      </div>
     </div>
   );
 }
