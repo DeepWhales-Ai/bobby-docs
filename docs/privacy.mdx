@@ -1,0 +1,248 @@
+---
+title: Privacy Policy
+slug: /privacy
+description: Bobby Privacy Policy. What Bobby collects, what he does with it, and what rights you have.
+---
+
+# Bobby Privacy Policy
+
+**Version 1.0**
+**Last updated: 27 May 2026**
+
+This policy explains what Bobby collects, what he does with it, and what rights you have. It applies to Bobby Buy Bot (the Telegram bot at `@bobbybuybot`) and the website at `bobbybuybot.com`.
+
+See also the [Bobby Terms of Service](/terms).
+
+---
+
+## 1. Who we are
+
+Bobby is operated by **DeepBot LTD** (registered in RAK DAO, UAE, registration number **01010435**). References to "we", "us", "our" and "Bobby" all mean DeepBot LTD in this policy.
+
+Contact: **legal@deepbot.pro**.
+
+---
+
+## 2. What this policy covers
+
+This policy covers personal data Bobby processes when:
+
+- You are a member of a Telegram group that has added Bobby
+- You message Bobby directly on Telegram
+- You visit `bobbybuybot.com`
+
+It does not cover what Telegram itself does with your data. Telegram is the upstream processor of all messages on its platform. See Telegram's own privacy policy for that.
+
+---
+
+## 3. What Bobby actually does
+
+Plain version, no marketing.
+
+- Bobby is added to Telegram groups by group admins.
+- In those groups, Bobby reads messages to detect contract address pastes (token contract addresses on supported blockchains).
+- When a buy is confirmed on chain, Bobby posts a buy alert into the group.
+- Group members can tap a button on the buy alert (a "boost") to surface tokens on Bobby's trending board.
+- Bobby captures public on-chain market data at the moment of a boost (market cap, volume, price, holder counts) so the trending board has context.
+- If you DM Bobby, he runs an onboarding flow: classify which groups you admin, optionally set wallet preferences. No real name, no phone number, no email is requested.
+- Bobby sends DMs about trending, league rank, and project notifications you've opted into.
+- Bobby forwards aggregated signal data to internal systems (the intelligence layer). Aggregated means stripped of individual identifiers before downstream use.
+
+---
+
+## 4. What we collect
+
+We collect the minimum needed for the service to work.
+
+**From Telegram groups Bobby has been added to:**
+
+- Group ID and group name
+- Your Telegram user ID, Telegram username if set, and Telegram display name
+- Messages containing contract addresses (we parse the address, the rest of the message is not stored)
+- Whether you tapped a boost button, on which token, in which group, at what time
+- Public on-chain market data captured at boost time (this is about tokens, not about you)
+
+**From direct messages with Bobby:**
+
+- The content of your DMs with Bobby (these are 1:1 with the bot; this is needed to respond)
+- Your responses to onboarding prompts (group classification, preferences)
+- Any wallet addresses you choose to share
+
+**From bobbybuybot.com:**
+
+- Standard server logs (IP address, user agent, requested URL, timestamp). These are retained for 30 days for security and abuse prevention, then deleted.
+- Cookies (see Section 13).
+
+**We hash Telegram user IDs** with a server-side salt when those IDs are passed to internal analytics or partner click tracking. The raw ID never leaves our database in those contexts.
+
+---
+
+## 5. What we do not collect
+
+We are explicit about this because the question comes up.
+
+- **Private 1:1 messages between you and other people.** Bobby cannot see them and does not store them.
+- **Group messages that do not contain a contract address.** Bobby reads them in transit to detect contract addresses. He does not store them.
+- **Your real name**, unless you choose to tell him in a DM.
+- **Your phone number or email address**, unless you choose to tell him in a DM. We do not have access to your Telegram phone number.
+- **Payment card details.** Paid services are processed by Telegram's payment flow or by our payment processor. We see only the transaction outcome, not the card data.
+- **IP addresses linked to your Telegram activity.** We do not collect IPs through the Telegram Bot API.
+- **Location data**, beyond what an IP address in our web server logs implies for the website.
+
+---
+
+## 6. How we use your data
+
+We use what we collect to:
+
+- Detect contract addresses and post buy alerts in groups
+- Run the trending board and the league system
+- Send you DM notifications you have opted into
+- Aggregate cross-group signal data into the intelligence layer that powers Bobby's product
+- Prevent abuse, spam, and harassment, and enforce the [Terms of Service](/terms)
+- Improve Bobby's detection accuracy, ranking algorithms, and product features
+- Process and account for paid services (trending slots, ads, PRO subscriptions)
+- Comply with legal obligations
+
+We do not use your data for personalised ad targeting outside of Bobby's own paid trending slot system.
+
+---
+
+## 7. Who we share data with
+
+We do not sell your personal data. We never have.
+
+We share data in these limited cases:
+
+- **Service providers** who help us run Bobby (hosting, database, error monitoring). They are bound by contract to use the data only to provide their service to us.
+- **Payment processors** when you pay for a service. They see the payment, we see the outcome.
+- **Partners**, in **aggregate form only**. Aggregate means counts and trends, never individual users or wallets.
+- **Law enforcement or regulators** if we receive a valid legal request that requires disclosure. We push back on overbroad requests.
+- **Acquirers**, if DeepBot LTD is acquired or restructured. We will notify users in advance and the same protections will apply.
+
+We never reveal which Telegram groups data comes from when sharing intelligence externally. Source attribution stops at "the network".
+
+---
+
+## 8. Legal basis for processing (UK GDPR / EU GDPR)
+
+Our legal basis depends on what we are processing.
+
+- **Detecting contract addresses and posting buy alerts in groups**: legitimate interest. Group admins have invited Bobby for this purpose and the processing is limited to what is needed.
+- **DM features, onboarding, notifications you opt into**: consent. You initiated the DM and can stop at any time.
+- **Paid services**: contract. We process what is needed to deliver the service you paid for.
+- **Security, abuse prevention, server logs**: legitimate interest.
+- **Compliance with legal obligations**: legal obligation.
+
+You can object to processing based on legitimate interest. See Section 11.
+
+---
+
+## 9. International data transfers
+
+DeepBot LTD is registered in the United Arab Emirates (RAK DAO). Some of our service providers and processors are based in the United Kingdom, the European Union, and the United States.
+
+When data leaves the UAE, we rely on standard contractual clauses or equivalent safeguards with the receiving processor. We do not transfer data to jurisdictions without an adequate protection mechanism.
+
+---
+
+## 10. Data retention
+
+- **Active group membership and boost activity**: kept while the group is active and Bobby is present.
+- **Inactive users (no activity for 12 months)**: aggregated, individual records purged.
+- **Opt-out**: 30-day purge window from request, then full deletion of personal records. Aggregated and anonymised data may be retained.
+- **Server logs (website)**: 30 days.
+- **Payment records**: 7 years (legal and tax obligation).
+- **Suspended or banned accounts**: kept as long as needed for abuse prevention and dispute resolution, then deleted.
+
+If you request deletion, we will honour it within 30 days unless we have a legal obligation to retain specific records.
+
+---
+
+## 11. Your rights
+
+If UK GDPR or EU GDPR applies to you, you have the right to:
+
+- **Access** the personal data we hold about you
+- **Correct** anything that is wrong
+- **Delete** your data (the right to be forgotten)
+- **Restrict** processing while a dispute is resolved
+- **Object** to processing based on legitimate interest
+- **Portability** of data you have provided in a structured format
+- **Withdraw consent** for any processing based on consent, at any time
+- **Lodge a complaint** with your local data protection authority
+
+Users outside the UK and EU have similar rights under their local laws.
+
+---
+
+## 12. How to exercise your rights
+
+Three options:
+
+1. DM `@bobbybuybot` with `/privacy` to see what data Bobby has linked to your Telegram account.
+2. DM `@bobbybuybot` with `/delete` to request opt-out and deletion.
+3. Email **legal@deepbot.pro** with your Telegram user ID and what you are requesting.
+
+We will respond within 30 days. We will not charge a fee for a reasonable request.
+
+---
+
+## 13. Cookies (bobbybuybot.com only)
+
+The Telegram bot does not use cookies. The website does.
+
+We use the following cookies on `bobbybuybot.com`:
+
+- **Strictly necessary**: session cookies for navigation, security, and load balancing. These cannot be turned off.
+- **Functional**: remembers your preferences (display, language).
+- **Analytics**: aggregated, privacy-respecting visit data. We do not use cross-site tracking cookies.
+
+We do not use marketing or advertising cookies.
+
+You can disable cookies in your browser settings. Disabling strictly necessary cookies may break parts of the site.
+
+---
+
+## 14. Security
+
+We use industry-standard measures to protect your data:
+
+- Encryption in transit (TLS) and at rest for sensitive fields
+- Access controls (least privilege, audit logs)
+- Separation of personal data from analytics through hashing
+- Regular dependency and security review
+
+No system is perfectly secure. If we ever discover a breach affecting your personal data, we will notify you and the relevant authority as required by law.
+
+---
+
+## 15. Children
+
+Bobby is not intended for users under 18. We do not knowingly collect data from anyone under 18. If you believe a child is using Bobby, contact `legal@deepbot.pro` and we will remove the account.
+
+---
+
+## 16. Third-party links
+
+Bobby and `bobbybuybot.com` link to third parties (block explorers, DEXs, partner sites). Once you click through, that party's privacy policy applies. We are not responsible for their practices.
+
+---
+
+## 17. Changes to this policy
+
+We may update this policy. Material changes will be announced in Bobby's DM channel and on `bobbybuybot.com` at least 14 days before they take effect. The version number and "Last updated" date at the top of this page always reflect the current version.
+
+Historical versions are available on request from `legal@deepbot.pro`.
+
+---
+
+## 18. Contact
+
+- General and legal: **legal@deepbot.pro**
+- Privacy requests via Telegram: `@bobbybuybot` with `/privacy` or `/delete`
+- Postal: DeepBot LTD, RAK DAO, Ras Al Khaimah, United Arab Emirates (registration 01010435)
+
+---
+
+*This is the Bobby Privacy Policy v1.0. For the Terms of Service that govern your use of Bobby, see [Bobby Terms of Service](/terms).*
