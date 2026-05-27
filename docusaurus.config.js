@@ -111,6 +111,7 @@ const config = {
           {to: '/groups/what-bobby-does', label: 'For your group', position: 'left'},
           {to: '/projects/why',           label: 'For projects',   position: 'left'},
           {to: '/community/league',       label: 'Community',      position: 'left'},
+          {to: '/trending',               label: 'Trending',       position: 'left'},
           {to: '/intelligence/what-bobby-sees', label: 'The intelligence', position: 'left'},
           {to: '/surfaces/lobby',         label: 'Surfaces',       position: 'left'},
           {to: '/brand/assets',           label: 'Brand',          position: 'left'},

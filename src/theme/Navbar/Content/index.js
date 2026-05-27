@@ -10,6 +10,7 @@ const SECTIONS = [
   {label: 'For your group', to: '/groups/what-bobby-does', prefix: '/groups'},
   {label: 'For projects', to: '/projects/why', prefix: '/projects'},
   {label: 'Community', to: '/community/league', prefix: '/community'},
+  {label: 'Trending', to: '/trending', prefix: '/trending'},
   {label: 'The intelligence', to: '/intelligence/what-bobby-sees', prefix: '/intelligence'},
   {label: 'Surfaces', to: '/surfaces/lobby', prefix: '/surfaces'},
   {label: 'Brand', to: '/brand/assets', prefix: '/brand'},
