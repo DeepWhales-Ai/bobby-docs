@@ -317,10 +317,10 @@ function MockWeeklyPromo() {
 function MockCustomMonthly() {
   const phase = usePhase(7000);
   const weeks = [
-    {label: 'Week 1', tags: ['Buy alert', 'Mass DM Premium', 'Top 7 Premium'], intensity: 'high'},
+    {label: 'Week 1', tags: ['Buy alert', 'Mass DM', 'Top 7 Premium'], intensity: 'high'},
     {label: 'Week 2', tags: ['Top 7 Premium', 'Weekly Promo'], intensity: 'mid'},
-    {label: 'Week 3', tags: ['Weekly Promo', 'Mass DM Standard'], intensity: 'low'},
-    {label: 'Week 4', tags: ['Podium 24h', 'Buy alert', 'Mass DM Premium'], intensity: 'peak'},
+    {label: 'Week 3', tags: ['Weekly Promo', 'Mass DM'], intensity: 'low'},
+    {label: 'Week 4', tags: ['Podium 24h', 'Buy alert', 'Mass DM'], intensity: 'peak'},
   ];
   const activeIdx = Math.min(3, Math.floor(phase * 4.2));
 
