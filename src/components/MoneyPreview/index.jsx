@@ -1,0 +1,185 @@
+import React from 'react';
+import './styles.css';
+
+// Money page draft, rendered on the unlisted /projects/preview route.
+// Ported from the approved visual reference. Stage 1 availability deltas:
+//  - IGNITE + MOMENTUM nudge line items carry a `nudges begin [DATE]` chip
+//    (literal placeholder, no date invented).
+//  - TAKEOVER anchors visibly with an OPENS SOON chip and a reserve CTA.
+//  - Nudge and community broadcast table rows carry an Opens soon chip.
+// Network numbers stay in per the draft ruling. See the Stage1-flip marker in
+// docs/projects/preview.mdx.
+
+export default function MoneyPreview() {
+  return (
+    <div className="bmp">
+
+      {/* HERO */}
+      <section className="hero">
+        <div className="wrap">
+          <div className="eyebrow">For projects</div>
+          <h1>Advertise where crypto<br />actually pays attention.</h1>
+          <p className="sub">Bobby lives inside the rooms where tokens get bought. Every placement is exclusive. One sponsor at a time. That is why it works.</p>
+          <div className="hero-stats">
+            <div className="hstat"><div className="n">28,000+</div><div className="l">Groups live</div></div>
+            <div className="hstat"><div className="n">1.3M</div><div className="l">Users across the network</div></div>
+            <div className="hstat"><div className="n">2.5M+</div><div className="l">Alerts carrying ads monthly</div></div>
+            <div className="hstat"><div className="n">4,500</div><div className="l">Direct DM audience</div></div>
+          </div>
+          <a className="cta-primary" href="https://t.me/BobbyBuyBot">DM Bobby</a>
+        </div>
+      </section>
+
+      {/* PACKAGES */}
+      <section>
+        <div className="wrap">
+          <div className="eyebrow">Packages</div>
+          <h2>Three ways in. Each one samples the next weight class up.</h2>
+
+          <div className="packs">
+            {/* IGNITE */}
+            <div className="pack">
+              <div className="pname">Ignite</div>
+              <div className="worth">worth $800</div>
+              <div className="pprice">$399</div>
+              <div className="psave">save 50%</div>
+              <div className="pitems">
+                <div className="pit"><span>1 day exclusive buy alert banner</span><span className="pw">~83K placements</span></div>
+                <div className="pit"><span>1 day booster spotlight</span><span className="pw">daily ritual post</span></div>
+                <div className="pit"><span>1 nudge <span className="avail-chip">nudges begin [DATE]</span></span><span className="pw">direct 1:1</span></div>
+              </div>
+              <div className="pimp"><div className="t">Combined footprint</div><div className="v">~83K placements + direct intent</div></div>
+              <a className="cta-primary" href="https://t.me/BobbyBuyBot">DM Bobby</a>
+            </div>
+
+            {/* MOMENTUM */}
+            <div className="pack center">
+              <div className="badge">MOST POPULAR</div>
+              <div className="pname">Momentum</div>
+              <div className="worth">worth $2,500</div>
+              <div className="pprice">$1,299</div>
+              <div className="psave">save 48%</div>
+              <div className="pitems">
+                <div className="pit"><span>3 day exclusive banner</span><span className="pw">~250K placements</span></div>
+                <div className="pit"><span>3 booster spotlight days</span><span className="pw">3 ritual posts</span></div>
+                <div className="pit"><span>1 direct message blast</span><span className="pw">4,500 inboxes</span></div>
+                <div className="pit"><span>2 nudges <span className="avail-chip">nudges begin [DATE]</span></span><span className="pw">direct 1:1 x2</span></div>
+              </div>
+              <div className="pimp"><div className="t">Combined footprint</div><div className="v">~250K placements + full inbox creative</div></div>
+              <a className="cta-primary" href="https://t.me/BobbyBuyBot">DM Bobby</a>
+            </div>
+
+            {/* TAKEOVER */}
+            <div className="pack">
+              <div className="opensoon-chip">OPENS SOON</div>
+              <div className="pname">Takeover</div>
+              <div className="worth">worth $7,000</div>
+              <div className="pprice">$3,499</div>
+              <div className="psave">save 50%</div>
+              <div className="pitems">
+                <div className="pit"><span>7 day exclusive banner</span><span className="pw">~580K placements</span></div>
+                <div className="pit"><span>7 booster spotlight days</span><span className="pw">full week ritual</span></div>
+                <div className="pit"><span>1 week community broadcast credit</span><span className="pw">2x daily · 28K groups</span></div>
+                <div className="pit"><span>1 blast + league weekly credit</span><span className="pw">inbox + the big event</span></div>
+                <div className="pit"><span>4 nudges</span><span className="pw">direct 1:1 x4</span></div>
+              </div>
+              <div className="pimp"><div className="t">Combined footprint</div><div className="v">~580K placements + Bobby's voice, all week</div></div>
+              <a className="cta-primary" href="https://t.me/BobbyBuyBot">Opens soon · Reserve via Bobby</a>
+            </div>
+          </div>
+
+          <div className="partner">
+            <div className="t">Partner · standing presence, custom scope</div>
+            <a href="https://t.me/BobbyBuyBot">Talk to Bobby →</a>
+          </div>
+        </div>
+      </section>
+
+      {/* SURFACE POWER */}
+      <section>
+        <div className="wrap">
+          <div className="eyebrow">Build your own</div>
+          <h2>Every surface, its power, its price.</h2>
+          <p className="sub">Four weight classes. Reach puts you everywhere. Presence keeps you in the room. Moments put you on the posts everyone reads. Intent lands in one person's inbox.</p>
+
+          <table>
+            <thead><tr><th>Surface</th><th>Class</th><th>Power</th><th>Price</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><div className="sn">Buy alert banner</div><div className="sd">Your line and button at the foot of every live buy alert, network wide.</div></td>
+                <td><span className="classlab reach">Reach</span></td>
+                <td className="pow">~83K placements/day<small>2.5M+ alerts monthly</small></td>
+                <td className="prc">$200 day · $500 3 days · $900 week</td>
+              </tr>
+              <tr>
+                <td><div className="sn">Community broadcast credit</div><div className="sd">Bobby's twice daily message to every group carries your credit line.</div></td>
+                <td><span className="classlab presence">Presence</span></td>
+                <td className="pow">56K group drops/day<small>2x daily · 28K groups · 1.3M audience</small></td>
+                <td className="prc">$400 day · $2,000 week <span className="soon-chip">Opens soon</span></td>
+              </tr>
+              <tr>
+                <td><div className="sn">The Board placements</div><div className="sd">A paid position on the board itself. Position is the price.</div></td>
+                <td><span className="classlab presence">Presence</span></td>
+                <td className="pow">24/7 for the slot<small>every board pull, every group</small></td>
+                <td className="prc">from $135</td>
+              </tr>
+              <tr>
+                <td><div className="sn">Daily booster spotlight</div><div className="sd">One credit line on the day's top boosters post. Bobby's copy stays Bobby's.</div></td>
+                <td><span className="classlab moment">Moment</span></td>
+                <td className="pow">The daily ritual<small>highest read organic post</small></td>
+                <td className="prc">$300 day</td>
+              </tr>
+              <tr>
+                <td><div className="sn">League weekly credit</div><div className="sd">Your name on the week's biggest event. The announcement stays organic.</div></td>
+                <td><span className="classlab moment">Moment</span></td>
+                <td className="pow">The week's main event<small>network wide reset post</small></td>
+                <td className="prc">$300 · $750 x3</td>
+              </tr>
+              <tr>
+                <td><div className="sn">Weekly promo post</div><div className="sd">A scheduled standalone post inside groups where Bobby is live.</div></td>
+                <td><span className="classlab moment">Moment</span></td>
+                <td className="pow">Your post, in network<small>single or a run of three</small></td>
+                <td className="prc">$300 · $750 x3</td>
+              </tr>
+              <tr>
+                <td><div className="sn">Nudge</div><div className="sd">A sponsor button on Bobby's personal nudge. Capped hard so it never becomes noise.</div></td>
+                <td><span className="classlab intent">Intent</span></td>
+                <td className="pow">Direct 1:1, up to 4,500<small>max 2 per user per day</small></td>
+                <td className="prc">$300 per nudge <span className="soon-chip">Opens soon</span></td>
+              </tr>
+              <tr>
+                <td><div className="sn">Direct message blast</div><div className="sd">Full creative, image included, sent once to the opted in audience.</div></td>
+                <td><span className="classlab intent">Intent</span></td>
+                <td className="pow">4,500 inboxes<small>you own the whole message</small></td>
+                <td className="prc">$500 per send</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* HOW */}
+      <section>
+        <div className="wrap">
+          <div className="eyebrow">How it works</div>
+          <div className="how">
+            <div className="step"><div className="k">01</div><div className="t">DM Bobby and say advertise</div><div className="d">No forms. No sales calls. Bobby handles it in chat.</div></div>
+            <div className="step"><div className="k">02</div><div className="t">Pick and pay in chat</div><div className="d">Choose a package or build your own. Pay right there.</div></div>
+            <div className="step"><div className="k">03</div><div className="t">Bobby schedules it and sends proof</div><div className="d">You get confirmation when it runs. Receipts, not promises.</div></div>
+          </div>
+
+          <div className="trust">
+            <div className="ti"><b>Every placement is marked.</b> A visible Sponsored marker on every surface, every time.</div>
+            <div className="ti"><b>Bobby's own words are never for sale.</b> His calls, milestones and welcomes stay his.</div>
+            <div className="ti"><b>Editorial is a separate door.</b> Bobby Recommends requires qualification. Money cannot skip it.</div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <a className="cta-primary" href="https://t.me/BobbyBuyBot">DM Bobby</a>
+      </footer>
+
+    </div>
+  );
+}
