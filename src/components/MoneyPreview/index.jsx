@@ -40,7 +40,7 @@ export default function MoneyPreview() {
             {/* IGNITE */}
             <div className="pack">
               <div className="pname">Ignite</div>
-              <div className="worth">worth $800</div>
+              <div className="separate"><s>$800</s> bought separately</div>
               <div className="pprice">$399</div>
               <div className="psave">save 50%</div>
               <div className="pitems">
@@ -56,7 +56,7 @@ export default function MoneyPreview() {
             <div className="pack center">
               <div className="badge">MOST POPULAR</div>
               <div className="pname">Momentum</div>
-              <div className="worth">worth $2,500</div>
+              <div className="separate"><s>$2,500</s> bought separately</div>
               <div className="pprice">$1,299</div>
               <div className="psave">save 48%</div>
               <div className="pitems">
@@ -73,7 +73,7 @@ export default function MoneyPreview() {
             <div className="pack">
               <div className="opensoon-chip">OPENS SOON</div>
               <div className="pname">Takeover</div>
-              <div className="worth">worth $7,000</div>
+              <div className="separate"><s>$7,000</s> bought separately</div>
               <div className="pprice">$3,499</div>
               <div className="psave">save 50%</div>
               <div className="pitems">
@@ -86,6 +86,55 @@ export default function MoneyPreview() {
               <div className="pimp"><div className="t">Combined footprint</div><div className="v">~580K placements + Bobby's voice, all week</div></div>
               <a className="cta-primary" href="https://t.me/BobbyBuyBot">Opens soon · Reserve via Bobby</a>
             </div>
+
+            {/* RESIDENCY */}
+            <div className="pack">
+              <div className="opensoon-chip">OPENS SOON</div>
+              <div className="pname">RESIDENCY</div>
+              <div className="pdur">14 days</div>
+              <div className="separate"><s>$14,000</s> bought separately</div>
+              <div className="pprice">$6,999</div>
+              <div className="psave">Save 50%</div>
+              <div className="ptease">Two weeks living in every surface the network reads.</div>
+              <div className="pitems">
+                <div className="pit"><span>Banner · 2 weeks</span><span className="pw">$1,800</span></div>
+                <div className="pit"><span>Daily booster · 14 days</span><span className="pw">$4,200</span></div>
+                <div className="pit"><span>Group broadcast · 2 weeks</span><span className="pw">$4,000</span></div>
+                <div className="pit"><span>Blasts · 2</span><span className="pw">$1,000</span></div>
+                <div className="pit"><span>League placements · 2</span><span className="pw">$600</span></div>
+                <div className="pit"><span>Weekly promos · 2</span><span className="pw">$600</span></div>
+                <div className="pit"><span>Nudge DMs · 6</span><span className="pw">$1,800</span></div>
+              </div>
+              <a className="cta-primary" href="https://t.me/BobbyBuyBot"><span>Opens soon · Reserve via Bobby</span></a>
+            </div>
+
+            {/* REIGN */}
+            <div className="pack">
+              <div className="opensoon-chip">OPENS SOON</div>
+              <div className="pname">REIGN</div>
+              <div className="pdur">30 days</div>
+              <div className="separate"><s>$27,100</s> bought separately</div>
+              <div className="pprice">$12,999</div>
+              <div className="psave">Save 52%</div>
+              <div className="ptease">Thirty days. The network stops asking who you are.</div>
+              <div className="pitems">
+                <div className="pit"><span>Banner · 4 weeks</span><span className="pw">$3,600</span></div>
+                <div className="pit"><span>Daily booster · 30 days</span><span className="pw">$9,000</span></div>
+                <div className="pit"><span>Group broadcast · 4 weeks</span><span className="pw">$8,000</span></div>
+                <div className="pit"><span>Blasts · 4</span><span className="pw">$2,000</span></div>
+                <div className="pit"><span>League · 3 pack plus 1</span><span className="pw">$1,050</span></div>
+                <div className="pit"><span>Promo · 3 pack plus 1</span><span className="pw">$1,050</span></div>
+                <div className="pit"><span>Nudge DMs · 8</span><span className="pw">$2,400</span></div>
+              </div>
+              <a className="cta-primary" href="https://t.me/BobbyBuyBot"><span>Opens soon · Reserve via Bobby</span></a>
+            </div>
+          </div>
+
+          {/* Board add on strip */}
+          <div className="boardstrip">
+            <div className="t">Add The Board · from $135</div>
+            <div className="bsupport">Stacks on any package.</div>
+            <a href="https://t.me/BobbyBuyBot"><span>Get a slot</span></a>
           </div>
 
           <div className="partner">

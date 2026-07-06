@@ -32,7 +32,10 @@
 .bmp .pack.center{background:var(--panel2);border-color:var(--lime);transform:translateY(-14px);box-shadow:0 0 50px rgba(204,255,0,.10)}
 .bmp .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--lime);color:var(--ink);font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.14em;padding:5px 12px;border-radius:99px;white-space:nowrap}
 .bmp .pack .pname{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--text2)}
-.bmp .worth{font-family:var(--mono);font-size:13px;color:var(--text3);text-decoration:line-through;margin-top:14px}
+.bmp .separate{font-family:var(--mono);font-size:13px;color:var(--text3);margin-top:14px}
+.bmp .separate s{text-decoration:line-through}
+.bmp .pdur{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--text3);margin-top:6px}
+.bmp .ptease{font-size:12.5px;color:var(--text2);line-height:1.5;margin:14px 0 4px}
 .bmp .pprice{font-size:38px;font-weight:900;letter-spacing:-.02em;margin-top:2px}
 .bmp .psave{font-family:var(--mono);font-size:11px;color:var(--lime);letter-spacing:.08em;margin-top:4px}
 .bmp .pitems{margin:20px 0;display:flex;flex-direction:column;gap:9px}
@@ -45,6 +48,10 @@
 .bmp .partner{border:1px solid var(--line);border-radius:12px;margin-top:24px;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
 .bmp .partner .t{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text2)}
 .bmp .partner a{color:var(--lime);font-weight:700;font-size:13px;text-decoration:none}
+.bmp .boardstrip{border:1px solid var(--line);border-radius:12px;margin-top:16px;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.bmp .boardstrip .t{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text2)}
+.bmp .boardstrip .bsupport{font-size:12px;color:var(--text3);flex:1}
+.bmp .boardstrip a{color:var(--lime);font-weight:700;font-size:13px;text-decoration:none}
 
 /* availability markers (Stage 1 deltas) */
 .bmp .opensoon-chip{position:absolute;top:14px;right:14px;font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--text3);border:1px solid var(--line);border-radius:99px;padding:3px 9px;white-space:nowrap}
