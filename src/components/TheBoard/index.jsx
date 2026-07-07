@@ -88,7 +88,7 @@ export default function TheBoard() {
       </div>
 
       <div className="board-foot">
-        <span>positions 8-15 · standard trending</span>
+        <span>positions 8-15 · standard slots</span>
         <span>updates every 2 min on @bobbybooost</span>
       </div>
     </div>

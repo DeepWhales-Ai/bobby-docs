@@ -1,37 +1,34 @@
 import React from 'react';
+import TgMock from '@site/src/components/TgMock';
 import './styles.css';
 
-// /advertise — the advertiser sell. Every format, its reach, its price, one CTA.
-// Bobby voice. Prices trace to the live tier pages and the /projects ladder.
-// Stage 1 states per Krypt: all placements buyable; broadcast and nudge carry
-// "Campaigns scheduled from launch week"; auto alerts and Bobby sponsor
-// recommendations stay COMING SOON. Reach copy is qualitative (no precise
-// figures beyond the hero "Over 1 million users.").
+// /advertise — the advertiser sell. Outcome-led hero, proof strip, a 9-card
+// formats grid with aligned CTAs, three Telegram mockups, packages, closer.
+// Every placement is buyable via DM. No timing lines, no coming-soon language.
+// Prices trace to the live tier pages and the /projects ladder.
 
 const DM = 'https://t.me/BobbyBuyBot';
 
 const CARDS = [
   {
-    name: 'Nudge', hero: true, tagline: 'Nobody else has this.',
-    what: 'Follow up DM with a click button, sent to users who already saw the alert.',
-    where: 'Straight to the user inbox.',
-    reach: 'Per user, direct.',
-    schedule: 'Campaigns scheduled from launch week.',
-    price: '$300 per nudge',
-  },
-  {
     name: 'Buy alert banners',
-    what: 'Your banner under buy alerts across the network.',
-    where: '3 rotating slots. 3 projects at a time.',
+    what: 'Your banner under buy alerts across the network. 3 rotating slots, 3 projects at a time.',
+    where: 'Under every live buy alert.',
     reach: 'Rides millions of alerts every month.',
     price: '$200 day · $500 3 days · $900 week',
   },
   {
+    name: 'Nudge',
+    what: 'Follow up DM with a click button, sent to users who already saw the alert. Nobody else has this.',
+    where: 'Straight to the user inbox.',
+    reach: 'Per user, direct.',
+    price: '$300 per nudge',
+  },
+  {
     name: 'Group broadcast',
-    what: 'One message across the network. Neutral framing only, Bobby voice, no direct shilling.',
+    what: 'One message across the network. Neutral framing, Bobby voice, no direct shilling.',
     where: 'Across the network.',
     reach: 'Across the network.',
-    schedule: 'Campaigns scheduled from launch week.',
     price: '$400 day · $2,000 week',
   },
   {
@@ -44,10 +41,9 @@ const CARDS = [
   },
   {
     name: 'Mass DM',
-    what: 'Photo or video, straight to user inboxes.',
+    what: 'Photo or video, straight to user inboxes. Full network sends take days to deliver.',
     where: 'Direct to the inbox.',
     reach: 'Up to the full user base.',
-    constraint: 'Full network sends take days to deliver.',
     price: '$500 per send',
   },
   {
@@ -58,23 +54,25 @@ const CARDS = [
     price: '$300 day',
   },
   {
-    name: 'League placement and weekly promo',
+    name: 'League and weekly promo',
     what: "Your name on the week's league event, or a scheduled standalone post.",
     where: 'Across the network.',
     reach: 'Across the network.',
     price: '$300 · $750 x3',
   },
   {
-    name: 'Auto alerts', soon: true,
+    name: 'Auto alerts',
     what: 'Twice daily neutral DM across the network.',
     where: "Across the network's groups.",
     reach: 'Across the network.',
+    price: 'Pricing via Bobby',
   },
   {
-    name: 'Bobby sponsor recommendations', soon: true,
+    name: 'Bobby sponsor recommendations',
     what: 'Bobby suggests sponsors when users open the bot.',
     where: 'When users open the bot.',
     reach: 'Direct, in the bot.',
+    price: 'Pricing via Bobby',
   },
 ];
 
@@ -88,22 +86,17 @@ const PACKS = [
 
 function Card({c}) {
   return (
-    <div className={'card' + (c.hero ? ' hero-card' : '')}>
-      {c.soon && <div className="soonchip">Coming soon</div>}
-      <div className="cname">{c.name}</div>
-      {c.tagline && <div className="tagline">{c.tagline}</div>}
-      <div className="what">{c.what}</div>
-      <div className="where">{c.where}</div>
-      <div className="meta">
-        <div className="row"><b>Potential reach.</b> {c.reach}</div>
-        {c.schedule && <div className="row"><b>Timing.</b> {c.schedule}</div>}
-        {c.constraint && <div className="row"><b>Honest constraint.</b> {c.constraint}</div>}
-        {!c.soon && <div className="row"><b>Measured performance.</b> Click data publishing soon.</div>}
+    <div className="card">
+      <div className="cbody">
+        <h3>{c.name}</h3>
+        <div className="what">{c.what}</div>
+        <div className="where">{c.where}</div>
+        <div className="reach"><b>Potential reach.</b> {c.reach}</div>
       </div>
-      <div className="marker">Shown with a Sponsored marker.</div>
-      {!c.soon && <div className="price">{c.price}</div>}
-      {!c.soon && c.extra && <div className="price">{c.extra}</div>}
-      {!c.soon && <a className="cta" href={DM}><span>DM Bobby</span></a>}
+      <div className="cfoot">
+        <div className="price">{c.price}{c.extra && <span className="extra">{c.extra}</span>}</div>
+        <a className="cta-primary" href={DM}>DM Bobby</a>
+      </div>
     </div>
   );
 }
@@ -116,9 +109,14 @@ export default function Advertise() {
       <section className="hero">
         <div className="wrap">
           <div className="eyebrow">For projects and companies</div>
-          <h1>Advertise with Bobby</h1>
-          <p className="sub">Bobby is a marketing and network convergence machine. Over 1 million users. Tens of thousands of groups. One bot in the middle of all of it.</p>
-          <a className="cta" href={DM}><span>DM Bobby</span></a>
+          <h1>Your project in front of the whole network.</h1>
+          <p className="sub">Over 1 million users. Tens of thousands of groups. One bot in the middle.</p>
+          <a className="cta-primary" href={DM}>DM Bobby</a>
+          <div className="proof">
+            <span className="pi">Over 1 million users</span>
+            <span className="pi">Sponsored, marked, trusted</span>
+            <span className="pi">Live in minutes from your DM</span>
+          </div>
         </div>
       </section>
 
@@ -133,12 +131,49 @@ export default function Advertise() {
         </div>
       </section>
 
+      {/* TELEGRAM MOCKS */}
+      <section>
+        <div className="wrap">
+          <div className="eyebrow">Where your ad lives</div>
+          <h2>This is Telegram. This is the room.</h2>
+          <div className="tgset">
+            <div>
+              <TgMock messages={[{
+                from: 'bot',
+                text: 'New buy on $NOVA. 4.2 ETH in. Liquidity locked, holders climbing.',
+                sponsor: 'Presented with $NOVA',
+                buttons: [{label: 'View $NOVA'}],
+                time: '14:02',
+              }]} />
+              <div className="tgcap">Buy alert with a sponsor banner</div>
+            </div>
+            <div>
+              <TgMock messages={[{
+                from: 'bot',
+                text: 'Bobby here. $NOVA is moving and you were early. Take a look.',
+                buttons: [{label: 'Open $NOVA'}],
+                time: '14:05',
+              }]} />
+              <div className="tgcap">Nudge DM with a click button</div>
+            </div>
+            <div>
+              <TgMock messages={[{
+                from: 'bot',
+                text: 'Bobby broadcast. $NOVA is live across the network today. Worth a look.',
+                sponsor: 'Presented with $NOVA',
+                time: '09:00',
+              }]} />
+              <div className="tgcap">Group broadcast</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* PACKAGES */}
       <section>
         <div className="wrap">
           <div className="eyebrow">Packages</div>
-          <h2>Packages</h2>
-          <p className="sub">Every format above, bundled and discounted.</p>
+          <h2>Every format above, bundled and discounted.</h2>
           <div className="packrow">
             {PACKS.map((p) => (
               <div className="pk" key={p.n}>
@@ -149,11 +184,11 @@ export default function Advertise() {
             ))}
           </div>
           <div className="packlinks">
-            <a className="cta ghost" href="/projects"><span>See the ladder</span></a>
+            <a className="cta-ghost" href="/projects">See the ladder</a>
           </div>
           <div className="boardstrip">
-            <div className="bt">Add The Board · from $135</div>
-            <a className="cta ghost" href={DM}><span>Get a slot</span></a>
+            <div className="bt">Add The Board · from $135 · Board advert slot $500/day</div>
+            <a className="cta-ghost" href={DM}>Get a slot</a>
           </div>
         </div>
       </section>
@@ -161,7 +196,7 @@ export default function Advertise() {
       {/* CLOSER */}
       <div className="closer">
         <div className="line">We don't predict. We detect. Your project inside the machine that does.</div>
-        <a className="cta" href={DM}><span>DM Bobby</span></a>
+        <a className="cta-primary" href={DM}>DM Bobby</a>
       </div>
 
     </div>
