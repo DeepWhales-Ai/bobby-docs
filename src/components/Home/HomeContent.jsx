@@ -77,6 +77,33 @@ export default function HomeContent() {
         </div>
       </section>
 
+      <section className="home-section home-doors">
+        <div className="section-rule">
+          <span className="label"><span className="lime">Start here</span></span>
+          <span className="line" />
+        </div>
+        <p className="section-sub" style={{maxWidth: 560}}>
+          Two audiences. One network. Pick your door.
+        </p>
+        <div className="three-doors">
+          <Link to="/groups/what-bobby-does" className="door">
+            <div className="door-num">For your group</div>
+            <h3>Put Bobby in your group</h3>
+            <p>Add Bobby to your Telegram. Detect what's happening. Talk to your audience like you already know them.</p>
+          </Link>
+          <Link to="/projects" className="door">
+            <div className="door-num">For your project</div>
+            <h3>Market on the network</h3>
+            <p>Every surface, its reach, its price. We do not sell to whoever pays. We tell you if you qualify.</p>
+          </Link>
+          <Link to="/advertise" className="door">
+            <div className="door-num">Advertise with Bobby</div>
+            <h3>The whole machine</h3>
+            <p>Banners, nudges, broadcasts, The Board. One bot in the middle of all of it.</p>
+          </Link>
+        </div>
+      </section>
+
       <section className="home-section home-thesis">
         <Pullquote variant="hero">
           We don't predict. <span className="lime">We detect.</span>
@@ -123,37 +150,10 @@ export default function HomeContent() {
       </section>
 
       {/* 03 - Get started */}
+      {/* 03 - Why it works */}
       <section className="home-section">
         <div className="section-rule">
-          <span className="label"><span className="lime">03</span> · Get started</span>
-          <span className="line" />
-        </div>
-        <p className="section-sub" style={{maxWidth: 560}}>
-          Pick one.
-        </p>
-        <div className="three-doors">
-          <Link to="/groups/what-bobby-does" className="door">
-            <div className="door-num">01 · For your group</div>
-            <h3>Bobby in your group</h3>
-            <p>Add Bobby to your Telegram. Detect what's happening. Talk to your audience like you already know them.</p>
-          </Link>
-          <Link to="/projects/why" className="door">
-            <div className="door-num">02 · For your project</div>
-            <h3>Advertise with Bobby</h3>
-            <p>Two tiers. Five surfaces. We do not sell to whoever pays. We tell you if you qualify.</p>
-          </Link>
-          <Link to="/intelligence/what-bobby-sees" className="door">
-            <div className="door-num">03 · The story</div>
-            <h3>The intelligence</h3>
-            <p>What Bobby sees. Why convergence. Why the silence. Why most signals are noise.</p>
-          </Link>
-        </div>
-      </section>
-
-      {/* 04 - Why it works */}
-      <section className="home-section">
-        <div className="section-rule">
-          <span className="label"><span className="lime">04</span> · Why it works</span>
+          <span className="label"><span className="lime">03</span> · Why it works</span>
           <span className="line" />
         </div>
 
@@ -250,7 +250,7 @@ export default function HomeContent() {
       {/* 05 - Where Bobby is */}
       <section className="home-section">
         <div className="section-rule">
-          <span className="label"><span className="lime">05</span> · Where Bobby is</span>
+          <span className="label"><span className="lime">04</span> · Where Bobby is</span>
           <span className="line" />
         </div>
         <p className="section-sub" style={{maxWidth: 560}}>
@@ -273,7 +273,7 @@ export default function HomeContent() {
       {/* 06 - How Bobby talks */}
       <section className="home-section">
         <div className="section-rule">
-          <span className="label"><span className="lime">06</span> · How Bobby talks</span>
+          <span className="label"><span className="lime">05</span> · How Bobby talks</span>
           <span className="line" />
         </div>
 
