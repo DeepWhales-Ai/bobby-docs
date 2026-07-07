@@ -792,8 +792,8 @@ h1.page-h1 {
 .cta-primary {
   display: inline-flex; align-items: center; gap: 10px;
   background: var(--lime);
-  color: #000;
-  font-weight: 500;
+  color: #0B0B0C;
+  font-weight: 700;
   font-size: 14.5px;
   padding: 11px 18px;
   border-radius: var(--r-md);
@@ -3507,7 +3507,7 @@ h2:hover .anchor, h3:hover .anchor { opacity: 1; }
 
 /* --- BODY LINK COLOR - restore lime accent on doc body links
        (the prototype's `a { color: inherit }` reset removed it globally) --- */
-.theme-doc-markdown a:not(.bobby-card):not(.bobby-card--link):not(.surface-card):not(.door):not(.dm-cta):not(.cta-primary):not(.cta-ghost):not(.button):not(.brand-download) {
+.theme-doc-markdown a:not(.bobby-card):not(.bobby-card--link):not(.surface-card):not(.door):not(.dm-cta):not(.cta-primary):not(.cta-ghost):not(.button):not(.brand-download):not(.cta):not(.tg-btn) {
   color: var(--lime);
   text-decoration: underline;
   text-decoration-color: var(--lime-edge);

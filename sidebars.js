@@ -16,9 +16,6 @@ const sidebars = {
         'groups/what-bobby-does',
         'groups/add',
         'groups/configure',
-        'groups/alerts',
-        'groups/commands',
-        'groups/pro',
       ],
     },
     {
@@ -39,9 +36,6 @@ const sidebars = {
       label: 'The intelligence',
       items: [
         'intelligence/what-bobby-sees',
-        'intelligence/convergence',
-        'intelligence/why-we-say-no',
-        'intelligence/bobby-sees',
       ],
     },
     {
@@ -50,7 +44,6 @@ const sidebars = {
       items: [
         'community/league',
         'community/board',
-        'community/proof',
       ],
     },
     {
@@ -58,7 +51,6 @@ const sidebars = {
       label: 'Surfaces',
       items: [
         'surfaces/lobby',
-        'surfaces/x',
         'surfaces/support',
       ],
     },
@@ -67,8 +59,6 @@ const sidebars = {
       label: 'Brand',
       items: [
         'brand/assets',
-        'brand/voice',
-        'brand/press',
       ],
     },
     {

@@ -87,7 +87,7 @@ function MockBuyAlert() {
                 }}>
                   <div className="sm-sponsor-tag">SPONSOR</div>
                   <div className="sm-sponsor-line">⚡ Bobby. Since 2021.</div>
-                  <div className="sm-sponsor-cta">Boosted tokens trend first</div>
+                  <div className="sm-sponsor-cta">Boosted tokens rise first</div>
                   <div className="sm-sweep" style={{
                     transform: `translateX(${-100 + sponsorPulse * 200}%)`,
                     opacity: sponsorPulse > 0.4 && sponsorPulse < 0.95 ? 0.6 : 0,
@@ -107,7 +107,7 @@ function MockBuyAlert() {
 }
 
 // ============================================================
-// 02 - The Board (trending)
+// 02 - The Board
 // ============================================================
 function MockBoard() {
   const phase = usePhase(6000);
@@ -140,14 +140,14 @@ function MockBoard() {
         <div className="sm-avatar sm-bobby-av">B</div>
         <div className="sm-tg-meta">
           <div className="sm-tg-name">Bobby</div>
-          <div className="sm-tg-sub sm-online">/trending · live</div>
+          <div className="sm-tg-sub sm-online">The Board · live</div>
         </div>
         <div className="sm-tg-tag">bobby DM</div>
       </div>
       <div className="sm-tg-body sm-board-body">
         <div className="sm-board">
-          <div className="sm-board-title">🔥 Bobby Trending</div>
-          <div className="sm-board-tag">First trending system on Telegram. Since 2021.</div>
+          <div className="sm-board-title">🔥 The Board</div>
+          <div className="sm-board-tag">The first of its kind on Telegram. Since 2021.</div>
           <div className="sm-board-podium-label">👑 The Podium</div>
           <div className="sm-board-list">
             {ranked.slice(0, 7).map((tk, i) => {

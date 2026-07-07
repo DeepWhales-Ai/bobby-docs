@@ -1,26 +1,94 @@
 ---
 title: "Configure Bobby"
 sidebar_label: "Configure Bobby"
-description: "Two commands cover most of it. Set the portal. Set the socials. Bobby does the rest."
+description: "Every Bobby command in one place. Set the portal, register socials, run the group, buy placement. All from Telegram."
 ---
 
-import {TGMsg} from '@site/src/components/TG';
+import TgMock from '@site/src/components/TgMock';
 
-## Set the portal
+Every command lives here. Type them in your group, or in DM where noted. On most Telegram clients, typing `/` brings up a menu, so you do not need to memorize a thing.
 
-Tell Bobby where members should land when they tap the portal button on his alerts.
+## Group admin
 
-<TGMsg from="you" code="/set_portal https://yourproject.com" />
+| Command | What it does |
+|---|---|
+| `/add` | Start the add wizard in DM. Auto detects chain, ticker, listing. |
+| `/settings` | Pick which group you are configuring. Admin only. |
+| `/customise` | Toggle what Bobby posts: booster post, league post, broadcasts, Bobby AI. |
 
-## Set the socials
+<TgMock messages={[
+  {from: 'you', code: '/add'},
+  {from: 'bot', text: 'Send me the contract. I will detect the chain, ticker and listing, then walk you through the rest.'},
+]} />
 
-X, Telegram channels, websites, dexscreener. Bobby renders them in his info panel and in his alerts. Render rules are below.
+## Socials and portal
 
-<TGMsg from="you" code="/set_socials x=BobbyBuyBot tg=BobbyBuyBot web=bobby.bot" />
+| Command | What it does |
+|---|---|
+| `/set_portal {url}` | Set where the portal button on alerts links. |
+| `/set_main {url}` | Set the main link for the project. |
+| `/set_x {handle or url}` | Register the project X account. |
+| `/set_website {url}` | Register the project website. |
+| `/set_socials` | Register everything in one command. |
+| `/show_socials` | Show what is currently registered. |
+| `/socials` | Render the registered socials in chat. |
 
-<Info>
-**The render flag.** Some communities want the socials inline on every Bobby alert. Some prefer Bobby clean. Toggle `BOBBY_SOCIALS_RENDER` on or off. When on, your socials render under every alert. When off, they only show in the info panel.
-</Info>
+<TgMock messages={[
+  {from: 'you', code: '/set_portal https://yourproject.com'},
+  {from: 'you', code: '/set_socials x=BobbyBuyBot tg=BobbyBuyBot web=bobby.bot'},
+  {from: 'bot', text: 'Saved. Portal and socials are live on your alerts.'},
+]} />
+
+## Token and market
+
+| Command | What it does |
+|---|---|
+| `/ca` | Return the contract address. Always shown in full. |
+| `/chart` | Open the chart for the token. |
+| `/buy` | Buy the token. In a group Bobby auto fills the registered tokens. In DM you pass the address. |
+
+<TgMock messages={[
+  {from: 'you', code: '/buy'},
+  {from: 'bot', text: 'You have two registered tokens. Pick one and I will open the buy flow.', buttons: [{label: '$NOVA'}, {label: '$ORBIT'}]},
+]} />
+
+## League and The Board
+
+| Command | What it does |
+|---|---|
+| `/league` | Show the League standings for the group. |
+| `/trending` | Show The Board, ranked live. |
+
+The Board ranks by boosts. A boost is a free tap on any buy alert. Boost is never paid.
+
+## Advertising
+
+| Command | What it does |
+|---|---|
+| `/promote` | Buy any placement. All ad purchasing runs through this, in DM. |
+
+<TgMock messages={[
+  {from: 'you', code: '/promote'},
+  {from: 'bot', text: 'Tell me what you want to run. Banners, nudges, broadcasts, The Board. I price it and take payment right here.'},
+]} />
+
+## DM
+
+| Command | What it does |
+|---|---|
+| `/start` | Open Bobby in DM. The front door for adding a project and buying placement. |
+
+## Syntax rules
+
+- **Groups auto fill.** In a group, token commands use the group's registered tokens. If more than one is registered, Bobby shows a picker.
+- **DM takes the address.** In DM, `/buy` and `/ca` accept a full contract address.
+- **Addresses are always full.** Bobby never shortens a contract address. If it is shown, it is shown whole.
+
+## Only speaks when it matters
+
+Members read Bobby because Bobby only speaks when it matters. We keep it that way.
+
+You cannot tune the methodology. You cannot weight a single source. You cannot turn detection into a firehose. Those are not settings. The internal joke is twelve herbs and spices.
 
 ## Permissions Bobby needs
 
@@ -29,10 +97,14 @@ X, Telegram channels, websites, dexscreener. Bobby renders them in his info pane
 | Send messages | Required | Bobby needs to be able to ping. |
 | Pin messages | Optional | For the welcome pin and major convergence alerts. |
 | Delete | Never asked for | Bobby does not moderate. |
-| Admin | Required | Bobby needs admin to read group activity, post alerts, and manage the room. Bobby never moderates members or deletes content. |
+| Admin | Required | Bobby needs admin to read group activity and post alerts. He never moderates members or deletes content. |
 
-Bobby is admin-permissioned, not a moderator. The admin role is the floor Telegram requires for Bobby to do his job. Moderation is not in his job description.
+Bobby is admin permissioned, not a moderator. The admin role is the floor Telegram requires for Bobby to do his job.
 
-## More
+## Bobby PRO · $29/mo
 
-Tune the room further: [customize alerts](/groups/alerts). Lookup every command: [commands reference](/groups/commands).
+The upgrade tier for group admins. One subscription per group, cancel anytime. It unlocks custom alert thresholds, group analytics, priority support, and voice tweaks for your room. It is the admin's own toolkit, not project advertising, so it is not on the project pricing pages. Run the upgrade from `/settings` in the group where Bobby is already live. Crypto at checkout.
+
+<Info>
+**Not yet running Bobby?** [Add Bobby first.](/groups/add) The free tier is full featured. PRO sits on top.
+</Info>

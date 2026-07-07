@@ -45,10 +45,29 @@
 
   /* Aliases consumed by bobby-prototype.css */
   --font-sans: var(--ifm-font-family-base);
-  --font-mono: var(--ifm-font-family-monospace);
+  /* PR4: two families only. Label/eyebrow/meta "mono" chrome now resolves to the
+     sans so letter-spacing and weight do the work. True monospace lives only in
+     TgMock command examples via --font-code. Real code blocks keep Infima mono. */
+  --font-mono: var(--font-sans);
+  --font-code: 'JetBrains Mono', 'IBM Plex Mono', 'SF Mono', Menlo, monospace;
   --font-display: var(--ifm-font-family-base);
   --ifm-font-size-base: 15px;
   --ifm-line-height-base: 1.65;
+
+  /* PR4 design tokens (type scale, spacing, card) */
+  --fs-h1: 3rem;
+  --fs-h2: 2rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  --fs-meta: 0.875rem;
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 16px;
+  --sp-4: 24px;
+  --sp-5: 40px;
+  --sp-6: 64px;
+  --radius: 14px;
+  --card-border: rgba(255, 255, 255, 0.10);
 
   --ifm-navbar-height: 72px;
   --ifm-navbar-background-color: var(--bg-2);

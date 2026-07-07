@@ -77,6 +77,17 @@ const config = {
       {
         redirects: [
           {from: '/projects/preview', to: '/projects'},
+          {from: '/trending', to: '/community/board'},
+          {from: '/groups/commands', to: '/groups/configure'},
+          {from: '/groups/alerts', to: '/groups/configure'},
+          {from: '/groups/pro', to: '/groups/configure'},
+          {from: '/intelligence/convergence', to: '/intelligence/what-bobby-sees'},
+          {from: '/intelligence/why-we-say-no', to: '/intelligence/what-bobby-sees'},
+          {from: '/intelligence/bobby-sees', to: '/intelligence/what-bobby-sees'},
+          {from: '/surfaces/x', to: '/surfaces/lobby'},
+          {from: '/community/proof', to: '/community/board'},
+          {from: '/brand/voice', to: '/brand/assets'},
+          {from: '/brand/press', to: '/brand/assets'},
         ],
       },
     ],
@@ -128,7 +139,7 @@ const config = {
             position: 'left',
             items: [
               {to: '/community/league',             label: 'Community'},
-              {to: '/trending',                     label: 'The Board'},
+              {to: '/community/board',              label: 'The Board'},
               {to: '/intelligence/what-bobby-sees', label: 'The intelligence'},
               {to: '/surfaces/lobby',               label: 'Surfaces'},
               {to: '/brand/assets',                 label: 'Brand'},

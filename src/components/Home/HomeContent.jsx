@@ -13,10 +13,10 @@ const Pill = ({kind = 'live', children}) => (
 const SURFACES = [
   {g: 'BG', name: 'Bobby in your group', desc: 'The buy bot. Add Bobby to a Telegram group. He calls every buy and detects what\'s moving next.', path: '/groups/what-bobby-does', pill: <Pill kind="live">Live</Pill>},
   {g: 'BL', name: 'Bobby Lobby',         desc: 'The community itself. The room where the audience finally meets the audience. Trusted since 2021.', path: '/surfaces/lobby', pill: <Pill kind="live">Live</Pill>},
-  {g: 'BS', name: 'Bobby Sees',          desc: 'Discovery surface for trending and intelligence. Formerly Bobby Browser.', path: '/intelligence/bobby-sees', pill: <Pill kind="live">Live</Pill>},
-  {g: 'BX', name: 'Bobby X',             desc: 'Proof-of-network on X. The public credibility layer.', path: '/surfaces/x', pill: <Pill kind="phase">Phase 1</Pill>},
+  {g: 'BS', name: 'Bobby Sees',          desc: 'Discovery surface for The Board and intelligence. Formerly Bobby Browser.', path: '/intelligence/what-bobby-sees', pill: <Pill kind="live">Live</Pill>},
+  {g: 'BX', name: 'Bobby X',             desc: 'Proof of network on X. The public credibility layer.', path: '/surfaces/lobby', pill: <Pill kind="live">Live</Pill>},
   {g: 'B?', name: 'Bobby Support',       desc: 'A real human, when you need one.', path: '/surfaces/support', pill: <Pill kind="live">Live</Pill>},
-  {g: '/?', name: 'Commands',            desc: 'Every Bobby command, in one reference.', path: '/groups/commands', pill: null},
+  {g: '/?', name: 'Commands',            desc: 'Every Bobby command, in one reference.', path: '/groups/configure', pill: null},
 ];
 
 const MARQUEE_ITEMS = [
@@ -144,7 +144,7 @@ export default function HomeContent() {
 
         <div className="section-cta-row">
           <Link to="/intelligence/what-bobby-sees" className="cta-ghost">How the model works →</Link>
-          <Link to="/intelligence/why-we-say-no" className="cta-ghost">Why we say no →</Link>
+          <Link to="/intelligence/what-bobby-sees" className="cta-ghost">Why we say no →</Link>
         </div>
       </section>
 
@@ -289,7 +289,7 @@ export default function HomeContent() {
               <path d="M5 12h14M13 5l7 7-7 7" />
             </svg>
           </Link>
-          <Link to="/brand/voice" className="button">The voice in one page</Link>
+          <Link to="/brand/assets" className="button">The voice in one page</Link>
           <Link to="/groups/add" className="button">Add Bobby to a group</Link>
         </div>
       </section>
@@ -303,7 +303,7 @@ export default function HomeContent() {
               Bobby has been part of crypto Telegram since 2021 and is still trusted there. That is the only product we cannot replace.
             </p>
           </div>
-          <Link to="/intelligence/why-we-say-no" className="cta-ghost">Why we say no →</Link>
+          <Link to="/intelligence/what-bobby-sees" className="cta-ghost">Why we say no →</Link>
         </div>
       </section>
 

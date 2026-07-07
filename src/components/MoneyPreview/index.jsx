@@ -1,13 +1,8 @@
 import React from 'react';
 import './styles.css';
 
-// Money page, rendered at the public /projects route. Ported from the approved
-// visual reference. Stage 1 render states:
-//  - IGNITE + MOMENTUM buyable (DM Bobby). Nudge line items carry a dateless
-//    "Nudges unlock soon" chip.
-//  - TAKEOVER, RESIDENCY, REIGN anchor with an OPENS SOON chip and reserve CTA.
-//  - Nudge, community broadcast, and weekly promo rows carry an Opens soon chip.
-// Network size numbers are stripped (Bible §36 third surface ratification held).
+// Money page, rendered at the public /projects route. Every package and surface
+// is buyable via the standard DM Bobby path. Network size numbers are stripped.
 
 export default function MoneyPreview() {
   return (
@@ -39,7 +34,7 @@ export default function MoneyPreview() {
               <div className="pitems">
                 <div className="pit"><span>1 day exclusive buy alert banner</span><span className="pw">network wide</span></div>
                 <div className="pit"><span>1 day booster spotlight</span><span className="pw">daily ritual post</span></div>
-                <div className="pit"><span>1 nudge <span className="avail-chip">Nudges unlock soon</span></span><span className="pw">direct 1:1</span></div>
+                <div className="pit"><span>1 nudge</span><span className="pw">direct 1:1</span></div>
               </div>
               <div className="pimp"><div className="t">Combined footprint</div><div className="v">network wide reach + direct intent</div></div>
               <a className="cta-primary" href="https://t.me/BobbyBuyBot">DM Bobby</a>
@@ -56,7 +51,7 @@ export default function MoneyPreview() {
                 <div className="pit"><span>3 day exclusive banner</span><span className="pw">network wide</span></div>
                 <div className="pit"><span>3 booster spotlight days</span><span className="pw">3 ritual posts</span></div>
                 <div className="pit"><span>1 direct message blast</span><span className="pw">the opted in inbox</span></div>
-                <div className="pit"><span>2 nudges <span className="avail-chip">Nudges unlock soon</span></span><span className="pw">direct 1:1 x2</span></div>
+                <div className="pit"><span>2 nudges</span><span className="pw">direct 1:1 x2</span></div>
               </div>
               <div className="pimp"><div className="t">Combined footprint</div><div className="v">network wide reach + full inbox creative</div></div>
               <a className="cta-primary" href="https://t.me/BobbyBuyBot">DM Bobby</a>
@@ -64,7 +59,6 @@ export default function MoneyPreview() {
 
             {/* TAKEOVER */}
             <div className="pack">
-              <div className="opensoon-chip">OPENS SOON</div>
               <div className="pname">Takeover</div>
               <div className="separate"><s>$7,000</s> bought separately</div>
               <div className="pprice">$3,499</div>
@@ -77,12 +71,11 @@ export default function MoneyPreview() {
                 <div className="pit"><span>4 nudges</span><span className="pw">direct 1:1 x4</span></div>
               </div>
               <div className="pimp"><div className="t">Combined footprint</div><div className="v">network wide reach + Bobby's voice, all week</div></div>
-              <a className="cta-primary" href="https://t.me/BobbyBuyBot">Opens soon · Reserve via Bobby</a>
+              <a className="cta-primary" href="https://t.me/BobbyBuyBot">DM Bobby</a>
             </div>
 
             {/* RESIDENCY */}
             <div className="pack">
-              <div className="opensoon-chip">OPENS SOON</div>
               <div className="pname">RESIDENCY</div>
               <div className="pdur">14 days</div>
               <div className="separate"><s>$14,000</s> bought separately</div>
@@ -98,12 +91,11 @@ export default function MoneyPreview() {
                 <div className="pit"><span>Weekly promos · 2</span><span className="pw">$600</span></div>
                 <div className="pit"><span>Nudge DMs · 6</span><span className="pw">$1,800</span></div>
               </div>
-              <a className="cta-primary" href="https://t.me/BobbyBuyBot"><span>Opens soon · Reserve via Bobby</span></a>
+              <a className="cta-primary" href="https://t.me/BobbyBuyBot">DM Bobby</a>
             </div>
 
             {/* REIGN */}
             <div className="pack">
-              <div className="opensoon-chip">OPENS SOON</div>
               <div className="pname">REIGN</div>
               <div className="pdur">30 days</div>
               <div className="separate"><s>$27,100</s> bought separately</div>
@@ -119,7 +111,7 @@ export default function MoneyPreview() {
                 <div className="pit"><span>Promo · 3 pack plus 1</span><span className="pw">$1,050</span></div>
                 <div className="pit"><span>Nudge DMs · 8</span><span className="pw">$2,400</span></div>
               </div>
-              <a className="cta-primary" href="https://t.me/BobbyBuyBot"><span>Opens soon · Reserve via Bobby</span></a>
+              <a className="cta-primary" href="https://t.me/BobbyBuyBot">DM Bobby</a>
             </div>
           </div>
 
@@ -157,7 +149,7 @@ export default function MoneyPreview() {
                 <td><div className="sn">Community broadcast credit</div><div className="sd">Bobby's twice daily message to every group carries your credit line.</div></td>
                 <td><span className="classlab presence">Presence</span></td>
                 <td className="pow">Every group, twice daily<small>network wide cadence</small></td>
-                <td className="prc">$400 day · $2,000 week <span className="soon-chip">Opens soon</span></td>
+                <td className="prc">$400 day · $2,000 week</td>
               </tr>
               <tr>
                 <td><div className="sn">The Board placements</div><div className="sd">A paid position on the board itself. Position is the price.</div></td>
@@ -181,13 +173,13 @@ export default function MoneyPreview() {
                 <td><div className="sn">Weekly promo post</div><div className="sd">A scheduled standalone post inside groups where Bobby is live.</div></td>
                 <td><span className="classlab moment">Moment</span></td>
                 <td className="pow">Your post, in network<small>single or a run of three</small></td>
-                <td className="prc">$300 · $750 x3 <span className="soon-chip">Opens soon</span></td>
+                <td className="prc">$300 · $750 x3</td>
               </tr>
               <tr>
                 <td><div className="sn">Nudge</div><div className="sd">A sponsor button on Bobby's personal nudge. Capped hard so it never becomes noise.</div></td>
                 <td><span className="classlab intent">Intent</span></td>
                 <td className="pow">Direct 1:1<small>max 2 per user per day</small></td>
-                <td className="prc">$300 per nudge <span className="soon-chip">Opens soon</span></td>
+                <td className="prc">$300 per nudge</td>
               </tr>
               <tr>
                 <td><div className="sn">Direct message blast</div><div className="sd">Full creative, image included, sent once to the opted in audience.</div></td>
