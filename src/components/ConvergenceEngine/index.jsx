@@ -15,7 +15,7 @@ const CHATTER = [
   {src: 'OG Holders',     text: 'cohort shift, not pump',        kind: 'beh'},
   {src: 'Ethermind',      text: '$WIF mentioned in 4 rooms',     kind: 'echo'},
   {src: 'Solana Pulse',   text: 'historical match: 2024-Q3',     kind: 'hist'},
-  {src: 'Mid-Cap Lab',    text: 'wallet 0x4a...c1 again',        kind: 'beh'},
+  {src: 'Mid-Cap Lab',    text: 'wallet 0x4a7C91e3B5f2D8a06c41E9d27F83b5A2e0D6c1F4 again',        kind: 'beh'},
   {src: 'Trench Talk',    text: 'quiet but compounding',         kind: 'conv'},
   {src: 'Rugfilter',      text: 'safety pass, sellable',         kind: 'list'},
   {src: 'Avalanche AM',   text: 'echo from 3 unrelated chats',   kind: 'echo'},
@@ -23,9 +23,9 @@ const CHATTER = [
 ];
 
 const ALERT_LINES = [
-  {tkr: '$WIF',    msg: '6 independent sources agree',     meta: 'cross-community'},
+  {tkr: '$WIF',    msg: '6 independent sources agree',     meta: 'cross community'},
   {tkr: '$BRETT',  msg: 'holder cohort shift detected',    meta: 'behavior'},
-  {tkr: '$BERA',   msg: 'echo across 4 unrelated rooms',   meta: 'cross-community'},
+  {tkr: '$BERA',   msg: 'echo across 4 unrelated rooms',   meta: 'cross community'},
   {tkr: '$PEPE',   msg: 'historical pattern match',        meta: 'historical'},
   {tkr: '$BONK',   msg: 'listing footprint converging',    meta: 'listings'},
   {tkr: '$POPCAT', msg: 'quiet accumulation, 8 wallets',   meta: 'behavior'},
@@ -35,7 +35,7 @@ const ALERT_LINES = [
 const STREAMS = [
   {y: 60,  label: 'Group conversations', color: '#BFFF00'},
   {y: 130, label: 'Holder behavior',     color: '#9FE000'},
-  {y: 200, label: 'Cross-community echo',color: '#BFFF00'},
+  {y: 200, label: 'Cross community echo',color: '#BFFF00'},
   {y: 270, label: 'Listing footprint',   color: '#80C800'},
   {y: 340, label: 'Historical context',  color: '#9FE000'},
 ];
@@ -339,7 +339,7 @@ export default function ConvergenceEngine() {
         </div>
 
         <div className="ce-mobile-caption">
-          <strong>Inputs:</strong> group conversations · holder behavior · cross-community echo · listing footprint · historical context.<br />
+          <strong>Inputs:</strong> group conversations · holder behavior · cross community echo · listing footprint · historical context.<br />
           <strong>Outputs:</strong> alerts that earn the ping.
         </div>
 

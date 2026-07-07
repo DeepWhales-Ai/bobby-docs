@@ -265,6 +265,9 @@
   color: var(--lime);
   font-family: var(--font-mono);
   font-size: 12px;
+  /* Full addresses are never truncated; the 42 char address wraps instead. */
+  word-break: break-all;
+  min-width: 0;
 }
 .tg-ba-d-pct {
   margin-left: auto;

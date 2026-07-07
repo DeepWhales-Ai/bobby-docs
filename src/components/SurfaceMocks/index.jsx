@@ -282,7 +282,7 @@ function MockWeeklyPromo() {
               <div className="sm-promo-tag">⚡ Promoted</div>
               <div className="sm-promo-headline">$RIFT is one Bobby's been quietly tracking.</div>
               <div className="sm-promo-body">
-                Cross-community footprint up 4x in two weeks. Holder growth ahead of price action. Liquidity locked through August.
+                Cross community footprint up 4x in two weeks. Holder growth ahead of price action. Liquidity locked through August.
               </div>
               <div className="sm-promo-stats">
                 <div className="sm-promo-stat">
