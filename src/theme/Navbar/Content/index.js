@@ -14,7 +14,7 @@ const SECTIONS = [
     label: 'More',
     children: [
       {label: 'Community', to: '/community/league', prefix: '/community'},
-      {label: 'Trending', to: '/trending', prefix: '/trending'},
+      {label: 'The Board', to: '/trending', prefix: '/trending'},
       {label: 'The intelligence', to: '/intelligence/what-bobby-sees', prefix: '/intelligence'},
       {label: 'Surfaces', to: '/surfaces/lobby', prefix: '/surfaces'},
       {label: 'Brand', to: '/brand/assets', prefix: '/brand'},

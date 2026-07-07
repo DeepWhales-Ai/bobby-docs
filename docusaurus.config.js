@@ -128,7 +128,7 @@ const config = {
             position: 'left',
             items: [
               {to: '/community/league',             label: 'Community'},
-              {to: '/trending',                     label: 'Trending'},
+              {to: '/trending',                     label: 'The Board'},
               {to: '/intelligence/what-bobby-sees', label: 'The intelligence'},
               {to: '/surfaces/lobby',               label: 'Surfaces'},
               {to: '/brand/assets',                 label: 'Brand'},
