@@ -71,6 +71,17 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {from: '/projects/preview', to: '/projects'},
+        ],
+      },
+    ],
+  ],
+
   themes: [
     [
       require.resolve('@easyops-cn/docusaurus-search-local'),
@@ -109,7 +120,7 @@ const config = {
         // sits last so the CTA stays bottom-of-drawer on tap.
         items: [
           {to: '/groups/what-bobby-does', label: 'For your group', position: 'left'},
-          {to: '/projects/why',           label: 'For projects',   position: 'left'},
+          {to: '/projects',               label: 'Projects',       position: 'left'},
           {to: '/community/league',       label: 'Community',      position: 'left'},
           {to: '/trending',               label: 'Trending',       position: 'left'},
           {to: '/intelligence/what-bobby-sees', label: 'The intelligence', position: 'left'},
