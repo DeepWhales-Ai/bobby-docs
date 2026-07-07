@@ -40,6 +40,7 @@ const CARDS = [
     where: 'On The Board itself.',
     reach: 'Across the network.',
     price: 'from $135',
+    extra: 'Board advert slot · $500/day',
   },
   {
     name: 'Mass DM',
@@ -101,6 +102,7 @@ function Card({c}) {
       </div>
       <div className="marker">Shown with a Sponsored marker.</div>
       {!c.soon && <div className="price">{c.price}</div>}
+      {!c.soon && c.extra && <div className="price">{c.extra}</div>}
       {!c.soon && <a className="cta" href={DM}><span>DM Bobby</span></a>}
     </div>
   );
