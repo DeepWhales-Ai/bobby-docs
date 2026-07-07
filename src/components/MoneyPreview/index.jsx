@@ -34,7 +34,7 @@ export default function MoneyPreview() {
       <section>
         <div className="wrap">
           <div className="eyebrow">Packages</div>
-          <h2>Three ways in. Each one samples the next weight class up.</h2>
+          <h2>Five ways in. Each one samples the next weight class up.</h2>
 
           <div className="packs">
             {/* IGNITE */}
