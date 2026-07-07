@@ -8,13 +8,21 @@ import SearchBar from '@theme/SearchBar';
 
 const SECTIONS = [
   {label: 'For your group', to: '/groups/what-bobby-does', prefix: '/groups'},
-  {label: 'Projects', to: '/projects', prefix: '/projects'},
-  {label: 'Community', to: '/community/league', prefix: '/community'},
-  {label: 'Trending', to: '/trending', prefix: '/trending'},
-  {label: 'The intelligence', to: '/intelligence/what-bobby-sees', prefix: '/intelligence'},
-  {label: 'Surfaces', to: '/surfaces/lobby', prefix: '/surfaces'},
-  {label: 'Brand', to: '/brand/assets', prefix: '/brand'},
-  {label: 'Useful links', to: '/links', prefix: '/links'},
+  {label: 'For your project', to: '/projects', prefix: '/projects'},
+  {label: 'Advertise with Bobby', to: '/advertise', prefix: '/advertise'},
+  {
+    label: 'More',
+    children: [
+      {label: 'Community', to: '/community/league', prefix: '/community'},
+      {label: 'The Board', to: '/trending', prefix: '/trending'},
+      {label: 'The intelligence', to: '/intelligence/what-bobby-sees', prefix: '/intelligence'},
+      {label: 'Surfaces', to: '/surfaces/lobby', prefix: '/surfaces'},
+      {label: 'Brand', to: '/brand/assets', prefix: '/brand'},
+      {label: 'Useful links', to: '/links', prefix: '/links'},
+      {label: 'Legal', to: '/legal', prefix: '/legal'},
+      {label: 'Terms', to: '/terms', prefix: '/terms'},
+    ],
+  },
 ];
 
 function TelegramIcon() {
@@ -46,14 +54,34 @@ export default function NavbarContent() {
         {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
         <NavbarLogo />
         <div className="topnav-sections">
-          {SECTIONS.map((s) => (
-            <Link
-              key={s.label}
-              to={s.to}
-              className={'topnav-link' + (isActive(s) ? ' active' : '')}>
-              {s.label}
-            </Link>
-          ))}
+          {SECTIONS.map((s) =>
+            s.children ? (
+              <div
+                key={s.label}
+                className={'topnav-dropdown' + (s.children.some(isActive) ? ' active' : '')}>
+                <button type="button" className="topnav-link topnav-more" aria-haspopup="true">
+                  {s.label}
+                </button>
+                <div className="topnav-menu">
+                  {s.children.map((c) => (
+                    <Link
+                      key={c.label}
+                      to={c.to}
+                      className={'topnav-menu-link' + (isActive(c) ? ' active' : '')}>
+                      {c.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <Link
+                key={s.label}
+                to={s.to}
+                className={'topnav-link' + (isActive(s) ? ' active' : '')}>
+                {s.label}
+              </Link>
+            ),
+          )}
         </div>
       </div>
       <div className="bobby-topnav-right">

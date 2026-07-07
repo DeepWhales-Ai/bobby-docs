@@ -120,13 +120,23 @@ const config = {
         // sits last so the CTA stays bottom-of-drawer on tap.
         items: [
           {to: '/groups/what-bobby-does', label: 'For your group', position: 'left'},
-          {to: '/projects',               label: 'Projects',       position: 'left'},
-          {to: '/community/league',       label: 'Community',      position: 'left'},
-          {to: '/trending',               label: 'Trending',       position: 'left'},
-          {to: '/intelligence/what-bobby-sees', label: 'The intelligence', position: 'left'},
-          {to: '/surfaces/lobby',         label: 'Surfaces',       position: 'left'},
-          {to: '/brand/assets',           label: 'Brand',          position: 'left'},
-          {to: '/links',                  label: 'Useful links',   position: 'left'},
+          {to: '/projects',               label: 'For your project', position: 'left'},
+          {to: '/advertise',              label: 'Advertise with Bobby', position: 'left'},
+          {
+            type: 'dropdown',
+            label: 'More',
+            position: 'left',
+            items: [
+              {to: '/community/league',             label: 'Community'},
+              {to: '/trending',                     label: 'The Board'},
+              {to: '/intelligence/what-bobby-sees', label: 'The intelligence'},
+              {to: '/surfaces/lobby',               label: 'Surfaces'},
+              {to: '/brand/assets',                 label: 'Brand'},
+              {to: '/links',                        label: 'Useful links'},
+              {to: '/legal',                        label: 'Legal'},
+              {to: '/terms',                        label: 'Terms'},
+            ],
+          },
           {
             href: 'https://t.me/BobbyBuyBot',
             label: 'Telegram',
