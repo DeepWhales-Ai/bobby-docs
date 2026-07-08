@@ -40,7 +40,7 @@ const config = {
     },
   ],
 
-  url: 'https://docs.bobby.placeholder',
+  url: 'https://www.bobbybuybot.com',
   baseUrl: '/',
 
   organizationName: 'DeepWhales-Ai',

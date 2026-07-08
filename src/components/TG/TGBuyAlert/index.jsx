@@ -149,7 +149,7 @@ export default function TGBuyAlert() {
         </li>
         <li>
           <span className="tg-ba-d-icon"><Icon.User /></span>
-          <span className="tg-ba-d-link">0xF105...72Ad</span>
+          <span className="tg-ba-d-link">0xF105a5D5c81Db2f83b0Ba16Ae92e959B4c72Ad31</span>
           <span className="tg-ba-d-pct">▲ 14.32%</span>
         </li>
         <li>

@@ -2609,6 +2609,9 @@ h2:hover .anchor, h3:hover .anchor { opacity: 1; }
   font-size: 11.5px;
   color: var(--text-2);
   line-height: 1.35;
+  /* Full addresses are never truncated; the 42 char address wraps in the feed. */
+  overflow-wrap: anywhere;
+  word-break: break-all;
 }
 
 /* CENTER - SVG */
