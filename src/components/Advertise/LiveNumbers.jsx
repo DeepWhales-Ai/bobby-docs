@@ -62,11 +62,15 @@ export default function LiveNumbers() {
   return (
     <div className="livenums" ref={ref}>
       <span className="ln-dot" aria-hidden="true" />
-      <div className="lnstat"><span className="n">{fmt(users)}</span><span className="l">users</span></div>
-      <div className="lnstat"><span className="n">{fmt(botUsers)}</span><span className="l">bot users</span></div>
-      <div className="lnstat"><span className="n">{fmt(groups)}</span><span className="l">all time groups</span></div>
-      <span className="pi">Sponsored, marked, trusted</span>
-      <span className="pi">Live in minutes from your DM</span>
+      <div className="ln-stats">
+        <div className="lnstat"><span className="n">{fmt(users)}</span><span className="l">users</span></div>
+        <div className="lnstat"><span className="n">{fmt(botUsers)}</span><span className="l">bot users</span></div>
+        <div className="lnstat"><span className="n">{fmt(groups)}</span><span className="l">all time groups</span></div>
+      </div>
+      <div className="ln-foot">
+        <span className="pi">Sponsored, marked, trusted</span>
+        <span className="pi">Live in minutes from your DM</span>
+      </div>
     </div>
   );
 }
