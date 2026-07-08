@@ -1,18 +1,19 @@
 import React from 'react';
 import TgMock from '@site/src/components/TgMock';
+import LiveNumbers from './LiveNumbers';
 import './styles.css';
 
-// /advertise — the advertiser sell. Outcome-led hero, proof strip, a 9-card
-// formats grid with aligned CTAs, three Telegram mockups, packages, closer.
-// Every placement is buyable via DM. No timing lines, no coming-soon language.
-// Prices trace to the live tier pages and the /projects ladder.
+// /advertise — the advertiser sell. Outcome-led hero, live numbers strip, an
+// 8-card formats grid with aligned CTAs, three Telegram mockups, packages,
+// closer. Every placement is buyable via DM. Card facts follow Bible §41.
+// The precise network figures in LiveNumbers are sanctioned for THIS page only.
 
 const DM = 'https://t.me/BobbyBuyBot';
 
 const CARDS = [
   {
     name: 'Buy alert banners',
-    what: 'Your banner under buy alerts across the network. 3 rotating slots, 3 projects at a time.',
+    what: 'Your banner under buy alerts across the network. One advertiser. Exclusive.',
     where: 'Under every live buy alert.',
     reach: 'Rides millions of alerts every month.',
     price: '$200 day · $500 3 days · $900 week',
@@ -23,13 +24,14 @@ const CARDS = [
     where: 'Straight to the user inbox.',
     reach: 'Per user, direct.',
     price: '$300 per nudge',
+    extra: 'Max 2 per user per day.',
   },
   {
-    name: 'Group broadcast',
-    what: 'One message across the network. Neutral framing, Bobby voice, no direct shilling.',
-    where: 'Across the network.',
+    name: 'Network broadcasts',
+    what: "One message across the network, twice daily. Your credit line and button on every post. Bobby's own content unchanged. Marked Sponsored.",
+    where: 'In groups across the network.',
     reach: 'Across the network.',
-    price: '$400 day · $2,000 week',
+    price: '$400 per day · $2,000 per week',
   },
   {
     name: 'The Board sponsorship',
@@ -55,24 +57,18 @@ const CARDS = [
   },
   {
     name: 'League and weekly promo',
-    what: "Your name on the week's league event, or a scheduled standalone post.",
+    what: "Sponsor the league alerts. Your name on the week's league event, or a scheduled standalone post.",
     where: 'Across the network.',
     reach: 'Across the network.',
     price: '$300 · $750 x3',
   },
   {
-    name: 'Auto alerts',
-    what: 'Twice daily neutral DM across the network.',
-    where: "Across the network's groups.",
-    reach: 'Across the network.',
-    price: 'Pricing via Bobby',
-  },
-  {
-    name: 'Bobby sponsor recommendations',
-    what: 'Bobby suggests sponsors when users open the bot.',
-    where: 'When users open the bot.',
+    name: 'Bobby Recommends',
+    what: 'Bobby recommends a sponsor in his own voice. Qualification required. Sponsored and endorsed, clearly disclosed.',
+    where: "In Bobby's recommendations.",
     reach: 'Direct, in the bot.',
-    price: 'Pricing via Bobby',
+    price: '24h $2,000 · 3 Day $5,000 · Week $10,000',
+    extra: 'Qualification required.',
   },
 ];
 
@@ -113,9 +109,7 @@ export default function Advertise() {
           <p className="sub">Over 1 million users. Tens of thousands of groups. One bot in the middle.</p>
           <a className="cta-primary" href={DM}>DM Bobby</a>
           <div className="proof">
-            <span className="pi">Over 1 million users</span>
-            <span className="pi">Sponsored, marked, trusted</span>
-            <span className="pi">Live in minutes from your DM</span>
+            <LiveNumbers />
           </div>
         </div>
       </section>
@@ -163,7 +157,7 @@ export default function Advertise() {
                 sponsor: 'Presented with $NOVA',
                 time: '09:00',
               }]} />
-              <div className="tgcap">Group broadcast</div>
+              <div className="tgcap">Network broadcast</div>
             </div>
           </div>
         </div>

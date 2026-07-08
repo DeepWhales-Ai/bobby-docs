@@ -15,10 +15,25 @@
 .adv .hero { padding-top: var(--sp-6); }
 .adv .hero .cta-primary { margin-top: var(--sp-5); }
 
-/* PROOF STRIP */
-.adv .proof { display: flex; flex-wrap: wrap; gap: var(--sp-4); border-top: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border); padding: var(--sp-4) 0; margin-top: var(--sp-5); }
+/* PROOF STRIP / LIVE NUMBERS */
+.adv .proof { border: 1px solid var(--card-border); border-radius: var(--radius); margin-top: var(--sp-5); }
 .adv .proof .pi { font-size: var(--fs-meta); color: var(--text-2); font-weight: 600; }
 .adv .proof .pi::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--lime); margin-right: 8px; vertical-align: middle; }
+.adv .livenums { position: relative; display: flex; flex-direction: column; padding: var(--sp-5) var(--sp-4) var(--sp-3); }
+.adv .ln-stats { display: flex; justify-content: center; align-items: baseline; gap: var(--sp-6); text-align: center; }
+.adv .livenums .lnstat { display: flex; flex-direction: column; gap: var(--sp-1); align-items: center; }
+.adv .livenums .n { font-size: 2.25rem; font-weight: 800; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; color: var(--lime); line-height: 1; }
+.adv .livenums .l { font-size: var(--fs-meta); color: var(--text-3); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.adv .ln-foot { display: flex; justify-content: center; flex-wrap: wrap; gap: var(--sp-2) var(--sp-5); border-top: 1px solid var(--card-border); margin-top: var(--sp-4); padding-top: var(--sp-3); }
+.adv .ln-dot { position: absolute; top: var(--sp-3); right: var(--sp-3); width: 8px; height: 8px; border-radius: 50%; background: var(--lime); animation: advLnPulse 2s ease-in-out infinite; }
+@keyframes advLnPulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(191, 255, 0, 0.5); }
+  50% { opacity: 0.6; box-shadow: 0 0 0 5px rgba(191, 255, 0, 0); }
+}
+@media (max-width: 920px) {
+  .adv .ln-stats { gap: var(--sp-4); flex-wrap: wrap; }
+  .adv .livenums .n { font-size: 1.5rem; }
+}
 
 /* FORMAT CARDS */
 .adv .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-3); align-items: stretch; margin-top: var(--sp-5); }
