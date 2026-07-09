@@ -86,6 +86,7 @@ const config = {
           {from: '/intelligence/bobby-sees', to: '/intelligence/what-bobby-sees'},
           {from: '/surfaces/x', to: '/surfaces/lobby'},
           {from: '/community/proof', to: '/community/board'},
+          {from: '/projects/surfaces', to: '/advertise'},
           {from: '/brand/voice', to: '/brand/assets'},
           {from: '/brand/press', to: '/brand/assets'},
         ],
