@@ -56,13 +56,16 @@ function Message({m, animate}) {
 }
 
 export default function TgMock({name = 'Bobby', status = 'bot', context, messages = [], animate = false}) {
+  // context undefined falls back to 'online' (static usages); pass '' to render
+  // no subline. Never put a member count or any reach figure here.
+  const sub = context === undefined ? 'online' : context;
   return (
     <div className={'tgmock' + (animate ? ' tgmock-anim' : '')}>
       <div className="tgmock-head">
         <div className="tgmock-av">B</div>
         <div className="tgmock-who">
           <div className="tgmock-name">{name} <span className="tgmock-bot">{status}</span></div>
-          <div className="tgmock-status">{context || 'online'}</div>
+          {sub ? <div className="tgmock-status">{sub}</div> : null}
         </div>
       </div>
       <div className="tgmock-body">

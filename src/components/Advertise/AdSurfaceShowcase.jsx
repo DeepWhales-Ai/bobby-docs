@@ -19,7 +19,7 @@ const SURFACES = [
     name: 'Buy alert banner',
     desc: 'Your line and button on every buy alert.',
     caption: 'Shows under buy alerts in any group running Bobby.',
-    mock: {name: GROUP, status: 'group', context: '2,140 members',
+    mock: {name: GROUP, status: 'group', context: '',
       messages: [{
         from: 'bot', time: '14:02',
         text: 'New buy on $NOVA. 4.2 ETH in. Liquidity locked, holders climbing.',
@@ -30,9 +30,9 @@ const SURFACES = [
   {
     id: 'broadcast',
     name: 'Network broadcasts',
-    desc: 'One credit line and button, twice daily.',
-    caption: 'Posted by Bobby to groups across the network, twice daily.',
-    mock: {name: GROUP, status: 'group', context: '2,140 members',
+    desc: 'One credit line and button on every post.',
+    caption: 'Posted by Bobby to groups across the network.',
+    mock: {name: GROUP, status: 'group', context: '',
       messages: [{
         from: 'bot', time: '09:00',
         text: 'Bobby broadcast. $NOVA is worth a look across the network today.',
@@ -45,7 +45,7 @@ const SURFACES = [
     name: 'Bobby Recommends',
     desc: 'Bobby recommends in his own voice.',
     caption: 'Bobby recommends in his own voice. Sponsored and endorsed, clearly disclosed.',
-    mock: {name: GROUP, status: 'group', context: '2,140 members',
+    mock: {name: GROUP, status: 'group', context: '',
       messages: [{
         from: 'bot', time: '11:20',
         text: 'Bobby here. I looked at $NOVA and I like what the holders are doing. Worth your time.',
@@ -70,7 +70,7 @@ const SURFACES = [
     name: 'League and weekly promo',
     desc: "Your name on the week's league event.",
     caption: "Your name on the week's league event.",
-    mock: {name: GROUP, status: 'group', context: '2,140 members',
+    mock: {name: GROUP, status: 'group', context: '',
       messages: [{
         from: 'bot', time: '12:00',
         text: "This week's League is live. Boost your picks and climb the board.",
@@ -107,7 +107,7 @@ const SURFACES = [
     name: 'Daily booster',
     desc: "One credit line on the day's boosters post.",
     caption: "One credit line on the day's top boosters post.",
-    mock: {name: GROUP, status: 'group', context: '2,140 members',
+    mock: {name: GROUP, status: 'group', context: '',
       messages: [{
         from: 'bot', time: '00:00',
         text: 'Top boosters today. $ALPHA, $NOVA and $KORE are leading the room.',
