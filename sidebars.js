@@ -27,7 +27,6 @@ const sidebars = {
         'projects/tier-2',
         'projects/founders',
         'projects/bundles',
-        'projects/surfaces',
         'projects/apply',
       ],
     },

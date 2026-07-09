@@ -1,5 +1,5 @@
 /* TgMock: a static, realistic Telegram chat frame. Dark TG palette, scoped so
-   nothing leaks. Monospace (--font-code) appears ONLY inside .tgmock-code — the
+   nothing leaks. Monospace (--font-code) appears ONLY inside .tgmock-code, the
    single sanctioned monospace surface on the site. */
 
 .tgmock {
@@ -81,3 +81,43 @@
   min-width: 120px;
 }
 .tg-btn:hover { background: rgba(255, 255, 255, 0.14); color: var(--tg-text); }
+
+/* Animation + ad-element highlight (AdSurfaceShowcase). Static usages are
+   unaffected: without .tgmock-anim, rows show immediately and any highlight
+   ring/pointer renders static. */
+.tgmock-pointer {
+  position: absolute; top: -11px; right: 8px; z-index: 4;
+  background: var(--lime); color: #0B0B0C;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.02em;
+  padding: 2px 8px; border-radius: 7px; white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+.tgmock-hl { position: relative; }
+.tgmock-hl::after {
+  content: ''; position: absolute; inset: -4px; pointer-events: none;
+  border: 2px solid var(--lime); border-radius: 12px;
+  box-shadow: 0 0 0 3px rgba(191, 255, 0, 0.15);
+  opacity: 1;
+}
+
+/* Animated mode: messages arrive, then the highlight lands and pulses. */
+.tgmock-anim .tgmock-in { opacity: 0; transform: translateY(10px); animation: tgmockIn 0.35s ease forwards; }
+.tgmock-anim .tgmock-body .tgmock-in:nth-child(1) { animation-delay: 0.15s; }
+.tgmock-anim .tgmock-body .tgmock-in:nth-child(2) { animation-delay: 0.5s; }
+.tgmock-anim .tgmock-body .tgmock-in:nth-child(3) { animation-delay: 0.85s; }
+.tgmock-anim .tgmock-body .tgmock-in:nth-child(4) { animation-delay: 1.2s; }
+.tgmock-anim .tgmock-hl::after { opacity: 0; animation: tgmockRing 0.45s ease 1.35s forwards, tgmockPulse 1.9s ease 1.9s infinite; }
+.tgmock-anim .tgmock-pointer { opacity: 0; transform: translateY(4px); animation: tgmockRing 0.4s ease 1.5s forwards; }
+
+@keyframes tgmockIn { to { opacity: 1; transform: translateY(0); } }
+@keyframes tgmockRing { to { opacity: 1; transform: translateY(0); } }
+@keyframes tgmockPulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(191, 255, 0, 0.16); }
+  50% { box-shadow: 0 0 0 6px rgba(191, 255, 0, 0.04); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tgmock-anim .tgmock-in { opacity: 1; transform: none; animation: none; }
+  .tgmock-anim .tgmock-hl::after { opacity: 1; animation: none; }
+  .tgmock-anim .tgmock-pointer { opacity: 1; transform: none; animation: none; }
+}

@@ -1,12 +1,12 @@
 import React from 'react';
-import TgMock from '@site/src/components/TgMock';
 import LiveNumbers from './LiveNumbers';
+import AdSurfaceShowcase from './AdSurfaceShowcase';
 import './styles.css';
 
-// /advertise — the advertiser sell. Outcome-led hero, live numbers strip, an
-// 8-card formats grid with aligned CTAs, three Telegram mockups, packages,
-// closer. Every placement is buyable via DM. Card facts follow Bible §41.
-// The precise network figures in LiveNumbers are sanctioned for THIS page only.
+// /advertise. The advertiser sell. Outcome-led hero, live numbers strip, an
+// 8-card formats grid with aligned CTAs, the interactive AdSurfaceShowcase,
+// packages, closer. Every placement is buyable via DM. Card facts follow Bible
+// §41. The precise network figures in LiveNumbers are sanctioned for THIS page.
 
 const DM = 'https://t.me/BobbyBuyBot';
 
@@ -125,41 +125,13 @@ export default function Advertise() {
         </div>
       </section>
 
-      {/* TELEGRAM MOCKS */}
+      {/* AD SURFACE SHOWCASE */}
       <section>
         <div className="wrap">
           <div className="eyebrow">Where your ad lives</div>
-          <h2>This is Telegram. This is the room.</h2>
-          <div className="tgset">
-            <div>
-              <TgMock messages={[{
-                from: 'bot',
-                text: 'New buy on $NOVA. 4.2 ETH in. Liquidity locked, holders climbing.',
-                sponsor: 'Presented with $NOVA',
-                buttons: [{label: 'View $NOVA'}],
-                time: '14:02',
-              }]} />
-              <div className="tgcap">Buy alert with a sponsor banner</div>
-            </div>
-            <div>
-              <TgMock messages={[{
-                from: 'bot',
-                text: 'Bobby here. $NOVA is moving and you were early. Take a look.',
-                buttons: [{label: 'Open $NOVA'}],
-                time: '14:05',
-              }]} />
-              <div className="tgcap">Nudge DM with a click button</div>
-            </div>
-            <div>
-              <TgMock messages={[{
-                from: 'bot',
-                text: 'Bobby broadcast. $NOVA is live across the network today. Worth a look.',
-                sponsor: 'Presented with $NOVA',
-                time: '09:00',
-              }]} />
-              <div className="tgcap">Network broadcast</div>
-            </div>
-          </div>
+          <h2>Where your ad shows.</h2>
+          <p className="sub">Click a surface. Bobby plays back exactly what runs, where it shows, and in which chat.</p>
+          <AdSurfaceShowcase />
         </div>
       </section>
 
