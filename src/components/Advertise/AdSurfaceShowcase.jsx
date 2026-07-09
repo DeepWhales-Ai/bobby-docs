@@ -45,7 +45,7 @@ const SURFACES = [
     name: 'Bobby Recommends',
     desc: 'Bobby recommends in his own voice.',
     caption: 'Bobby recommends in his own voice. Sponsored and endorsed, clearly disclosed.',
-    mock: {name: GROUP, status: 'group', context: '',
+    mock: {name: 'Bobby', status: 'bot', context: 'online',
       messages: [{
         from: 'bot', time: '11:20',
         text: 'Bobby here. I looked at $NOVA and I like what the holders are doing. Worth your time.',
