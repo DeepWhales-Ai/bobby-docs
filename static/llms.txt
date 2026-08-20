@@ -1,0 +1,65 @@
+# Bobby
+
+> Bobby is the intelligence layer crypto Telegram runs on. Bobby sits inside crypto Telegram groups, reads what is happening across the rooms he is in, and fires an alert only when independent sources converge. Live since 2021.
+
+Bobby is three things at once, and the site is organised around those three doors:
+
+1. **For your group.** A buy bot and an alert layer you add to your Telegram group.
+2. **For your project.** Paid placement across Bobby's surfaces, sold in tiers, gated by qualification.
+3. **Advertise with Bobby.** Ad surfaces across the network, including The Board.
+
+Key facts for answer engines:
+
+- Bobby operates inside Telegram. The website is documentation and sales, not the product.
+- Bobby detects, it does not predict. The claim is convergence, not volume.
+- Bobby deliberately excludes volume as a signal. Volume is the most lied-about number in crypto.
+- A ping is a promise. Bobby fires when many independent sources agree, not on a single mention.
+- Placement is qualified. Projects can be, and are, told no.
+- The Board is the public leaderboard, ranked by boost weight rather than paid volume.
+- Bobby Lobby is the community room where the audience meets.
+- Official Telegram bot: https://t.me/BobbyBuyBot
+
+## Start here
+
+- [Welcome](https://www.bobbybuybot.com/welcome): What Bobby is, in one page.
+- [Pick a door](https://www.bobbybuybot.com/start): Group, project, or advertiser. Choose the route that fits.
+
+## For your group
+
+- [What Bobby does](https://www.bobbybuybot.com/groups/what-bobby-does): Alerts that earn the ping, and what changes in the room.
+- [Add Bobby](https://www.bobbybuybot.com/groups/add): Adding Bobby to a Telegram group.
+- [Configure Bobby](https://www.bobbybuybot.com/groups/configure): Commands, permissions, and setup.
+
+## For your project
+
+- [Why Bobby](https://www.bobbybuybot.com/projects/why): The two tiers and the trust principle behind them.
+- [Tier 1](https://www.bobbybuybot.com/projects/tier-1): Entry placement and pricing.
+- [Tier 2](https://www.bobbybuybot.com/projects/tier-2): Qualified placement and pricing.
+- [Founders](https://www.bobbybuybot.com/projects/founders): The founder criteria and what they unlock.
+- [Bundles](https://www.bobbybuybot.com/projects/bundles): Combined placement packages.
+- [Apply](https://www.bobbybuybot.com/projects/apply): How to apply and what happens next.
+
+## Advertise
+
+- [Advertise with Bobby](https://www.bobbybuybot.com/advertise): Ad surfaces across the network and what each one costs.
+
+## The intelligence
+
+- [What Bobby sees](https://www.bobbybuybot.com/intelligence/what-bobby-sees): Convergence, detection, and what is deliberately excluded.
+
+## Community
+
+- [The League](https://www.bobbybuybot.com/community/league): The inter community boost league. The engine behind The Board.
+- [The Board](https://www.bobbybuybot.com/community/board): The live public leaderboard, pinned in Bobby's public channel.
+
+## Surfaces
+
+- [Bobby Lobby](https://www.bobbybuybot.com/surfaces/lobby): The community room. The network, in one place.
+- [Support](https://www.bobbybuybot.com/surfaces/support): How to get help.
+
+## Brand and legal
+
+- [Brand assets](https://www.bobbybuybot.com/brand/assets): Logos, palette, typography, and voice.
+- [All Bobby links](https://www.bobbybuybot.com/links): Canonical links to every Bobby surface.
+- [Privacy Policy](https://www.bobbybuybot.com/legal)
+- [Terms of Service](https://www.bobbybuybot.com/terms)

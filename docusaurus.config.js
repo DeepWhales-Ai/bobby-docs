@@ -38,6 +38,45 @@ const config = {
         href: '/img/favicon-32.png',
       },
     },
+    // Structured data. Sitewide Organization + WebSite only.
+    // Deliberately no FAQPage: schema is only ever added where a page
+    // carries a visible, matching Q&A section, and no page here does.
+    // Keep every claim below matched by visible copy on the site.
+    {
+      tagName: 'script',
+      attributes: {type: 'application/ld+json'},
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        '@id': 'https://www.bobbybuybot.com/#organization',
+        name: 'Bobby',
+        alternateName: 'Bobby Buy Bot',
+        url: 'https://www.bobbybuybot.com/',
+        logo: 'https://www.bobbybuybot.com/img/favicon-256.png',
+        description:
+          'Bobby is the intelligence layer crypto Telegram runs on. Bobby sits inside crypto Telegram groups and fires an alert only when independent sources converge.',
+        foundingDate: '2021',
+        sameAs: [
+          'https://t.me/BobbyBuyBot',
+          'https://x.com/BobbyBuyBot',
+          'https://t.me/BobbyLobby',
+        ],
+      }),
+    },
+    {
+      tagName: 'script',
+      attributes: {type: 'application/ld+json'},
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        '@id': 'https://www.bobbybuybot.com/#website',
+        name: 'Bobby',
+        url: 'https://www.bobbybuybot.com/',
+        description: 'The intelligence layer crypto Telegram runs on.',
+        inLanguage: 'en',
+        publisher: {'@id': 'https://www.bobbybuybot.com/#organization'},
+      }),
+    },
   ],
 
   url: 'https://www.bobbybuybot.com',
@@ -66,6 +105,15 @@ const config = {
         blog: false,
         theme: {
           customCss: './src/css/custom.css',
+        },
+        // Explicit rather than relying on preset defaults, so the crawl
+        // surface is reviewable in source. Emits /sitemap.xml at the root.
+        sitemap: {
+          lastmod: 'date',
+          changefreq: 'weekly',
+          priority: 0.5,
+          filename: 'sitemap.xml',
+          ignorePatterns: ['/search'],
         },
       }),
     ],

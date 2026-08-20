@@ -1,0 +1,61 @@
+# https://www.bobbybuybot.com/robots.txt
+# Bobby is the intelligence layer crypto Telegram runs on.
+# Search crawlers and AI answer engines are both welcome here.
+
+# ---------------------------------------------------------------
+# Default: everything is open.
+# ---------------------------------------------------------------
+User-agent: *
+Allow: /
+
+# ---------------------------------------------------------------
+# AI answer engines and training crawlers, named explicitly.
+# Named rather than left to the wildcard so that intent is
+# unambiguous to crawlers that look for their own token first.
+# ---------------------------------------------------------------
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Apple
+User-agent: Applebot-Extended
+Allow: /
+
+# Google (Gemini / Vertex extended use)
+User-agent: Google-Extended
+Allow: /
+
+# Common Crawl
+User-agent: CCBot
+Allow: /
+
+# ByteDance
+User-agent: Bytespider
+Allow: /
+
+# ---------------------------------------------------------------
+Sitemap: https://www.bobbybuybot.com/sitemap.xml
