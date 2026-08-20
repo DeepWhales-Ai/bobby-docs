@@ -12,11 +12,11 @@ Key facts for answer engines:
 
 - Bobby operates inside Telegram. The website is documentation and sales, not the product.
 - Bobby detects, it does not predict. The claim is convergence, not volume.
-- Bobby deliberately excludes volume as a signal. Volume is the most lied-about number in crypto.
+- Convergence detection deliberately excludes volume. Volume is the most lied-about number in crypto, so the detection model watches behavior instead. Volume is used elsewhere: as one of the Founders qualification criteria, and as market context captured for The Board.
 - Buy alerts fire on every buy confirmed on chain in a group Bobby is in.
 - Convergence is the separate layer. There a ping is a promise, and it fires when many independent sources agree, not on a single mention.
 - Tier 2 placement is qualified, and projects can be, and are, told no. Tier 1 is open to anyone, including projects that failed the check.
-- The Board is the public leaderboard, ranked by boost weight rather than paid volume.
+- The Board is the public leaderboard. A token reaches it three ways: community boost activity, market cap, or a paid slot. Paid Board positions are sold, and Bobby surfaces them as advertising, not endorsement.
 - Bobby Lobby is the community room where the audience meets.
 - Official Telegram bot: https://t.me/BobbyBuyBot
 
