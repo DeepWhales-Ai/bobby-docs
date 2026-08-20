@@ -108,8 +108,11 @@ const config = {
         },
         // Explicit rather than relying on preset defaults, so the crawl
         // surface is reviewable in source. Emits /sitemap.xml at the root.
+        // No `lastmod`: it requires docs `showLastUpdateTime: true`, which
+        // also prints a visible "Last updated on" line on every page. Left
+        // off deliberately rather than shipped as an option that emits
+        // nothing.
         sitemap: {
-          lastmod: 'date',
           changefreq: 'weekly',
           priority: 0.5,
           filename: 'sitemap.xml',
