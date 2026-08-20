@@ -38,6 +38,46 @@ const config = {
         href: '/img/favicon-32.png',
       },
     },
+    // Structured data. Sitewide Organization + WebSite only.
+    // Deliberately no FAQPage: schema is only ever added where a page
+    // carries a visible, matching Q&A section, and no page here does.
+    // Keep every claim below matched by visible copy on the site.
+    {
+      tagName: 'script',
+      attributes: {type: 'application/ld+json'},
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        '@id': 'https://www.bobbybuybot.com/#organization',
+        name: 'Bobby',
+        alternateName: 'Bobby Buy Bot',
+        url: 'https://www.bobbybuybot.com/',
+        logo: 'https://www.bobbybuybot.com/img/favicon-256.png',
+        description:
+          'Bobby is the intelligence layer crypto Telegram runs on. Bobby sits inside crypto Telegram groups, calls every buy as it confirms on chain, and reads across the rooms to detect what is moving next.',
+        // sameAs is an identity claim, so it lists only surfaces that are
+        // Bobby himself. The Lobby is a separate community room, not
+        // another profile of this organization, so it is not listed here.
+        sameAs: [
+          'https://t.me/BobbyBuyBot',
+          'https://x.com/BobbyBuyBot',
+        ],
+      }),
+    },
+    {
+      tagName: 'script',
+      attributes: {type: 'application/ld+json'},
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        '@id': 'https://www.bobbybuybot.com/#website',
+        name: 'Bobby',
+        url: 'https://www.bobbybuybot.com/',
+        description: 'The intelligence layer crypto Telegram runs on.',
+        inLanguage: 'en',
+        publisher: {'@id': 'https://www.bobbybuybot.com/#organization'},
+      }),
+    },
   ],
 
   url: 'https://www.bobbybuybot.com',
@@ -66,6 +106,18 @@ const config = {
         blog: false,
         theme: {
           customCss: './src/css/custom.css',
+        },
+        // Explicit rather than relying on preset defaults, so the crawl
+        // surface is reviewable in source. Emits /sitemap.xml at the root.
+        // No `lastmod`: it requires docs `showLastUpdateTime: true`, which
+        // also prints a visible "Last updated on" line on every page. Left
+        // off deliberately rather than shipped as an option that emits
+        // nothing.
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          filename: 'sitemap.xml',
+          ignorePatterns: ['/search'],
         },
       }),
     ],
