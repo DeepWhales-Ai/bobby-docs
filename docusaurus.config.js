@@ -54,12 +54,13 @@ const config = {
         url: 'https://www.bobbybuybot.com/',
         logo: 'https://www.bobbybuybot.com/img/favicon-256.png',
         description:
-          'Bobby is the intelligence layer crypto Telegram runs on. Bobby sits inside crypto Telegram groups and fires an alert only when independent sources converge.',
-        foundingDate: '2021',
+          'Bobby is the intelligence layer crypto Telegram runs on. Bobby sits inside crypto Telegram groups, calls every buy as it confirms on chain, and reads across the rooms to detect what is moving next.',
+        // sameAs is an identity claim, so it lists only surfaces that are
+        // Bobby himself. The Lobby is a separate community room, not
+        // another profile of this organization, so it is not listed here.
         sameAs: [
           'https://t.me/BobbyBuyBot',
           'https://x.com/BobbyBuyBot',
-          'https://t.me/BobbyLobby',
         ],
       }),
     },

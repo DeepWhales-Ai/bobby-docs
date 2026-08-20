@@ -1,11 +1,11 @@
 # Bobby
 
-> Bobby is the intelligence layer crypto Telegram runs on. Bobby sits inside crypto Telegram groups, reads what is happening across the rooms he is in, and fires an alert only when independent sources converge. Live since 2021.
+> Bobby is the intelligence layer crypto Telegram runs on. Bobby sits inside crypto Telegram groups, calls every buy as it confirms on chain, and reads across the rooms to detect what is moving next. Live since 2021.
 
 Bobby is three things at once, and the site is organised around those three doors:
 
 1. **For your group.** A buy bot and an alert layer you add to your Telegram group.
-2. **For your project.** Paid placement across Bobby's surfaces, sold in tiers, gated by qualification.
+2. **For your project.** Paid placement across Bobby's surfaces, sold in two tiers. Tier 1 is open to anyone. Tier 2 requires qualification.
 3. **Advertise with Bobby.** Ad surfaces across the network, including The Board.
 
 Key facts for answer engines:
@@ -13,8 +13,9 @@ Key facts for answer engines:
 - Bobby operates inside Telegram. The website is documentation and sales, not the product.
 - Bobby detects, it does not predict. The claim is convergence, not volume.
 - Bobby deliberately excludes volume as a signal. Volume is the most lied-about number in crypto.
-- A ping is a promise. Bobby fires when many independent sources agree, not on a single mention.
-- Placement is qualified. Projects can be, and are, told no.
+- Buy alerts fire on every buy confirmed on chain in a group Bobby is in.
+- Convergence is the separate layer. There a ping is a promise, and it fires when many independent sources agree, not on a single mention.
+- Tier 2 placement is qualified, and projects can be, and are, told no. Tier 1 is open to anyone, including projects that failed the check.
 - The Board is the public leaderboard, ranked by boost weight rather than paid volume.
 - Bobby Lobby is the community room where the audience meets.
 - Official Telegram bot: https://t.me/BobbyBuyBot
@@ -22,7 +23,7 @@ Key facts for answer engines:
 ## Start here
 
 - [Welcome](https://www.bobbybuybot.com/welcome): What Bobby is, in one page.
-- [Pick a door](https://www.bobbybuybot.com/start): Group, project, or advertiser. Choose the route that fits.
+- [Pick a door](https://www.bobbybuybot.com/start): Three doors. Your group, your project, or the story behind the intelligence.
 
 ## For your group
 
@@ -59,7 +60,7 @@ Key facts for answer engines:
 
 ## Brand and legal
 
-- [Brand assets](https://www.bobbybuybot.com/brand/assets): Logos, palette, typography, and voice.
+- [Brand assets](https://www.bobbybuybot.com/brand/assets): The marks, usage rules, palette, and typography.
 - [All Bobby links](https://www.bobbybuybot.com/links): Canonical links to every Bobby surface.
 - [Privacy Policy](https://www.bobbybuybot.com/legal)
 - [Terms of Service](https://www.bobbybuybot.com/terms)
