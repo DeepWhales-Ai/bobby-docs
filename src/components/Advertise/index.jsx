@@ -1,4 +1,5 @@
 import React from 'react';
+import {HtmlClassNameProvider} from '@docusaurus/theme-common';
 import LiveNumbers from './LiveNumbers';
 import AdSurfaceShowcase from './AdSurfaceShowcase';
 import './styles.css';
@@ -91,6 +92,7 @@ function Card({c}) {
 
 export default function Advertise() {
   return (
+    <HtmlClassNameProvider className="adv-page">
     <div className="adv">
 
       {/* HERO */}
@@ -159,5 +161,6 @@ export default function Advertise() {
       </div>
 
     </div>
+    </HtmlClassNameProvider>
   );
 }
