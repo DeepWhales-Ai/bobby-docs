@@ -65,11 +65,11 @@ const CARDS = [
 ];
 
 const PACKS = [
-  {n: 'IGNITE', p: '$199', d: '1 day'},
-  {n: 'MOMENTUM', p: '$649', d: '3 days'},
-  {n: 'TAKEOVER', p: '$1,749', d: '7 days'},
-  {n: 'RESIDENCY', p: '$3,499', d: '14 days'},
-  {n: 'REIGN', p: '$6,499', d: '30 days'},
+  {n: 'IGNITE', p: '$212', d: '1 day', s: '$38'},
+  {n: 'MOMENTUM', p: '$807', d: '3 days', s: '$143'},
+  {n: 'TAKEOVER', p: '$2,465', d: '7 days', s: '$435'},
+  {n: 'RESIDENCY', p: '$5,185', d: '14 days', s: '$915'},
+  {n: 'REIGN', p: '$10,497', d: '30 days', s: '$1,853'},
 ];
 
 function Card({c}) {
@@ -138,6 +138,7 @@ export default function Advertise() {
                 <div className="pn">{p.n}</div>
                 <div className="pp">{p.p}</div>
                 <div className="pd">{p.d}</div>
+                <div className="ps">Save {p.s} vs buying separately</div>
               </div>
             ))}
           </div>
