@@ -98,7 +98,7 @@ export default function HomeContent() {
           <Link to="/advertise" className="door">
             <div className="door-num">Advertise with Bobby</div>
             <h3>The whole machine</h3>
-            <p>Banners, nudges, broadcasts, The Board. One bot in the middle of all of it.</p>
+            <p>Banners, broadcasts, The Board. One bot in the middle of all of it.</p>
           </Link>
         </div>
       </section>
