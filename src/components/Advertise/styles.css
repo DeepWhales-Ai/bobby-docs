@@ -2,29 +2,43 @@
    palette, no monospace chrome). Cards are equal height with the price+CTA
    footer pinned to the bottom so every CTA aligns across the row. */
 
+/* Use the full content width instead of the docs column. Docusaurus ships its
+   styles in cascade layers, where a layered !important beats an unlayered one,
+   so this must sit in the earliest layer to override the 75% docItemCol cap. */
+@layer docusaurus.infima {
+  html.adv-page .row > .col { flex: 0 0 100% !important; max-width: 100% !important; }
+}
+
 .adv { display: block; background: var(--bg); color: var(--text); font-family: var(--font-sans); }
 .adv .wrap { max-width: 1120px; margin: 0 auto; padding: 0 var(--sp-4); }
-.adv section { padding: var(--sp-6) 0; }
+.adv section { padding: var(--sp-5) 0; }
+.adv section + section { padding-top: 0; }
 .adv .eyebrow { font-family: var(--font-sans); font-size: var(--fs-meta); letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-3); font-weight: 600; }
-.adv h1 { font-family: var(--font-display); font-size: var(--fs-h1); font-weight: 800; letter-spacing: -0.03em; line-height: 1.03; margin-top: var(--sp-3); }
-.adv h2 { font-family: var(--font-display); font-size: var(--fs-h2); font-weight: 800; letter-spacing: -0.02em; margin-top: var(--sp-3); }
+.adv h1 { font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; margin-top: var(--sp-2); }
+.adv h2 { font-family: var(--font-display); font-size: 1.625rem; font-weight: 800; letter-spacing: -0.02em; margin-top: var(--sp-2); }
 .adv h3 { font-family: var(--font-sans); font-size: var(--fs-h3); font-weight: 700; letter-spacing: -0.01em; }
-.adv .sub { color: var(--text-2); margin-top: var(--sp-3); max-width: 640px; font-size: 1.0625rem; line-height: 1.55; }
+.adv .sub { color: var(--text-2); margin-top: var(--sp-2); max-width: 640px; font-size: 1.0625rem; line-height: 1.55; }
 
 /* HERO */
-.adv .hero { padding-top: var(--sp-6); }
-.adv .hero .cta-primary { margin-top: var(--sp-5); }
+/* Infima paints .hero with a background and 4rem padding; reset it. */
+.adv .hero { background: transparent; border: 0; margin: 0 auto; padding: var(--sp-2) 0 var(--sp-3); overflow: visible; }
+.adv .hero .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-3); }
+.adv .hero .wrap { row-gap: var(--sp-2); }
+.adv .hero .eyebrow, .adv .hero h1, .adv .hero .sub { flex-basis: 100%; margin: 0; max-width: none; }
+.adv .hero .sub { margin-bottom: var(--sp-1); }
+.adv .hero .cta-primary { margin-top: 0; }
+
 
 /* PROOF STRIP / LIVE NUMBERS */
-.adv .proof { border: 1px solid var(--card-border); border-radius: var(--radius); margin-top: var(--sp-5); }
+.adv .proof { flex: 1; min-width: 420px; border: 1px solid var(--card-border); border-radius: var(--radius); margin-top: 0; }
 .adv .proof .pi { font-size: var(--fs-meta); color: var(--text-2); font-weight: 600; }
 .adv .proof .pi::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--lime); margin-right: 8px; vertical-align: middle; }
-.adv .livenums { position: relative; display: flex; flex-direction: column; padding: var(--sp-5) var(--sp-4) var(--sp-3); }
+.adv .livenums { position: relative; display: flex; flex-direction: column; padding: var(--sp-3) var(--sp-4) var(--sp-2); }
 .adv .ln-stats { display: flex; justify-content: center; align-items: baseline; gap: var(--sp-6); text-align: center; }
 .adv .livenums .lnstat { display: flex; flex-direction: column; gap: var(--sp-1); align-items: center; }
-.adv .livenums .n { font-size: 2.25rem; font-weight: 800; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; color: var(--lime); line-height: 1; }
+.adv .livenums .n { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; color: var(--lime); line-height: 1; }
 .adv .livenums .l { font-size: var(--fs-meta); color: var(--text-3); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
-.adv .ln-foot { display: flex; justify-content: center; flex-wrap: wrap; gap: var(--sp-2) var(--sp-5); border-top: 1px solid var(--card-border); margin-top: var(--sp-4); padding-top: var(--sp-3); }
+.adv .ln-foot { display: flex; justify-content: center; flex-wrap: wrap; gap: var(--sp-2) var(--sp-5); border-top: 1px solid var(--card-border); margin-top: var(--sp-2); padding-top: var(--sp-2); }
 .adv .ln-dot { position: absolute; top: var(--sp-3); right: var(--sp-3); width: 8px; height: 8px; border-radius: 50%; background: var(--lime); animation: advLnPulse 2s ease-in-out infinite; }
 @keyframes advLnPulse {
   0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(191, 255, 0, 0.5); }
@@ -36,18 +50,21 @@
 }
 
 /* FORMAT CARDS */
-.adv .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-3); align-items: stretch; margin-top: var(--sp-5); }
-.adv .card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--card-border); border-radius: var(--radius); padding: var(--sp-4); }
+.adv .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-3); align-items: stretch; margin-top: var(--sp-3); }
+.adv .card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--card-border); border-radius: var(--radius); padding: var(--sp-3) var(--sp-4); }
 .adv .card .cbody { flex: 1; }
+/* A lone last card spans the row instead of leaving a gap. */
+.adv .card:last-child:nth-child(3n+1) { grid-column: 1 / -1; flex-direction: row; align-items: center; gap: var(--sp-5); }
+.adv .card:last-child:nth-child(3n+1) .cfoot { margin-top: 0; width: 340px; flex-shrink: 0; }
 .adv .card h3 { margin-bottom: var(--sp-2); }
 .adv .card .what { font-size: 0.9375rem; color: var(--text); line-height: 1.5; }
 .adv .card .where { font-size: var(--fs-meta); color: var(--text-3); margin-top: var(--sp-2); line-height: 1.5; }
 .adv .card .reach { font-size: var(--fs-meta); color: var(--text-2); margin-top: var(--sp-2); line-height: 1.5; }
 .adv .card .reach b { color: var(--text); font-weight: 700; }
-.adv .card .cfoot { margin-top: var(--sp-4); }
+.adv .card .cfoot { margin-top: var(--sp-3); }
 .adv .card .price { font-size: 1rem; color: var(--lime); font-weight: 700; }
 .adv .card .price .extra { display: block; font-size: var(--fs-meta); color: var(--text-2); font-weight: 600; margin-top: var(--sp-1); }
-.adv .card .cta-primary { width: 100%; justify-content: center; margin-top: var(--sp-3); }
+.adv .card .cta-primary { width: 100%; justify-content: center; margin-top: var(--sp-2); }
 
 /* TELEGRAM MOCKS */
 .adv .tgset { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-4); margin-top: var(--sp-5); align-items: start; }
@@ -55,24 +72,27 @@
 .adv .tgcap { font-size: var(--fs-meta); color: var(--text-3); margin-top: var(--sp-2); text-align: center; }
 
 /* PACKAGES */
-.adv .packrow { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--sp-2); margin-top: var(--sp-4); }
-.adv .pk { background: var(--surface); border: 1px solid var(--card-border); border-radius: var(--radius); padding: var(--sp-4) var(--sp-3); text-align: center; }
+.adv .packrow { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--sp-2); margin-top: var(--sp-3); }
+.adv .pk { background: var(--surface); border: 1px solid var(--card-border); border-radius: var(--radius); padding: var(--sp-3); text-align: center; }
 .adv .pk .pn { font-size: var(--fs-meta); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3); font-weight: 600; }
 .adv .pk .pp { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; margin-top: var(--sp-2); }
 .adv .pk .pd { font-size: var(--fs-meta); color: var(--text-3); margin-top: var(--sp-1); }
 .adv .pk .ps { font-size: var(--fs-meta); color: var(--text-2); margin-top: var(--sp-2); }
-.adv .packlinks { display: flex; gap: var(--sp-3); align-items: center; flex-wrap: wrap; margin-top: var(--sp-4); }
+.adv .packlinks { display: flex; gap: var(--sp-3); align-items: center; flex-wrap: wrap; margin-top: var(--sp-3); }
 .adv .boardstrip { border: 1px solid var(--card-border); border-radius: var(--radius); margin-top: var(--sp-3); padding: var(--sp-3) var(--sp-4); display: flex; justify-content: space-between; align-items: center; gap: var(--sp-3); flex-wrap: wrap; }
 .adv .boardstrip .bt { font-size: var(--fs-meta); letter-spacing: 0.06em; color: var(--text-2); font-weight: 600; }
 
 /* CLOSER */
-.adv .closer { border-top: 1px solid var(--card-border); text-align: center; padding: var(--sp-6) var(--sp-4) calc(var(--sp-6) + var(--sp-4)); }
+.adv .closer { border-top: 1px solid var(--card-border); text-align: center; padding: var(--sp-5) var(--sp-4); }
 .adv .closer .line { font-family: var(--font-display); font-size: var(--fs-h2); font-weight: 800; letter-spacing: -0.02em; max-width: 680px; margin: 0 auto; line-height: 1.2; }
-.adv .closer .cta-primary { margin-top: var(--sp-4); }
+.adv .closer .cta-primary { margin-top: var(--sp-3); }
 
 @media (max-width: 920px) {
   .adv .cards { grid-template-columns: 1fr; }
+  .adv .card:last-child:nth-child(3n+1) { flex-direction: column; align-items: stretch; gap: 0; }
+  .adv .card:last-child:nth-child(3n+1) .cfoot { margin-top: var(--sp-3); width: auto; }
   .adv .tgset { grid-template-columns: 1fr; }
   .adv .packrow { grid-template-columns: 1fr 1fr; }
   .adv h1 { font-size: 2rem; }
+  .adv .proof { min-width: 0; flex-basis: 100%; }
 }
