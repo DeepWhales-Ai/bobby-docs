@@ -1,4 +1,5 @@
 import React from 'react';
+import {HtmlClassNameProvider} from '@docusaurus/theme-common';
 import './styles.css';
 
 // Money page, rendered at the public /projects route. Every package and surface
@@ -6,13 +7,14 @@ import './styles.css';
 
 export default function MoneyPreview() {
   return (
+    <HtmlClassNameProvider className="proj-page">
     <div className="bmp">
 
       {/* HERO */}
       <section className="hero">
         <div className="wrap">
           <div className="eyebrow">For projects</div>
-          <h1>Advertise where crypto<br />actually pays attention.</h1>
+          <h1>Advertise where crypto actually pays attention.</h1>
           <p className="sub">Bobby lives inside the rooms where tokens get bought. Every placement is exclusive. One sponsor at a time. That is why it works.</p>
           <a className="cta-primary" href="https://t.me/BobbyBuyBot">DM Bobby</a>
         </div>
@@ -204,5 +206,6 @@ export default function MoneyPreview() {
       </footer>
 
     </div>
+    </HtmlClassNameProvider>
   );
 }
