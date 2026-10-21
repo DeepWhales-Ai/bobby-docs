@@ -54,18 +54,6 @@ const SURFACES = [
       }]},
   },
   {
-    id: 'nudge',
-    name: 'Nudge DM',
-    desc: 'A direct nudge in the user Bobby DM.',
-    caption: 'A direct nudge in the user Bobby DM.',
-    mock: {name: 'Bobby', status: 'bot', context: 'online',
-      messages: [{
-        from: 'bot', time: '14:05',
-        text: 'Bobby here. $NOVA is moving and you were early. Take a look.',
-        buttons: [{label: 'Open $NOVA'}], highlight: 'Your nudge', highlightPart: 'button',
-      }]},
-  },
-  {
     id: 'league',
     name: 'League and weekly promo',
     desc: "Your name on the week's league event.",

@@ -16,68 +16,60 @@ const CARDS = [
     what: 'Your banner under buy alerts across the network. One advertiser. Exclusive.',
     where: 'Under every live buy alert.',
     reach: 'Rides millions of alerts every month.',
-    price: '$200 day · $500 3 days · $900 week',
-  },
-  {
-    name: 'Nudge',
-    what: 'Follow up DM with a click button, sent to users who already saw the alert. Nobody else has this.',
-    where: 'Straight to the user inbox.',
-    reach: 'Per user, direct.',
-    price: '$300 per nudge',
-    extra: 'Max 2 per user per day.',
+    price: '$100 day · $250 3 days · $450 week',
   },
   {
     name: 'Network broadcasts',
     what: "One message across the network, twice daily. Your credit line and button on every post. Bobby's own content unchanged. Marked Sponsored.",
     where: 'In groups across the network.',
     reach: 'Across the network.',
-    price: '$400 per day · $2,000 per week',
+    price: '$200 per day · $1,000 per week',
   },
   {
     name: 'The Board sponsorship',
     what: 'Sponsor slot on The Board.',
     where: 'On The Board itself.',
     reach: 'Across the network.',
-    price: 'from $135',
-    extra: 'Board advert slot · $500/day',
+    price: 'from $67.50',
+    extra: 'Board advert slot · $250/day',
   },
   {
     name: 'Mass DM',
     what: 'Photo or video, straight to user inboxes. Full network sends take days to deliver.',
     where: 'Direct to the inbox.',
     reach: 'Up to the full user base.',
-    price: '$500 per send',
+    price: '$250 per send',
   },
   {
     name: 'Daily booster',
     what: "One credit line on the day's top boosters post. Bobby's copy stays Bobby's.",
     where: 'On the daily boosters post.',
     reach: 'The daily ritual, across the network.',
-    price: '$300 day',
+    price: '$150 day',
   },
   {
     name: 'League and weekly promo',
     what: "Sponsor the league alerts. Your name on the week's league event, or a scheduled standalone post.",
     where: 'Across the network.',
     reach: 'Across the network.',
-    price: '$300 · $750 x3',
+    price: '$150 · $375 x3',
   },
   {
     name: 'Bobby Recommends',
     what: 'Bobby recommends a sponsor in his own voice. Qualification required. Sponsored and endorsed, clearly disclosed.',
     where: "In Bobby's recommendations.",
     reach: 'Direct, in the bot.',
-    price: '24h $2,000 · 3 Day $5,000 · Week $10,000',
+    price: '24h $1,000 · 3 Day $2,500 · Week $5,000',
     extra: 'Qualification required.',
   },
 ];
 
 const PACKS = [
-  {n: 'IGNITE', p: '$399', d: '1 day'},
-  {n: 'MOMENTUM', p: '$1,299', d: '3 days'},
-  {n: 'TAKEOVER', p: '$3,499', d: '7 days'},
-  {n: 'RESIDENCY', p: '$6,999', d: '14 days'},
-  {n: 'REIGN', p: '$12,999', d: '30 days'},
+  {n: 'IGNITE', p: '$199', d: '1 day'},
+  {n: 'MOMENTUM', p: '$649', d: '3 days'},
+  {n: 'TAKEOVER', p: '$1,749', d: '7 days'},
+  {n: 'RESIDENCY', p: '$3,499', d: '14 days'},
+  {n: 'REIGN', p: '$6,499', d: '30 days'},
 ];
 
 function Card({c}) {
@@ -153,7 +145,7 @@ export default function Advertise() {
             <a className="cta-ghost" href="/projects">See the ladder</a>
           </div>
           <div className="boardstrip">
-            <div className="bt">Add The Board · from $135 · Board advert slot $500/day</div>
+            <div className="bt">Add The Board · from $67.50 · Board advert slot $250/day</div>
             <a className="cta-ghost" href={DM}>Get a slot</a>
           </div>
         </div>
