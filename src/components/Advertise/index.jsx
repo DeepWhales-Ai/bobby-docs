@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from '@docusaurus/Link';
 import {HtmlClassNameProvider} from '@docusaurus/theme-common';
 import LiveNumbers from './LiveNumbers';
 import AdSurfaceShowcase from './AdSurfaceShowcase';
@@ -136,12 +137,12 @@ export default function Advertise() {
           <h2>Every format above, bundled and discounted.</h2>
           <div className="packrow">
             {PACKS.map((p) => (
-              <div className="pk" key={p.n}>
+              <Link className="pk" key={p.n} to={`/projects#${p.n.toLowerCase()}`}>
                 <div className="pn">{p.n}</div>
                 <div className="pp">{p.p}</div>
                 <div className="pd">{p.d}</div>
                 <div className="ps">Save {p.s} vs buying separately</div>
-              </div>
+              </Link>
             ))}
           </div>
           <div className="packlinks">

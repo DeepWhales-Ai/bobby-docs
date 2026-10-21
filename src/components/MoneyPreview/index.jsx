@@ -28,7 +28,7 @@ export default function MoneyPreview() {
 
           <div className="packs">
             {/* IGNITE */}
-            <div className="pack">
+            <div className="pack" id="ignite">
               <div className="pname">Ignite</div>
               <div className="separate"><s>$250</s> bought separately</div>
               <div className="pprice">$199</div>
@@ -42,7 +42,7 @@ export default function MoneyPreview() {
             </div>
 
             {/* MOMENTUM */}
-            <div className="pack center">
+            <div className="pack center" id="momentum">
               <div className="badge">MOST POPULAR</div>
               <div className="pname">Momentum</div>
               <div className="separate"><s>$950</s> bought separately</div>
@@ -58,7 +58,7 @@ export default function MoneyPreview() {
             </div>
 
             {/* TAKEOVER */}
-            <div className="pack">
+            <div className="pack" id="takeover">
               <div className="pname">Takeover</div>
               <div className="separate"><s>$2,900</s> bought separately</div>
               <div className="pprice">$1,749</div>
@@ -74,7 +74,7 @@ export default function MoneyPreview() {
             </div>
 
             {/* RESIDENCY */}
-            <div className="pack">
+            <div className="pack" id="residency">
               <div className="pname">RESIDENCY</div>
               <div className="pdur">14 days</div>
               <div className="separate"><s>$6,100</s> bought separately</div>
@@ -93,7 +93,7 @@ export default function MoneyPreview() {
             </div>
 
             {/* REIGN */}
-            <div className="pack">
+            <div className="pack" id="reign">
               <div className="pname">REIGN</div>
               <div className="pdur">30 days</div>
               <div className="separate"><s>$12,350</s> bought separately</div>
