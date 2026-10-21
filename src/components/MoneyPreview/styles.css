@@ -46,6 +46,10 @@
 .bmp .pack:nth-child(n+4){grid-column:span 3}
 .bmp .pack:nth-child(n+4) .pitems{display:grid;grid-template-columns:1fr 1fr;gap:9px 24px}
 .bmp .pack{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;display:flex;flex-direction:column;position:relative}
+/* Packages are link targets from /advertise: clear the fixed navbar and show
+   which one was linked to. */
+.bmp .pack{scroll-margin-top:96px}
+.bmp .pack:target{border-color:var(--lime)}
 .bmp .pack.center{background:var(--panel2);border-color:var(--lime);box-shadow:0 0 50px rgba(204,255,0,.10)}
 .bmp .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--lime);color:var(--ink);font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.14em;padding:5px 12px;border-radius:99px;white-space:nowrap}
 .bmp .pack .pname{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--text2)}

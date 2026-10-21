@@ -74,6 +74,9 @@
 /* PACKAGES */
 .adv .packrow { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--sp-2); margin-top: var(--sp-3); }
 .adv .pk { background: var(--surface); border: 1px solid var(--card-border); border-radius: var(--radius); padding: var(--sp-3); text-align: center; }
+/* Each tile links to its card on /projects. */
+.adv a.pk { display: block; color: inherit; text-decoration: none; transition: border-color 0.15s ease, background 0.15s ease; }
+.adv a.pk:hover, .adv a.pk:focus-visible { border-color: var(--lime); background: var(--surface-2); color: inherit; text-decoration: none; }
 .adv .pk .pn { font-size: var(--fs-meta); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3); font-weight: 600; }
 .adv .pk .pp { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; margin-top: var(--sp-2); }
 .adv .pk .pd { font-size: var(--fs-meta); color: var(--text-3); margin-top: var(--sp-1); }
