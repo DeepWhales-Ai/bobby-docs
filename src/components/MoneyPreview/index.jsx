@@ -29,8 +29,8 @@ export default function MoneyPreview() {
             <div className="pack">
               <div className="pname">Ignite</div>
               <div className="separate"><s>$250</s> bought separately</div>
-              <div className="pprice">$212</div>
-              <div className="psave">Save $38 vs buying separately</div>
+              <div className="pprice">$199</div>
+              <div className="psave">Save $51 vs buying separately</div>
               <div className="pitems">
                 <div className="pit"><span>1 day exclusive buy alert banner</span><span className="pw">network wide</span></div>
                 <div className="pit"><span>1 day booster spotlight</span><span className="pw">daily ritual post</span></div>
@@ -44,8 +44,8 @@ export default function MoneyPreview() {
               <div className="badge">MOST POPULAR</div>
               <div className="pname">Momentum</div>
               <div className="separate"><s>$950</s> bought separately</div>
-              <div className="pprice">$807</div>
-              <div className="psave">Save $143 vs buying separately</div>
+              <div className="pprice">$649</div>
+              <div className="psave">Save $301 vs buying separately</div>
               <div className="pitems">
                 <div className="pit"><span>3 day exclusive banner</span><span className="pw">network wide</span></div>
                 <div className="pit"><span>3 booster spotlight days</span><span className="pw">3 ritual posts</span></div>
@@ -59,8 +59,8 @@ export default function MoneyPreview() {
             <div className="pack">
               <div className="pname">Takeover</div>
               <div className="separate"><s>$2,900</s> bought separately</div>
-              <div className="pprice">$2,465</div>
-              <div className="psave">Save $435 vs buying separately</div>
+              <div className="pprice">$1,749</div>
+              <div className="psave">Save $1,151 vs buying separately</div>
               <div className="pitems">
                 <div className="pit"><span>7 day exclusive banner</span><span className="pw">network wide</span></div>
                 <div className="pit"><span>7 booster spotlight days</span><span className="pw">full week ritual</span></div>
@@ -76,8 +76,8 @@ export default function MoneyPreview() {
               <div className="pname">RESIDENCY</div>
               <div className="pdur">14 days</div>
               <div className="separate"><s>$6,100</s> bought separately</div>
-              <div className="pprice">$5,185</div>
-              <div className="psave">Save $915 vs buying separately</div>
+              <div className="pprice">$3,499</div>
+              <div className="psave">Save $2,601 vs buying separately</div>
               <div className="ptease">Two weeks living in every surface the network reads.</div>
               <div className="pitems">
                 <div className="pit"><span>Banner · 2 weeks</span><span className="pw">$900</span></div>
@@ -95,8 +95,8 @@ export default function MoneyPreview() {
               <div className="pname">REIGN</div>
               <div className="pdur">30 days</div>
               <div className="separate"><s>$12,350</s> bought separately</div>
-              <div className="pprice">$10,497</div>
-              <div className="psave">Save $1,853 vs buying separately</div>
+              <div className="pprice">$6,499</div>
+              <div className="psave">Save $5,851 vs buying separately</div>
               <div className="ptease">Thirty days. The network stops asking who you are.</div>
               <div className="pitems">
                 <div className="pit"><span>Banner · 4 weeks</span><span className="pw">$1,800</span></div>
