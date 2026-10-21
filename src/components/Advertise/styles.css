@@ -60,6 +60,7 @@
 .adv .pk .pn { font-size: var(--fs-meta); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3); font-weight: 600; }
 .adv .pk .pp { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; margin-top: var(--sp-2); }
 .adv .pk .pd { font-size: var(--fs-meta); color: var(--text-3); margin-top: var(--sp-1); }
+.adv .pk .ps { font-size: var(--fs-meta); color: var(--text-2); margin-top: var(--sp-2); }
 .adv .packlinks { display: flex; gap: var(--sp-3); align-items: center; flex-wrap: wrap; margin-top: var(--sp-4); }
 .adv .boardstrip { border: 1px solid var(--card-border); border-radius: var(--radius); margin-top: var(--sp-3); padding: var(--sp-3) var(--sp-4); display: flex; justify-content: space-between; align-items: center; gap: var(--sp-3); flex-wrap: wrap; }
 .adv .boardstrip .bt { font-size: var(--fs-meta); letter-spacing: 0.06em; color: var(--text-2); font-weight: 600; }
