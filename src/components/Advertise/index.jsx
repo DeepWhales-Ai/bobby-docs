@@ -98,7 +98,7 @@ export default function Advertise() {
         <div className="wrap">
           <div className="eyebrow">For projects and companies</div>
           <h1>Your project in front of the whole network.</h1>
-          <p className="sub">Over 1 million users. Tens of thousands of groups. One bot in the middle.</p>
+          <p className="sub">Over 2 million users. Tens of thousands of groups. One bot in the middle.</p>
           <a className="cta-primary" href={DM}>DM Bobby</a>
           <div className="proof">
             <LiveNumbers />

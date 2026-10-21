@@ -215,7 +215,7 @@ export default function HomeContent() {
           </p>
           <div className="lobby-feature-stats">
             <p className="lobby-feature-claim" style={{fontFamily: 'var(--mono)', fontSize: '13px', letterSpacing: '.04em', color: 'var(--text-2)', lineHeight: 1.6}}>
-              Tens of thousands of groups. Over 1 million users. Alerts around the clock.
+              Tens of thousands of groups. Over 2 million users. Alerts around the clock.
             </p>
           </div>
           <div className="lobby-feature-cta">

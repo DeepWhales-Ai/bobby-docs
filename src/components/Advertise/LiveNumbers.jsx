@@ -2,16 +2,16 @@ import React, {useEffect, useRef, useState} from 'react';
 
 // Live network numbers strip for /advertise. Honest implementation of the
 // "live and growing" intent: on scroll into view each figure counts up from
-// ~97% of its base over ~1.5s (ease out), then ticks upward at an approximate
+// ~99% of its base over ~1.5s (ease out), then ticks upward at an approximate
 // real growth rate. Values never decrement and never visibly reset; a reload
 // starts fresh. Pure client state, no storage, intervals cleaned on unmount.
 // These three precise figures are sanctioned for THIS page only.
 
 function useLiveCount(base, growthMs, started) {
-  const [value, setValue] = useState(() => Math.floor(base * 0.97));
+  const [value, setValue] = useState(() => Math.floor(base * 0.99));
   useEffect(() => {
     if (!started) return undefined;
-    const from = Math.floor(base * 0.97);
+    const from = Math.floor(base * 0.99);
     const dur = 1500;
     let raf;
     let t0;
@@ -53,9 +53,9 @@ export default function LiveNumbers() {
     return () => obs.disconnect();
   }, []);
 
-  const users = useLiveCount(1300000, 2000, started);
-  const botUsers = useLiveCount(11400, 45000, started);
-  const groups = useLiveCount(29000, 90000, started);
+  const users = useLiveCount(2027072, 2000, started);
+  const botUsers = useLiveCount(17247, 45000, started);
+  const groups = useLiveCount(33931, 90000, started);
 
   const fmt = (n) => n.toLocaleString('en-US');
 
