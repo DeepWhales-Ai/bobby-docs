@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Link from '@docusaurus/Link';
 import {HtmlClassNameProvider} from '@docusaurus/theme-common';
 import LiveNumbers from './LiveNumbers';
@@ -10,7 +10,60 @@ import './styles.css';
 // packages, closer. Every placement is buyable via DM. Card facts follow Bible
 // §41. The precise network figures in LiveNumbers are sanctioned for THIS page.
 
-const DM = 'https://t.me/BobbyBuyBot';
+// Tracked ads links (Krypt 2026-10-22). /advertise?src=<tag> sends every DM
+// CTA to t.me/BobbyBuyBot?start=promote_<tag>, which opens Bobby's /promote
+// ads menu and lets Bobby count opens, quotes and paid orders per tag. A
+// visit without a valid tag is "site". One first-party beacon per tag per
+// browser session counts the visit; no third-party script, no cookies, no
+// personal data.
+const BOT = 'https://t.me/BobbyBuyBot';
+const TAG_RE = /^[a-z0-9_]{1,24}$/;
+const DEFAULT_TAG = 'site';
+const VISIT_URL = 'https://status.bobbybuybot.com/api/promote-visit';
+
+export function promoteTagFrom(search) {
+  let src = '';
+  try {
+    src = new URLSearchParams(search || '').get('src') || '';
+  } catch (e) {
+    src = '';
+  }
+  return TAG_RE.test(src) ? src : DEFAULT_TAG;
+}
+
+export function promoteLink(tag) {
+  return `${BOT}?start=promote_${TAG_RE.test(tag) ? tag : DEFAULT_TAG}`;
+}
+
+function countVisit(tag) {
+  try {
+    const key = `bobby-promote-visit:${tag}`;
+    if (window.sessionStorage.getItem(key)) return;
+    window.sessionStorage.setItem(key, '1');
+  } catch (e) {
+    // storage blocked: still count, once per page load
+  }
+  try {
+    const url = `${VISIT_URL}?src=${encodeURIComponent(tag)}`;
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon(url);
+    } else {
+      fetch(url, {method: 'POST', mode: 'no-cors', keepalive: true}).catch(() => {});
+    }
+  } catch (e) {
+    // counting never breaks the page
+  }
+}
+
+function useTrackedDM() {
+  const [dm, setDm] = useState(promoteLink(DEFAULT_TAG));
+  useEffect(() => {
+    const tag = promoteTagFrom(window.location.search);
+    setDm(promoteLink(tag));
+    countVisit(tag);
+  }, []);
+  return dm;
+}
 
 const CARDS = [
   {
@@ -74,7 +127,7 @@ const PACKS = [
   {n: 'REIGN', p: '$6,499', d: '30 days', s: '$5,851'},
 ];
 
-function Card({c}) {
+function Card({c, dm}) {
   return (
     <div className="card">
       <div className="cbody">
@@ -85,13 +138,14 @@ function Card({c}) {
       </div>
       <div className="cfoot">
         <div className="price">{c.price}{c.extra && <span className="extra">{c.extra}</span>}</div>
-        <a className="cta-primary" href={DM}>DM Bobby</a>
+        <a className="cta-primary" href={dm}>DM Bobby</a>
       </div>
     </div>
   );
 }
 
 export default function Advertise() {
+  const dm = useTrackedDM();
   return (
     <HtmlClassNameProvider className="adv-page">
     <div className="adv">
@@ -102,7 +156,7 @@ export default function Advertise() {
           <div className="eyebrow">For projects and companies</div>
           <h1>Your project in front of the whole network.</h1>
           <p className="sub">Over 2 million users. Tens of thousands of groups. One bot in the middle.</p>
-          <a className="cta-primary" href={DM}>DM Bobby</a>
+          <a className="cta-primary" href={dm}>DM Bobby</a>
           <div className="proof">
             <LiveNumbers />
           </div>
@@ -115,7 +169,7 @@ export default function Advertise() {
           <div className="eyebrow">Every format</div>
           <h2>What you get. What it reaches. What it costs.</h2>
           <div className="cards">
-            {CARDS.map((c) => <Card key={c.name} c={c} />)}
+            {CARDS.map((c) => <Card key={c.name} c={c} dm={dm} />)}
           </div>
         </div>
       </section>
@@ -150,7 +204,7 @@ export default function Advertise() {
           </div>
           <div className="boardstrip">
             <div className="bt">Add The Board · from $67.50 · Board advert slot $250/day</div>
-            <a className="cta-ghost" href={DM}>Get a slot</a>
+            <a className="cta-ghost" href={dm}>Get a slot</a>
           </div>
         </div>
       </section>
@@ -158,7 +212,7 @@ export default function Advertise() {
       {/* CLOSER */}
       <div className="closer">
         <div className="line">We don't predict. We detect. Your project inside the machine that does.</div>
-        <a className="cta-primary" href={DM}>DM Bobby</a>
+        <a className="cta-primary" href={dm}>DM Bobby</a>
       </div>
 
     </div>
