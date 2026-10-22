@@ -188,7 +188,7 @@ export default function MoneyPreview() {
         <div className="wrap">
           <div className="eyebrow">How it works</div>
           <div className="how">
-            <div className="step"><div className="k">01</div><div className="t">DM Bobby and type /promote</div><div className="d">No forms. No sales calls. Bobby handles it in chat.</div></div>
+            <div className="step"><div className="k">01</div><div className="t">DM Bobby and say advertise</div><div className="d">No forms. No sales calls. Bobby handles it in chat.</div></div>
             <div className="step"><div className="k">02</div><div className="t">Pick and pay in chat</div><div className="d">Choose a package or build your own. Pay right there.</div></div>
             <div className="step"><div className="k">03</div><div className="t">Bobby schedules it and sends proof</div><div className="d">You get confirmation when it runs. Receipts, not promises.</div></div>
           </div>
