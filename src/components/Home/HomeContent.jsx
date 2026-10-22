@@ -103,12 +103,6 @@ export default function HomeContent() {
         </div>
       </section>
 
-      <section className="home-section home-thesis">
-        <Pullquote variant="hero">
-          We don't predict. <span className="lime">We detect.</span>
-        </Pullquote>
-      </section>
-
       {/* 01 - The buy bot you already know */}
       <section className="home-section">
         <div className="section-rule">
