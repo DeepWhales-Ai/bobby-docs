@@ -32,7 +32,7 @@ export function promoteTagFrom(search) {
 }
 
 export function promoteLink(tag) {
-  return `${BOT}?start=promote_${TAG_RE.test(tag) ? tag : DEFAULT_TAG}`;
+  return `${BOT}?start=promote_${typeof tag === 'string' && TAG_RE.test(tag) ? tag : DEFAULT_TAG}`;
 }
 
 function countVisit(tag) {
